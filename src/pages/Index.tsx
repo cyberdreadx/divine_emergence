@@ -6,6 +6,7 @@ import Offerings from "@/components/Offerings";
 import Breathwork from "@/components/Breathwork";
 import Retreat from "@/components/Retreat";
 import Mission from "@/components/Mission";
+import Reviews from "@/components/Reviews";
 import Connect from "@/components/Connect";
 import Footer from "@/components/Footer";
 
@@ -51,6 +52,7 @@ const Index = () => {
       <Breathwork />
       <Retreat />
       <Mission />
+      <Reviews />
       <Connect />
       <Footer />
     </div>
