@@ -1,5 +1,5 @@
 import { ArrowRight, MapPin } from "lucide-react";
-import { LINKS } from "@/lib/site";
+import { Link } from "react-router-dom";
 import connection from "@/assets/de-connection.webp";
 
 const Retreat = () => {
@@ -30,15 +30,13 @@ const Retreat = () => {
               intimate setting. Space to move through what you've been carrying and
               return to yourself, alongside women walking the same path.
             </p>
-            <a
-              href={LINKS.retreat}
-              target="_blank"
-              rel="noopener noreferrer"
+            <Link
+              to="/retreat"
               className="group inline-flex items-center gap-2.5 self-start bg-gradient-to-r from-gold to-blush text-blush-foreground px-7 py-3.5 rounded-full font-medium tracking-wide shadow-lg shadow-gold/10 hover:brightness-110 transition"
             >
               Explore the Retreat
               <ArrowRight className="w-4 h-4 transition-transform group-hover:translate-x-1" />
-            </a>
+            </Link>
           </div>
         </div>
       </div>

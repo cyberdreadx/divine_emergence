@@ -1,6 +1,6 @@
 import { ArrowUpRight } from "lucide-react";
 import { Link } from "react-router-dom";
-import { offerings } from "@/lib/offerings";
+import { gridOfferings } from "@/lib/offerings";
 
 const Offerings = () => {
   return (
@@ -21,7 +21,7 @@ const Offerings = () => {
         </div>
 
         <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-5">
-          {offerings.map((o) => (
+          {gridOfferings.map((o) => (
             <Link
               key={o.slug}
               to={`/offerings/${o.slug}`}
