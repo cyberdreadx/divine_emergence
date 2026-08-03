@@ -22,7 +22,17 @@ import { BRAND, BOOKING_URL } from "@/lib/site";
  * While this array is empty, a branded placeholder book is shown so the
  * page-turning animation can be previewed.
  */
-const EBOOK_PAGES: string[] = [];
+const EBOOK_PAGES: string[] = [
+  "/ebook/page-1.webp",
+  "/ebook/page-2.webp",
+  "/ebook/page-3.webp",
+  "/ebook/page-4.webp",
+  "/ebook/page-5.webp",
+  "/ebook/page-6.webp",
+  "/ebook/page-7.webp",
+  "/ebook/page-8.webp",
+  "/ebook/page-9.webp",
+];
 
 // react-pageflip ships every setting as a required prop; cast to a permissive
 // component so we can pass only the ones we care about.
@@ -44,9 +54,13 @@ const Page = forwardRef<HTMLDivElement, { children: ReactNode; hard?: boolean }>
 );
 Page.displayName = "Page";
 
-const ImagePage = forwardRef<HTMLDivElement, { src: string; index: number }>(
-  ({ src, index }, ref) => (
-    <div ref={ref} className="ebook-page bg-[#efe7d8] overflow-hidden">
+const ImagePage = forwardRef<HTMLDivElement, { src: string; index: number; hard?: boolean }>(
+  ({ src, index, hard }, ref) => (
+    <div
+      ref={ref}
+      data-density={hard ? "hard" : "soft"}
+      className="ebook-page bg-[#241a30] overflow-hidden"
+    >
       <img
         src={src}
         alt={`Page ${index + 1}`}
@@ -153,13 +167,14 @@ const Ebook = () => {
 
           <div className="text-center mb-10">
             <span className="text-gold font-sans text-xs uppercase tracking-[0.3em] block mb-4">
-              Free Resource
+              Free Ebook
             </span>
             <h1 className="font-serif text-4xl md:text-5xl text-foreground leading-[1.1]">
-              Read the ebook
+              Bufo Alvarius
             </h1>
             <p className="mt-4 text-muted-foreground max-w-xl mx-auto leading-relaxed">
-              Turn the pages just like a real book. Drag a corner, swipe, or use the arrows.
+              Dive into 5-MeO, processing, and integration. Turn the pages just like a real
+              book, drag a corner, swipe, or use the arrows.
             </p>
           </div>
 
@@ -167,13 +182,13 @@ const Ebook = () => {
             <div className="ebook-stage w-full flex justify-center">
               <FlipBook
                 ref={bookRef}
-                width={450}
+                width={464}
                 height={600}
                 size="stretch"
                 minWidth={300}
-                maxWidth={560}
-                minHeight={400}
-                maxHeight={746}
+                maxWidth={520}
+                minHeight={388}
+                maxHeight={673}
                 maxShadowOpacity={0.5}
                 showCover={true}
                 mobileScrollSupport={true}
@@ -187,7 +202,14 @@ const Ebook = () => {
                 }
               >
                 {hasRealPages
-                  ? EBOOK_PAGES.map((src, i) => <ImagePage key={i} src={src} index={i} />)
+                  ? EBOOK_PAGES.map((src, i) => (
+                      <ImagePage
+                        key={i}
+                        src={src}
+                        index={i}
+                        hard={i === 0 || i === EBOOK_PAGES.length - 1}
+                      />
+                    ))
                   : placeholderPages}
               </FlipBook>
             </div>
