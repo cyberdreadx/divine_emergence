@@ -1,38 +1,6 @@
-import { Wind, Flame, Compass, GraduationCap, Sparkles, ArrowUpRight } from "lucide-react";
-import { LINKS } from "@/lib/site";
-
-const offerings = [
-  {
-    title: "Breathwork",
-    desc: "The simplest tool you have, and one of the most powerful. Facilitated sessions that regulate your nervous system and release what the body has been holding.",
-    href: LINKS.breathwork,
-    Icon: Wind,
-  },
-  {
-    title: "Bufo Alvarius",
-    desc: "Psychedelic-assisted support for those ready to move beyond survival, held with safety, integrity, and deep reverence.",
-    href: LINKS.bufo,
-    Icon: Flame,
-  },
-  {
-    title: "Private Coaching",
-    desc: "One-on-one guidance for navigating trauma, addiction, and anxiety. A holistic path toward clarity, personal power, and true freedom.",
-    href: LINKS.coaching,
-    Icon: Compass,
-  },
-  {
-    title: "Breathwork Training Program",
-    desc: "For those called to carry this work forward. Learn to hold space and facilitate transformational breath.",
-    href: LINKS.training,
-    Icon: GraduationCap,
-  },
-  {
-    title: "Regulation Is Power",
-    desc: "Practices and teachings to bring you back to yourself in a way that feels aligned, free, and grounded.",
-    href: LINKS.regulation,
-    Icon: Sparkles,
-  },
-];
+import { ArrowUpRight } from "lucide-react";
+import { Link } from "react-router-dom";
+import { offerings } from "@/lib/offerings";
 
 const Offerings = () => {
   return (
@@ -54,11 +22,9 @@ const Offerings = () => {
 
         <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-5">
           {offerings.map((o) => (
-            <a
-              key={o.title}
-              href={o.href}
-              target="_blank"
-              rel="noopener noreferrer"
+            <Link
+              key={o.slug}
+              to={`/offerings/${o.slug}`}
               className="group relative flex flex-col rounded-2xl border border-white/10 bg-card/40 backdrop-blur-sm p-7 hover:border-gold/40 hover:bg-card/60 transition-all"
             >
               <div className="flex items-center justify-between mb-5">
@@ -68,8 +34,8 @@ const Offerings = () => {
                 <ArrowUpRight className="w-4 h-4 text-muted-foreground group-hover:text-gold transition-colors" />
               </div>
               <h3 className="font-serif text-2xl text-foreground mb-3">{o.title}</h3>
-              <p className="text-muted-foreground text-sm leading-relaxed">{o.desc}</p>
-            </a>
+              <p className="text-muted-foreground text-sm leading-relaxed">{o.cardDesc}</p>
+            </Link>
           ))}
         </div>
       </div>

@@ -4,6 +4,8 @@ import { Toaster as Sonner } from "@/components/ui/sonner";
 import { Toaster } from "@/components/ui/toaster";
 import { TooltipProvider } from "@/components/ui/tooltip";
 import Index from "./pages/Index.tsx";
+import OfferingDetail from "./pages/OfferingDetail.tsx";
+import Ebook from "./pages/Ebook.tsx";
 import NotFound from "./pages/NotFound.tsx";
 import ScrollToTop from "./components/ScrollToTop.tsx";
 
@@ -18,6 +20,8 @@ const App = () => (
         <ScrollToTop />
         <Routes>
           <Route path="/" element={<Index />} />
+          <Route path="/offerings/:slug" element={<OfferingDetail />} />
+          <Route path="/ebook" element={<Ebook />} />
           <Route path="*" element={<NotFound />} />
         </Routes>
       </BrowserRouter>

@@ -1,39 +1,53 @@
 import { useState } from "react";
+import { Link, useLocation } from "react-router-dom";
 import { Menu, X } from "lucide-react";
 import { BOOKING_URL } from "@/lib/site";
 import logo from "@/assets/de-logo.svg";
 
-const navLinks = [
-  { label: "About", href: "#about" },
-  { label: "Offerings", href: "#offerings" },
-  { label: "Breathwork", href: "#breathwork" },
-  { label: "Retreat", href: "#retreat" },
+// Section links live on the home page. From any other route we prefix with "/"
+// so the browser routes home first, then scrolls to the section.
+const sectionLinks = [
+  { label: "About", hash: "#about" },
+  { label: "Offerings", hash: "#offerings" },
+  { label: "Breathwork", hash: "#breathwork" },
+  { label: "Retreat", hash: "#retreat" },
 ];
 
 const Navbar = () => {
   const [open, setOpen] = useState(false);
+  const { pathname } = useLocation();
+  const onHome = pathname === "/";
+
+  const sectionHref = (hash: string) => (onHome ? hash : `/${hash}`);
 
   return (
     <nav className="fixed top-0 left-0 right-0 z-50 bg-background/60 backdrop-blur-md border-b border-white/10">
       <div className="max-w-6xl mx-auto px-6 flex items-center justify-between h-16">
-        <a href="#top" className="flex items-center" aria-label="Divine Emergence home">
+        <Link to="/" className="flex items-center" aria-label="Divine Emergence home">
           <img
             src={logo}
             alt="Divine Emergence"
             className="h-9 md:h-10 w-auto object-contain"
           />
-        </a>
+        </Link>
 
         <div className="hidden md:flex items-center gap-8">
-          {navLinks.map((l) => (
+          {sectionLinks.map((l) => (
             <a
               key={l.label}
-              href={l.href}
+              href={sectionHref(l.hash)}
               className="text-muted-foreground text-xs tracking-[0.18em] uppercase hover:text-foreground transition-colors"
             >
               {l.label}
             </a>
           ))}
+
+          <Link
+            to="/ebook"
+            className="text-muted-foreground text-xs tracking-[0.18em] uppercase hover:text-foreground transition-colors"
+          >
+            Free Ebook
+          </Link>
 
           <a
             href={BOOKING_URL}
@@ -56,16 +70,23 @@ const Navbar = () => {
 
       {open && (
         <div className="md:hidden bg-background/95 backdrop-blur-md border-t border-white/10 px-6 py-5 space-y-4">
-          {navLinks.map((l) => (
+          {sectionLinks.map((l) => (
             <a
               key={l.label}
-              href={l.href}
+              href={sectionHref(l.hash)}
               onClick={() => setOpen(false)}
               className="block text-muted-foreground text-sm tracking-wide uppercase hover:text-foreground transition-colors"
             >
               {l.label}
             </a>
           ))}
+          <Link
+            to="/ebook"
+            onClick={() => setOpen(false)}
+            className="block text-muted-foreground text-sm tracking-wide uppercase hover:text-foreground transition-colors"
+          >
+            Free Ebook
+          </Link>
           <a
             href={BOOKING_URL}
             target="_blank"

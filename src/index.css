@@ -90,6 +90,19 @@
     linear-gradient(180deg, hsl(258 45% 7%) 0%, hsl(262 44% 9%) 45%, hsl(266 40% 11%) 100%);
 }
 
+/* Page-turning ebook reader (react-pageflip). Each leaf fills its sized parent. */
+.ebook-page {
+  width: 100%;
+  height: 100%;
+}
+.ebook-flip {
+  margin: 0 auto;
+}
+.ebook-stage {
+  max-width: 100%;
+  overflow: hidden;
+}
+
 /* Soft sunburst halo, echoing the logo mark. */
 .de-halo::before {
   content: "";

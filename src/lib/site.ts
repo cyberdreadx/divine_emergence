@@ -13,11 +13,16 @@ export const BRAND = {
 export const BOOKING_URL =
   "https://grow.divineemergence.org/widget/booking/8FEdtQqFLFvSMLL4yl4O";
 
+// GoHighLevel application survey for the Breathwork Training Program.
+export const TRAINING_APPLY_URL =
+  "https://grow.divineemergence.org/widget/survey/0iNDtIRYKfFOdXdPZuD9";
+
 // Existing detail pages on the live site. These currently resolve on GoHighLevel;
 // update them here if the pages move.
 export const LINKS = {
   breathwork: "https://divineemergence.org/breathwork",
   bufo: "https://divineemergence.org/bufo_alvarius",
+  kambo: "https://divineemergence.org/kambo",
   coaching: "https://divineemergence.org/coaching",
   training: "https://divineemergence.org/training",
   retreat: "https://www.divineemergence.org/womensretreat",
