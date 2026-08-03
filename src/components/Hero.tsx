@@ -11,7 +11,7 @@ const Hero = () => {
       <div className="relative max-w-3xl mx-auto text-center flex flex-col items-center">
         <img
           src={logo}
-          alt={`Divine Emergence — ${BRAND.tagline}`}
+          alt={`Divine Emergence: ${BRAND.tagline}`}
           className="w-[22rem] md:w-[34rem] max-w-full h-auto"
         />
 
@@ -21,7 +21,7 @@ const Hero = () => {
 
         <p className="mt-6 text-muted-foreground text-base md:text-lg leading-relaxed max-w-xl">
           A psychospiritual practice guiding you out of survival mode and into
-          authentic living — through breathwork, psychedelic-assisted support,
+          authentic living through breathwork, psychedelic-assisted support,
           and immersive retreats.
         </p>
 

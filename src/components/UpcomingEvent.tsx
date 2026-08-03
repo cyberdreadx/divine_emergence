@@ -79,7 +79,7 @@ const UpcomingEvent = () => {
           <div className="w-10 h-px bg-foreground/30 mt-4 md:mt-7" />
         </div>
 
-        {/* Featured event — editorial feature */}
+        {/* Featured event - editorial feature */}
         <article className="grid grid-cols-1 lg:grid-cols-12 gap-5 lg:gap-14 items-center mb-8 md:mb-16">
           <Link
             to={`/event/${featured.id}`}
@@ -166,7 +166,7 @@ const UpcomingEvent = () => {
           </div>
         </article>
 
-        {/* Additional events — quiet hairline list */}
+        {/* Additional events - quiet hairline list */}
         {rest.length > 0 && (
           <div className="border-t border-foreground/10 pt-10">
             <p className="text-[10px] tracking-[0.4em] uppercase font-semibold text-foreground/50 mb-8 text-center">

@@ -363,7 +363,7 @@ const AdminDeliverables = () => {
                                       const partnerEmail = r.partners?.email || partner.email;
                                       const partnerName = r.partners?.contact_name || partner.contact_name;
                                       const url = `${window.location.origin}/recap/${r.id}`;
-                                      const subject = encodeURIComponent(`Your Post-Event Recap — ${r.events?.name || "Event"}`);
+                                      const subject = encodeURIComponent(`Your Post-Event Recap: ${r.events?.name || "Event"}`);
                                       const body = encodeURIComponent(
                                         `Hi ${partnerName},\n\nThank you for partnering with us! Here's your post-event recap:\n\n${url}\n\nBest,\nBreathe & Bloom Team`
                                       );
@@ -452,9 +452,9 @@ const AdminDeliverables = () => {
                       </div>
                     </td>
                     <td className="px-5 py-4 text-sidebar-foreground/60 text-xs capitalize">{(d.asset_type || "").replace("_", " ")}</td>
-                    <td className="px-5 py-4 text-sidebar-foreground/60">{d.partners?.company_name || "—"}</td>
+                    <td className="px-5 py-4 text-sidebar-foreground/60">{d.partners?.company_name || "-"}</td>
                     <td className="px-5 py-4 text-sidebar-foreground/60">
-                      {d.due_date ? new Date(d.due_date).toLocaleDateString("en-US", { month: "short", day: "numeric" }) : "—"}
+                      {d.due_date ? new Date(d.due_date).toLocaleDateString("en-US", { month: "short", day: "numeric" }) : "-"}
                     </td>
                     <td className="px-5 py-4">{statusBadge(d.status)}</td>
                     <td className="px-5 py-4">

@@ -26,7 +26,7 @@ const Story = () => {
 
           <div>
             <h2 className="font-serif text-4xl md:text-5xl text-foreground leading-[1.15] mb-8">
-              I'm Laura — a psychospiritual practitioner based in{" "}
+              I'm Laura, a psychospiritual practitioner based in{" "}
               <span className="italic text-gold">South Florida</span>.
             </h2>
 

@@ -14,7 +14,7 @@ const Connect = () => {
         </h2>
         <p className="text-muted-foreground leading-relaxed max-w-xl mx-auto mb-10">
           If you're ready to stop managing your pain and start moving through it,
-          let's talk. Your first clarity call is free — a warm, no-pressure
+          let's talk. Your first clarity call is free, a warm, no-pressure
           conversation about where you are and where you want to go.
         </p>
 

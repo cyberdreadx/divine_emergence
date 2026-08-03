@@ -167,7 +167,7 @@ const PartnerAssetsManager = ({ partnerId, partnerEmail, partnerName }: PartnerA
       ) : assets.length === 0 ? (
         <div className="text-center py-8 border border-dashed border-sidebar-border rounded-lg">
           <Upload className="w-6 h-6 mx-auto mb-2 text-sidebar-foreground/20" />
-          <p className="text-sidebar-foreground/30 text-xs">No assets yet — upload images or documents</p>
+          <p className="text-sidebar-foreground/30 text-xs">No assets yet. Upload images or documents</p>
         </div>
       ) : (
         <>

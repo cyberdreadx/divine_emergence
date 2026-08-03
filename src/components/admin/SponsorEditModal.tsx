@@ -175,7 +175,7 @@ const SponsorEditModal = ({ open, onClose, sponsor, eventId, onSaved }: SponsorE
           />
         </div>
 
-        {/* CTA fields — only for main sponsors */}
+        {/* CTA fields - only for main sponsors */}
         {form.is_main && (
           <div className="space-y-3 p-4 rounded-lg border border-amber-500/20 bg-amber-500/5">
             <p className="text-xs text-[#022701]/60 font-medium uppercase tracking-wider">Main Sponsor CTA</p>

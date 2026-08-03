@@ -288,7 +288,7 @@ const AdminOrders = () => {
                   <TableCell className="font-mono text-xs">{order.order_number}</TableCell>
                   <TableCell>{order.purchaser_name}</TableCell>
                   <TableCell className="text-muted-foreground">{order.purchaser_email}</TableCell>
-                  <TableCell>{(order as any).events?.name ?? "—"}</TableCell>
+                  <TableCell>{(order as any).events?.name ?? "-"}</TableCell>
                   <TableCell className="capitalize">{order.ticket_type}</TableCell>
                   <TableCell className="text-right font-medium">
                     ${Number(order.total_amount).toFixed(2)}

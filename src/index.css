@@ -6,7 +6,7 @@
 
 @layer base {
   :root {
-    /* Divine Emergence — night sky at the moment of dawn.
+    /* Divine Emergence - night sky at the moment of dawn.
        Deep indigo/plum base, warm gold sun, soft cream light. */
     --background: 258 42% 8%;
     --foreground: 40 33% 94%;
@@ -82,7 +82,7 @@
   backdrop-filter: blur(6px);
 }
 
-/* Divine Emergence backdrop — deep night with a warm dawn glow rising from below. */
+/* Divine Emergence backdrop - deep night with a warm dawn glow rising from below. */
 .de-backdrop {
   background:
     radial-gradient(120% 80% at 50% 118%, hsl(30 78% 52% / 0.30) 0%, transparent 55%),
@@ -99,7 +99,7 @@
   background: radial-gradient(60% 50% at 50% 40%, hsl(38 80% 60% / 0.16) 0%, transparent 70%);
 }
 
-/* Luxurious scroll reveal — subtle fade + lift, staggered for direct children */
+/* Luxurious scroll reveal - subtle fade + lift, staggered for direct children */
 @media (prefers-reduced-motion: no-preference) {
   .lux-reveal > * {
     opacity: 0;

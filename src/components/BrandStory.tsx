@@ -30,7 +30,7 @@ const BrandStory = () => {
   return (
     <section id="experience" className="py-14 md:py-32 px-6 md:px-12">
       <div className="max-w-4xl mx-auto flex flex-col gap-32">
-        {/* 01 — The Experience */}
+        {/* 01 - The Experience */}
         <div className="relative">
           <span className="text-gold font-sans text-xs uppercase tracking-widest mb-6 block font-medium">
             01. The Experience
@@ -42,7 +42,7 @@ const BrandStory = () => {
             <div className="relative overflow-hidden rounded-2xl ring-1 ring-white/15 shadow-2xl">
               <img
                 src={experiencePhoto.url}
-                alt="A moment of stillness — reading by the rocks at golden hour"
+                alt="A moment of stillness, reading by the rocks at golden hour"
                 className="w-full aspect-[4/5] object-cover"
                 loading="lazy"
               />
@@ -58,7 +58,7 @@ const BrandStory = () => {
           </div>
         </div>
 
-        {/* 02 — The Audience */}
+        {/* 02 - The Audience */}
         <div className="relative">
           <span className="text-gold font-sans text-xs uppercase tracking-widest mb-6 block font-medium">
             02. The Audience
@@ -89,7 +89,7 @@ const BrandStory = () => {
           </div>
         </div>
 
-        {/* 03 — Why Partner */}
+        {/* 03 - Why Partner */}
         <div className="relative">
           <div className="flex flex-col md:flex-row gap-12 items-center">
             <div className="md:w-1/3">
@@ -135,7 +135,7 @@ const BrandStory = () => {
           </div>
         </div>
 
-        {/* 04 — Partnership Opportunities */}
+        {/* 04 - Partnership Opportunities */}
         <div className="relative pt-16 border-t border-foreground/10">
           <span className="text-gold font-sans text-xs uppercase tracking-widest mb-12 block font-medium">
             04. Opportunities

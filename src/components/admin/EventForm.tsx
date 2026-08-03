@@ -277,28 +277,28 @@ const EventForm = ({ open, onClose, event }: EventFormProps) => {
           </div>
         </div>
 
-        {/* Agenda — only for existing events */}
+        {/* Agenda - only for existing events */}
         {event && (
           <div className="border-t border-[#022701]/20 pt-4">
             <AgendaEditor eventId={event.id} />
           </div>
         )}
 
-        {/* Sponsors — only for existing events */}
+        {/* Sponsors - only for existing events */}
         {event && (
           <div className="border-t border-[#022701]/20 pt-4">
             <SponsorsManager eventId={event.id} />
           </div>
         )}
 
-        {/* Pricing & Capacity — only for existing events */}
+        {/* Pricing & Capacity - only for existing events */}
         {event && (
           <div className="border-t border-[#022701]/20 pt-4">
             <PricingManager eventId={event.id} />
           </div>
         )}
 
-        {/* Waiver — only for existing events */}
+        {/* Waiver - only for existing events */}
         {event && (
           <div className="border-t border-[#022701]/20 pt-4">
             <WaiverManager eventId={event.id} />

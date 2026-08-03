@@ -11,7 +11,7 @@ const Breathwork = () => {
           </span>
           <p className="font-serif text-2xl md:text-4xl text-foreground leading-[1.3] italic font-light">
             "Breathwork is for everyone because your breath is always with you.
-            It's the simplest tool you have — and one of the most powerful."
+            It's the simplest tool you have, and one of the most powerful."
           </p>
         </div>
 
@@ -28,7 +28,7 @@ const Breathwork = () => {
         <div className="grid md:grid-cols-2 gap-x-12 gap-y-6 text-muted-foreground leading-relaxed">
           <p>
             Every inhale and exhale is influencing your mind, your emotions, and your
-            entire nervous system — whether you realize it or not.
+            entire nervous system, whether you realize it or not.
           </p>
           <p>
             If you're anxious, overwhelmed, stuck, or just ready to feel like yourself
@@ -40,7 +40,7 @@ const Breathwork = () => {
             the better.
           </p>
           <p>
-            You can practice on your own — but working with a trained facilitator takes
+            You can practice on your own, but working with a trained facilitator takes
             you somewhere you can't usually get to. Having someone hold the space while
             you move through your breath makes all the difference.
           </p>

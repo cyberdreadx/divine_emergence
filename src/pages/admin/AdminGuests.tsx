@@ -255,9 +255,9 @@ const AdminGuests = () => {
                   </TableCell>
                   <TableCell className="text-muted-foreground text-xs">{g.email}</TableCell>
                   <TableCell className="text-muted-foreground text-xs">
-                    {(g as any).events?.name ?? "—"}
+                    {(g as any).events?.name ?? "-"}
                   </TableCell>
-                  <TableCell className="text-muted-foreground text-xs">{g.company || "—"}</TableCell>
+                  <TableCell className="text-muted-foreground text-xs">{g.company || "-"}</TableCell>
                   <TableCell>
                     <Select value={g.status} onValueChange={(v) => updateStatus(g.id, v)}>
                       <SelectTrigger className="h-7 w-[120px] text-xs">

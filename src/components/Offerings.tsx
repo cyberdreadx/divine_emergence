@@ -10,19 +10,19 @@ const offerings = [
   },
   {
     title: "Bufo Alvarius",
-    desc: "Psychedelic-assisted support for those ready to move beyond survival — held with safety, integrity, and deep reverence.",
+    desc: "Psychedelic-assisted support for those ready to move beyond survival, held with safety, integrity, and deep reverence.",
     href: LINKS.bufo,
     Icon: Flame,
   },
   {
     title: "Private Coaching",
-    desc: "One-on-one guidance for navigating trauma, addiction, and anxiety — a holistic path toward clarity, personal power, and true freedom.",
+    desc: "One-on-one guidance for navigating trauma, addiction, and anxiety. A holistic path toward clarity, personal power, and true freedom.",
     href: LINKS.coaching,
     Icon: Compass,
   },
   {
     title: "Breathwork Training Program",
-    desc: "For those called to carry this work forward — learn to hold space and facilitate transformational breath.",
+    desc: "For those called to carry this work forward. Learn to hold space and facilitate transformational breath.",
     href: LINKS.training,
     Icon: GraduationCap,
   },

@@ -2,7 +2,7 @@ import { ShieldCheck, Scale, Feather } from "lucide-react";
 
 const values = [
   { title: "Safety", desc: "A held, grounded space where your nervous system can finally let go.", Icon: ShieldCheck },
-  { title: "Integrity", desc: "Honest, holistic work — no masking, no shortcuts, no symptom management.", Icon: Scale },
+  { title: "Integrity", desc: "Honest, holistic work. No masking, no shortcuts, no symptom management.", Icon: Scale },
   { title: "Authenticity", desc: "Guiding you back to who you actually are beneath the survival patterns.", Icon: Feather },
 ];
 
@@ -15,7 +15,7 @@ const Mission = () => {
         </span>
         <p className="font-serif text-2xl md:text-4xl text-foreground leading-[1.35] italic font-light max-w-3xl mx-auto">
           To help people reconnect to their wholeness through breathwork, psychedelic
-          therapies, and integration — moving beyond survival and into clarity,
+          therapies, and integration, moving beyond survival and into clarity,
           personal power, and true freedom.
         </p>
 

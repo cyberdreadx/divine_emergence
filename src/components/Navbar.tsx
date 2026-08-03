@@ -16,7 +16,7 @@ const Navbar = () => {
   return (
     <nav className="fixed top-0 left-0 right-0 z-50 bg-background/60 backdrop-blur-md border-b border-white/10">
       <div className="max-w-6xl mx-auto px-6 flex items-center justify-between h-16">
-        <a href="#top" className="flex items-center" aria-label="Divine Emergence — home">
+        <a href="#top" className="flex items-center" aria-label="Divine Emergence home">
           <img
             src={logo}
             alt="Divine Emergence"

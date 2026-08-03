@@ -148,7 +148,7 @@ const AgendaEditor = ({ eventId }: AgendaEditorProps) => {
         </div>
       ) : segments.length === 0 ? (
         <div className="text-center py-8 border border-dashed border-[#022701]/20 rounded-lg">
-          <p className="text-[#022701]/30 text-xs">No segments yet — use quick-add or click Add</p>
+          <p className="text-[#022701]/30 text-xs">No segments yet. Use quick-add or click Add</p>
         </div>
       ) : (
         <div className="space-y-1.5">

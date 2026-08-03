@@ -315,7 +315,7 @@ const CheckIn = () => {
       {!isOnline && (
         <div className="bg-yellow-500/20 border-b border-yellow-500/30 px-4 py-2 flex items-center gap-2 text-yellow-400 text-xs">
           <WifiOff className="w-4 h-4" />
-          <span>Offline — check-ins will be queued and synced when reconnected</span>
+          <span>Offline. Check-ins will be queued and synced when reconnected</span>
           {offlineQueue.length > 0 && (
             <span className="ml-auto font-medium">{offlineQueue.length} queued</span>
           )}

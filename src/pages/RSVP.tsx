@@ -56,7 +56,7 @@ const RSVPPage = () => {
       }).select("id").single();
       if (error) throw error;
       setGuestId(data.id);
-      toast.success("Reservation saved — redirecting to secure payment...");
+      toast.success("Reservation saved, redirecting to secure payment...");
       window.location.href = "https://buy.stripe.com/14A5kC7lFgkPgEw8dg1VK01";
     } catch (err) {
       toast.error("Something went wrong. Please try again.");
@@ -86,7 +86,7 @@ const RSVPPage = () => {
                 <QRCodeSVG value={qrValue} size={180} level="M" />
               </div>
               <p className="text-white/60 text-xs mt-3 leading-relaxed whitespace-nowrap">
-                Screenshot this code — show at the door to check in
+                Screenshot this code, show at the door to check in
               </p>
             </div>
           )}

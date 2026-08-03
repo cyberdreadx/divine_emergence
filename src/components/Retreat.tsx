@@ -26,7 +26,7 @@ const Retreat = () => {
               Women's Lakehouse Retreat
             </h2>
             <p className="text-muted-foreground leading-relaxed mb-8">
-              A few days away from the noise — breath, ceremony, and community in an
+              A few days away from the noise: breath, ceremony, and community in an
               intimate setting. Space to move through what you've been carrying and
               return to yourself, alongside women walking the same path.
             </p>

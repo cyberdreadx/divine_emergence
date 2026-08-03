@@ -23,6 +23,6 @@ export const LINKS = {
   retreat: "https://www.divineemergence.org/womensretreat",
   regulation: "https://divineemergence.org/regulation-is-power",
   booking: BOOKING_URL,
-  // Social — fill in when handles are confirmed.
+  // Social - fill in when handles are confirmed.
   instagram: "",
 };

@@ -194,7 +194,7 @@ const AdminEventFlow = () => {
         </div>
       ) : segments.length === 0 ? (
         <div className="text-center py-16 border border-dashed border-sidebar-border rounded-xl">
-          <p className="text-sidebar-foreground/30 text-sm">No segments yet — use quick-add or create a custom one</p>
+          <p className="text-sidebar-foreground/30 text-sm">No segments yet. Use quick-add or create a custom one</p>
         </div>
       ) : (
         <div className="space-y-2">

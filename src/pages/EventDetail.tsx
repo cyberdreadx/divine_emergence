@@ -228,9 +228,9 @@ const EventDetail = () => {
   const dateShort = dateObj?.toLocaleDateString("en-US", { month: "long", day: "numeric" });
 
   const faqs = [
-    { q: "What should I bring?", a: "Just yourself, comfortable clothing, and an open heart. We provide everything else — mats, blankets, eye pillows, refreshments, and all journey materials." },
+    { q: "What should I bring?", a: "Just yourself, comfortable clothing, and an open heart. We provide everything else: mats, blankets, eye pillows, refreshments, and all journey materials." },
     { q: "What is the cancellation policy?", a: "Tickets are non-refundable but are transferable to another woman if you're unable to attend. Please reach out at least 48 hours before the event to arrange a transfer." },
-    { q: "Is this beginner friendly?", a: "Absolutely. Our experiences are held with care for all levels — first-timers and seasoned practitioners alike. Facilitators guide you gently throughout." },
+    { q: "Is this beginner friendly?", a: "Absolutely. Our experiences are held with care for all levels, first-timers and seasoned practitioners alike. Facilitators guide you gently throughout." },
     { q: "Are food and drinks provided?", a: "Yes. Welcome drinks, light bites, and a closing tea are included. Please share any dietary preferences when you RSVP." },
     { q: "Can I come with a friend?", a: "Of course. Many guests come solo and leave with new connections, but you're welcome to invite someone special. Each guest needs their own ticket." },
   ];
@@ -404,7 +404,7 @@ const EventDetail = () => {
               The session is structured to create a space of gentleness to release limiting beliefs within the mind and body, building resilience and help you manage stress under pressure. {"\n\n"}Every practice is chosen to both challenge and soften the nervous system , sharpen focus, and leave you feeling steadier, lighter, and more grounded.
             </p>
             <p className="text-base leading-relaxed mb-10" style={{ color: C.inkSoft }}>
-              Your reservation includes access to the red light therapy room, sauna, and cold plunge,  — recovery tools that support circulation, muscle recovery, and stress reduction. Alongside, curated sponsored  gifts for you to pamper yourself with at home.
+              Your reservation includes access to the red light therapy room, sauna, and cold plunge: recovery tools that support circulation, muscle recovery, and stress reduction. Alongside, curated sponsored  gifts for you to pamper yourself with at home.
             </p>
 
             {/* stat row */}
@@ -581,7 +581,7 @@ const EventDetail = () => {
           </div>
 
           <div className="grid lg:grid-cols-2 gap-6 lg:gap-8 items-stretch">
-            {/* UNIFIED CARD — price + included with care */}
+            {/* UNIFIED CARD - price + included with care */}
             <div
               className="rounded-3xl p-8 sm:p-10 lg:p-12 flex flex-col"
               style={{
@@ -678,11 +678,11 @@ const EventDetail = () => {
               })()}
             </div>
 
-            {/* RIGHT — editorial photo */}
+            {/* RIGHT - editorial photo */}
             <div className="relative rounded-3xl overflow-hidden min-h-[480px] lg:min-h-0" style={{ border: `1px solid ${C.hairline}` }}>
               <img
                 src={dearBodyAsset.url}
-                alt="Soft skin with water droplets — dear body, I love you"
+                alt="Soft skin with water droplets, dear body, I love you"
                 loading="lazy"
                 className="absolute inset-0 w-full h-full object-cover"
               />
@@ -726,7 +726,7 @@ const EventDetail = () => {
               const activeTime = getSegmentTime(activeSegment);
 
               const cx = 200, cy = 200;
-              // Wide, rounded, cupped petal — base at (0,0), tip up at (0,-144)
+              // Wide, rounded, cupped petal - base at (0,0), tip up at (0,-144)
               const petalD =
                 "M 0 0 C 34 -10, 48 -56, 28 -116 C 18 -134, 8 -144, 0 -144 C -8 -144, -18 -134, -28 -116 C -48 -56, -34 -10, 0 0 Z";
               const petalSm =
@@ -778,7 +778,7 @@ const EventDetail = () => {
                           strokeDasharray="1 5"
                         />
 
-                        {/* BACK PETAL RING — splayed wider, offset by half-angle */}
+                        {/* BACK PETAL RING - splayed wider, offset by half-angle */}
                         {segments.map((_, i) => {
                           const angle = (360 / N) * i + 180 / N;
                           const isActive = i === activeSegment;
@@ -796,7 +796,7 @@ const EventDetail = () => {
                           );
                         })}
 
-                        {/* FRONT PETAL RING — clickable, full color */}
+                        {/* FRONT PETAL RING - clickable, full color */}
                         {segments.map((_, i) => {
                           const angle = (360 / N) * i;
                           const isActive = i === activeSegment;
@@ -835,7 +835,7 @@ const EventDetail = () => {
                           );
                         })}
 
-                        {/* INNER CUP — small petals around seed pod */}
+                        {/* INNER CUP - small petals around seed pod */}
                         {[0, 60, 120, 180, 240, 300].map((a) => (
                           <path
                             key={`i${a}`}
@@ -891,7 +891,7 @@ const EventDetail = () => {
                         <circle cx={cx} cy={cy} r="2" fill="#8a6a3a" opacity="0.8" />
                       </g>
 
-                      {/* Numerals — quiet, outside the bloom */}
+                      {/* Numerals - quiet, outside the bloom */}
                       {segments.map((_, i) => {
                         const angle = (360 / N) * i - 90;
                         const rad = (angle * Math.PI) / 180;
@@ -929,7 +929,7 @@ const EventDetail = () => {
                   </div>
 
 
-                  {/* ACTIVE DETAIL — editorial side panel */}
+                  {/* ACTIVE DETAIL - editorial side panel */}
                   <div className="relative lg:pl-10">
                     {/* Hairline vertical divider */}
                     <div
@@ -975,7 +975,7 @@ const EventDetail = () => {
                         <span>{active.duration_minutes} minutes</span>
                         {active.facilitator && (
                           <>
-                            <span style={{ color: C.rose, opacity: 0.5 }}>—</span>
+                            <span style={{ color: C.rose, opacity: 0.5 }}>·</span>
                             {active.facilitator_instagram ? (
                               <a
                                 href={`https://instagram.com/${active.facilitator_instagram}`}
@@ -1146,7 +1146,7 @@ const EventDetail = () => {
 
       {/* ============ FINAL CTA ============ */}
       <section className="relative overflow-hidden" style={{ minHeight: 420 }}>
-        {/* Background image — full bleed */}
+        {/* Background image - full bleed */}
         <img
           src={finalCtaBloomAsset.url}
           alt=""
@@ -1211,7 +1211,7 @@ const EventDetail = () => {
             )}
           </div>
 
-          {/* Curated + Partners — unified block */}
+          {/* Curated + Partners - unified block */}
           <div className="mt-10 flex flex-col items-center gap-4">
             <p className="text-[10px] tracking-[0.35em] uppercase" style={{ color: C.card, opacity: 0.9 }}>
               Curated Wellness · Held with Intention
