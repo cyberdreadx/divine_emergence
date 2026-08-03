@@ -16,11 +16,7 @@ import {
 } from "lucide-react";
 import { BOOKING_URL, TRAINING_APPLY_URL } from "@/lib/site";
 
-import meditationImg from "@/assets/de-meditation.webp";
-import circleImg from "@/assets/de-circle.webp";
-import connectionImg from "@/assets/de-connection.webp";
 import waterfallImg from "@/assets/waterfall.jpg";
-import floralImg from "@/assets/hero-floral-luxury.jpg";
 import swimImg from "@/assets/synergy-swim.jpg";
 
 export type Feature = { title: string; text: string };
@@ -40,6 +36,7 @@ export type Offering = {
   intro: string;
   image: string;
   imageAlt: string;
+  gallery?: string[];
   ctaLabel: string;
   ctaHref: string;
   body?: string[];
@@ -97,8 +94,9 @@ export const offerings: Offering[] = [
         "Increase body awareness and resilience",
       ],
     },
-    image: meditationImg,
-    imageAlt: "A quiet moment of breath and stillness",
+    image: "/offerings/breathwork-1.webp",
+    imageAlt: "A guided breathwork session",
+    gallery: ["/offerings/breathwork-2.webp", "/offerings/breathwork-3.webp"],
     ctaLabel: "Book a session",
     ctaHref: BOOKING_URL,
   },
@@ -143,8 +141,8 @@ export const offerings: Offering[] = [
         ],
       },
     ],
-    image: circleImg,
-    imageAlt: "A luminous circle at the edge of dawn",
+    image: "/offerings/bufo-alvarius-1.webp",
+    imageAlt: "Ceremony and community",
     ctaLabel: "Schedule an intake call",
     ctaHref: BOOKING_URL,
   },
@@ -216,8 +214,9 @@ export const offerings: Offering[] = [
         ],
       },
     ],
-    image: connectionImg,
-    imageAlt: "Two hands reaching toward connection",
+    image: "/offerings/coaching-1.webp",
+    imageAlt: "A one on one coaching conversation",
+    gallery: ["/offerings/coaching-2.webp"],
     ctaLabel: "Book your free clarity call",
     ctaHref: BOOKING_URL,
   },
@@ -274,8 +273,14 @@ export const offerings: Offering[] = [
       { name: "Danielle", quote: "Laura is an amazing instructor. You can feel her authentic energy and love towards you when teaching." },
       { name: "Catherine", quote: "Laura is an incredibly kind, intuitive leader who created safety enabling deep connection." },
     ],
-    image: floralImg,
-    imageAlt: "Soft floral light",
+    image: "/offerings/training-4.webp",
+    imageAlt: "A breathwork facilitation workshop",
+    gallery: [
+      "/offerings/training-2.webp",
+      "/offerings/training-1.webp",
+      "/offerings/training-5.webp",
+      "/offerings/training-3.webp",
+    ],
     ctaLabel: "Apply now",
     ctaHref: TRAINING_APPLY_URL,
   },
@@ -393,8 +398,16 @@ export const offerings: Offering[] = [
       { q: "How do I know if this is the right time for me?", a: "If you feel stuck, overwhelmed, or disconnected, or you sense there is more to your breath and emotional system than what you are currently accessing, this is for you." },
       { q: "What support can I expect after the program?", a: "Lifetime access to breathwork and somatic practices, plus exclusive future discounts and promotions for Divine Emergence events and programs." },
     ],
-    image: meditationImg,
-    imageAlt: "Grounded and at ease",
+    image: "/offerings/regulation-is-power-12.webp",
+    imageAlt: "Rising into your power",
+    gallery: [
+      "/offerings/regulation-is-power-5.webp",
+      "/offerings/regulation-is-power-4.webp",
+      "/offerings/regulation-is-power-7.webp",
+      "/offerings/regulation-is-power-2.webp",
+      "/offerings/regulation-is-power-3.webp",
+      "/offerings/regulation-is-power-6.webp",
+    ],
     ctaLabel: "Reserve your spot",
     ctaHref: BOOKING_URL,
   },

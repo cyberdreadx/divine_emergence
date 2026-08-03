@@ -20,7 +20,7 @@ const OfferingDetail = ({ slug: slugOverride }: { slug?: string }) => {
   }
 
   const {
-    title, Icon, eyebrow, headline, intro, body, image, imageAlt,
+    title, Icon, eyebrow, headline, intro, body, image, imageAlt, gallery,
     approach, benefits, sections, curriculum, values, includes, pricing,
     testimonials, faq, ctaLabel, ctaHref,
   } = offering;
@@ -216,6 +216,28 @@ const OfferingDetail = ({ slug: slugOverride }: { slug?: string }) => {
                       <blockquote className="text-muted-foreground leading-relaxed flex-1">{t.quote}</blockquote>
                       <figcaption className="mt-5 text-foreground text-sm font-medium">{t.name}</figcaption>
                     </figure>
+                  ))}
+                </div>
+              </div>
+            )}
+
+            {/* Gallery */}
+            {gallery && gallery.length > 0 && (
+              <div>
+                <Eyebrow>Moments</Eyebrow>
+                <div className="grid grid-cols-2 md:grid-cols-3 gap-4">
+                  {gallery.map((src, i) => (
+                    <div
+                      key={i}
+                      className="aspect-[4/3] rounded-2xl overflow-hidden border border-white/10"
+                    >
+                      <img
+                        src={src}
+                        alt={`${title} ${i + 2}`}
+                        className="w-full h-full object-cover hover:scale-105 transition-transform duration-700"
+                        loading="lazy"
+                      />
+                    </div>
                   ))}
                 </div>
               </div>
