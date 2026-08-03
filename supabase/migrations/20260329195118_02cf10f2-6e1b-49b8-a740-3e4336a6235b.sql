@@ -1,0 +1,1 @@
+ALTER TABLE public.event_flow_segments ADD COLUMN IF NOT EXISTS facilitator_instagram text DEFAULT NULL;

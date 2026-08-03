@@ -1,0 +1,1 @@
+ALTER TABLE public.events ADD COLUMN end_time TEXT;

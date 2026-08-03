@@ -1,0 +1,2 @@
+UPDATE public.event_flow_segments SET facilitator = 'Alejandra' WHERE id = 'a0578609-77f6-490c-beae-391be3aba3ac';
+UPDATE public.event_flow_segments SET facilitator = 'Carla Masquida' WHERE id = '063b2ca6-a528-4e6b-bc8d-d0769aa5a250';

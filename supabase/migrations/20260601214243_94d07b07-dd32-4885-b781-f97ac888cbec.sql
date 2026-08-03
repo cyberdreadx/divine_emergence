@@ -1,0 +1,1 @@
+UPDATE public.event_flow_segments SET title = 'Sound Bath Experience' WHERE id = '063b2ca6-a528-4e6b-bc8d-d0769aa5a250';

@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64">
+  <rect width="64" height="64" rx="14" fill="#1c1330"/>
+  <g fill="none" stroke="#e6b25e" stroke-width="2.2" stroke-linecap="round">
+    <!-- horizon -->
+    <line x1="12" y1="44" x2="52" y2="44"/>
+    <!-- rising sun arc -->
+    <path d="M20 44a12 12 0 0 1 24 0"/>
+    <!-- rays -->
+    <line x1="32" y1="16" x2="32" y2="22"/>
+    <line x1="20" y1="19" x2="23" y2="24"/>
+    <line x1="44" y1="19" x2="41" y2="24"/>
+    <line x1="12.5" y1="28" x2="17" y2="31"/>
+    <line x1="51.5" y1="28" x2="47" y2="31"/>
+  </g>
+  <!-- inner star -->
+  <circle cx="32" cy="43" r="2.4" fill="#e6b25e"/>
+</svg>

@@ -1,0 +1,1 @@
+ALTER TABLE public.events ADD COLUMN IF NOT EXISTS highlights jsonb DEFAULT '[]'::jsonb;
