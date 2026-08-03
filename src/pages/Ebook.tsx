@@ -1,4 +1,4 @@
-import { forwardRef, useEffect, useRef, useState, type ReactNode } from "react";
+import { forwardRef, useRef, useState, type ReactNode } from "react";
 import { Link } from "react-router-dom";
 import { ArrowLeft, ChevronLeft, ChevronRight } from "lucide-react";
 import HTMLFlipBook from "react-pageflip";
@@ -140,26 +140,23 @@ const placeholderPages = [
 
 const Ebook = () => {
   const bookRef = useRef<{ pageFlip: () => { flipNext: () => void; flipPrev: () => void } }>(null);
-  const stageRef = useRef<HTMLDivElement>(null);
   const [page, setPage] = useState(0);
   const [total, setTotal] = useState(0);
-  const [pageW, setPageW] = useState(0);
-
-  // Size a single page to the available width so the book renders as one
-  // centered page (react-pageflip picks two-page mode from the viewport, not
-  // the parent, so we drive it with a fixed page size instead).
-  useEffect(() => {
-    const el = stageRef.current;
-    if (!el) return;
-    const compute = () => setPageW(Math.max(280, Math.min(440, Math.floor(el.clientWidth))));
-    compute();
-    const ro = new ResizeObserver(compute);
-    ro.observe(el);
-    return () => ro.disconnect();
-  }, []);
-  const pageH = Math.round(pageW / 0.7725);
+  const [orientation, setOrientation] = useState<"portrait" | "landscape">("landscape");
 
   const hasRealPages = EBOOK_PAGES.length > 0;
+
+  // In two-page (landscape) mode a closed book shows a single hard cover on one
+  // side. Shift the book so that lone cover is centered; opening to a spread
+  // slides it back to center, like a real book opening up.
+  const coverShift =
+    orientation === "landscape" && total > 0
+      ? page <= 0
+        ? "-25%"
+        : page >= total - 1
+        ? "25%"
+        : "0%"
+      : "0%";
 
   const flip = (dir: "next" | "prev") => {
     const api = bookRef.current?.pageFlip();
@@ -195,40 +192,45 @@ const Ebook = () => {
           </div>
 
           <div className="flex flex-col items-center">
-            <div ref={stageRef} className="ebook-stage w-full max-w-[440px] mx-auto">
-              {pageW > 0 && (
-                <div className="mx-auto" style={{ width: pageW }}>
-                  <FlipBook
-                    key={pageW}
-                    ref={bookRef}
-                    width={pageW}
-                    height={pageH}
-                    size="fixed"
-                    maxShadowOpacity={0.5}
-                    showCover={true}
-                    mobileScrollSupport={true}
-                    drawShadow={true}
-                    flippingTime={800}
-                    usePortrait={true}
-                    className="ebook-flip"
-                    onFlip={(e: { data: number }) => setPage(e.data)}
-                    onInit={(e: { object: { getPageCount: () => number } }) =>
-                      setTotal(e.object.getPageCount())
-                    }
-                  >
-                    {hasRealPages
-                      ? EBOOK_PAGES.map((src, i) => (
-                          <ImagePage
-                            key={i}
-                            src={src}
-                            index={i}
-                            hard={i === 0 || i === EBOOK_PAGES.length - 1}
-                          />
-                        ))
-                      : placeholderPages}
-                  </FlipBook>
-                </div>
-              )}
+            <div className="ebook-stage w-full overflow-hidden flex justify-center">
+              <FlipBook
+                ref={bookRef}
+                width={440}
+                height={570}
+                size="stretch"
+                minWidth={300}
+                maxWidth={470}
+                minHeight={388}
+                maxHeight={608}
+                maxShadowOpacity={0.5}
+                showCover={true}
+                mobileScrollSupport={true}
+                drawShadow={true}
+                flippingTime={800}
+                usePortrait={true}
+                className="ebook-flip"
+                style={{
+                  transform: `translateX(${coverShift})`,
+                  transition: "transform 700ms cubic-bezier(0.22, 0.61, 0.36, 1)",
+                }}
+                onFlip={(e: { data: number }) => setPage(e.data)}
+                onInit={(e: { object: { getPageCount: () => number; getOrientation?: () => "portrait" | "landscape" } }) => {
+                  setTotal(e.object.getPageCount());
+                  if (e.object.getOrientation) setOrientation(e.object.getOrientation());
+                }}
+                onChangeOrientation={(e: { data: "portrait" | "landscape" }) => setOrientation(e.data)}
+              >
+                {hasRealPages
+                  ? EBOOK_PAGES.map((src, i) => (
+                      <ImagePage
+                        key={i}
+                        src={src}
+                        index={i}
+                        hard={i === 0 || i === EBOOK_PAGES.length - 1}
+                      />
+                    ))
+                  : placeholderPages}
+              </FlipBook>
             </div>
 
             {/* Controls */}
