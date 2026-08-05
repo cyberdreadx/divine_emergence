@@ -1,5 +1,8 @@
-import { Star, Quote, ArrowUpRight } from "lucide-react";
-import { REVIEWS, reviews } from "@/lib/reviews";
+import { useEffect } from "react";
+import { Star, ArrowUpRight } from "lucide-react";
+import { REVIEWS } from "@/lib/reviews";
+
+const WIDGET_SRC = "https://widgets.sociablekit.com/google-reviews/widget.js";
 
 const Stars = ({ className = "" }: { className?: string }) => (
   <span className={`inline-flex items-center gap-0.5 ${className}`} aria-hidden="true">
@@ -10,6 +13,20 @@ const Stars = ({ className = "" }: { className?: string }) => (
 );
 
 const Reviews = () => {
+  // SociableKit's script scans the page for its widget container on load.
+  // Re-inject it on mount so the live Google reviews render (including after
+  // client-side navigation), then clean up on unmount.
+  useEffect(() => {
+    document.querySelectorAll(`script[src="${WIDGET_SRC}"]`).forEach((s) => s.remove());
+    const script = document.createElement("script");
+    script.src = WIDGET_SRC;
+    script.async = true;
+    document.body.appendChild(script);
+    return () => {
+      script.remove();
+    };
+  }, []);
+
   return (
     <section id="reviews" className="py-20 md:py-28 px-6 md:px-12">
       <div className="max-w-6xl mx-auto">
@@ -37,33 +54,9 @@ const Reviews = () => {
           </a>
         </div>
 
-        <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-5">
-          {reviews.map((r, i) => (
-            <figure
-              key={i}
-              className="relative flex flex-col rounded-2xl border border-white/10 bg-card/40 backdrop-blur-sm p-7"
-            >
-              <Quote className="w-6 h-6 text-gold/40 mb-4" strokeWidth={1.5} />
-              <blockquote className="text-muted-foreground leading-relaxed flex-1">
-                {r.quote}
-              </blockquote>
-              <figcaption className="mt-6 flex items-center justify-between">
-                <div>
-                  <div className="text-foreground text-sm font-medium">{r.name}</div>
-                  {r.context && (
-                    <div className="text-muted-foreground/60 text-xs mt-0.5">{r.context}</div>
-                  )}
-                </div>
-                <Stars />
-              </figcaption>
-            </figure>
-          ))}
-        </div>
-
-        <p className="mt-8 text-muted-foreground/50 text-xs">
-          Reviews sourced from Google. Star rating and count reflect the Divine Emergence,
-          LLC Google Business Profile.
-        </p>
+        {/* SociableKit live Google reviews widget. Configure its look in the
+            SociableKit dashboard (embed id 25702767). */}
+        <div className="sk-ww-google-reviews" data-embed-id="25702767" />
       </div>
     </section>
   );
