@@ -11,12 +11,11 @@ const Offerings = () => {
             Ways to work together
           </span>
           <h2 className="font-serif text-4xl md:text-6xl text-foreground leading-[1.1]">
-            A holistic path to <span className="italic">transformation</span>.
+            Guiding you out of <span className="italic">survival mode</span>.
           </h2>
           <p className="mt-6 text-muted-foreground leading-relaxed">
-            Through breathwork, private coaching, psychedelic-assisted support, and
-            immersive retreats, I guide people out of survival mode and into
-            authentic living.
+            Through breathwork, private coaching, natural medicine, and immersive
+            retreats, I guide people out of survival mode and into authentic living.
           </p>
         </div>
 
@@ -33,7 +32,7 @@ const Offerings = () => {
                 </span>
                 <ArrowUpRight className="w-4 h-4 text-muted-foreground group-hover:text-gold transition-colors" />
               </div>
-              <h3 className="font-serif text-2xl text-foreground mb-3">{o.title}</h3>
+              <h3 className="font-serif text-2xl text-foreground mb-3">{o.cardTitle ?? o.title}</h3>
               <p className="text-muted-foreground text-sm leading-relaxed">{o.cardDesc}</p>
             </Link>
           ))}

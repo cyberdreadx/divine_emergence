@@ -9,6 +9,7 @@ import Mission from "@/components/Mission";
 import Reviews from "@/components/Reviews";
 import Connect from "@/components/Connect";
 import Footer from "@/components/Footer";
+import NewsletterPopup from "@/components/NewsletterPopup";
 
 const Index = () => {
   useEffect(() => {
@@ -55,6 +56,7 @@ const Index = () => {
       <Reviews />
       <Connect />
       <Footer />
+      <NewsletterPopup />
     </div>
   );
 };

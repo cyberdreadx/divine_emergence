@@ -2,6 +2,7 @@ import { useParams, Link, Navigate } from "react-router-dom";
 import { ArrowLeft, ArrowUpRight, Check, Quote } from "lucide-react";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
+import EbookReader from "@/components/EbookReader";
 import { getOffering } from "@/lib/offerings";
 
 const Eyebrow = ({ children }: { children: React.ReactNode }) => (
@@ -22,7 +23,7 @@ const OfferingDetail = ({ slug: slugOverride }: { slug?: string }) => {
   const {
     title, Icon, eyebrow, headline, intro, body, image, imageAlt, gallery,
     approach, benefits, sections, curriculum, values, includes, pricing,
-    testimonials, faq, ctaLabel, ctaHref,
+    testimonials, faq, ctaLabel, ctaHref, embedEbook, secondaryCta,
   } = offering;
 
   return (
@@ -260,7 +261,55 @@ const OfferingDetail = ({ slug: slugOverride }: { slug?: string }) => {
                 </div>
               </div>
             )}
+
+            {/* Embedded free ebook */}
+            {embedEbook && (
+              <div>
+                <Eyebrow>Free ebook</Eyebrow>
+                <div className="rounded-3xl border border-white/10 bg-card/40 backdrop-blur-sm p-6 md:p-12">
+                  <div className="max-w-2xl mb-10">
+                    <h2 className="font-serif text-3xl md:text-4xl text-foreground mb-4">
+                      Read the free Bufo ebook
+                    </h2>
+                    <p className="text-muted-foreground leading-relaxed">
+                      A gentle guide to 5-MeO, processing, and integration. Turn the pages
+                      just like a real book, drag a corner, swipe, or use the arrows.
+                    </p>
+                  </div>
+                  <EbookReader />
+                </div>
+              </div>
+            )}
           </div>
+
+          {/* Secondary CTA */}
+          {secondaryCta && (
+            <div className="mt-16 md:mt-24 rounded-3xl border border-gold/20 bg-card/40 backdrop-blur-sm p-8 md:p-12 flex flex-col md:flex-row md:items-center gap-6 md:gap-10">
+              <div className="flex-1">
+                <h3 className="font-serif text-2xl md:text-3xl text-foreground mb-3">{secondaryCta.heading}</h3>
+                <p className="text-muted-foreground leading-relaxed">{secondaryCta.text}</p>
+              </div>
+              {secondaryCta.href.startsWith("/") ? (
+                <Link
+                  to={secondaryCta.href}
+                  className="shrink-0 inline-flex items-center gap-2 px-7 py-3 rounded-full border border-gold/40 text-foreground text-xs tracking-[0.16em] uppercase font-medium hover:border-gold hover:text-gold transition"
+                >
+                  {secondaryCta.label}
+                  <ArrowUpRight className="w-4 h-4" />
+                </Link>
+              ) : (
+                <a
+                  href={secondaryCta.href}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="shrink-0 inline-flex items-center gap-2 px-7 py-3 rounded-full border border-gold/40 text-foreground text-xs tracking-[0.16em] uppercase font-medium hover:border-gold hover:text-gold transition"
+                >
+                  {secondaryCta.label}
+                  <ArrowUpRight className="w-4 h-4" />
+                </a>
+              )}
+            </div>
+          )}
 
           {/* CTA */}
           <div className="mt-16 md:mt-24 rounded-3xl border border-white/10 bg-card/40 backdrop-blur-sm p-10 md:p-14 text-center">
