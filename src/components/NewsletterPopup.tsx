@@ -19,6 +19,7 @@ const MIN_FILL_MS = 2000;
  */
 const NewsletterPopup = () => {
   const [open, setOpen] = useState(false);
+  const [firstName, setFirstName] = useState("");
   const [email, setEmail] = useState("");
   const [status, setStatus] = useState<"idle" | "submitting" | "done" | "error">("idle");
   // Honeypot: a hidden field real users leave empty and bots tend to fill.
@@ -86,7 +87,7 @@ const NewsletterPopup = () => {
         await fetch(NEWSLETTER_ENDPOINT, {
           method: "POST",
           mode: "no-cors",
-          body: new URLSearchParams({ email }),
+          body: new URLSearchParams({ email, firstName: firstName.trim() }),
         });
       } else {
         // No endpoint configured yet. Confirm to the visitor anyway.
@@ -175,6 +176,15 @@ const NewsletterPopup = () => {
               />
               <input
                 ref={inputRef}
+                type="text"
+                autoComplete="given-name"
+                value={firstName}
+                onChange={(e) => setFirstName(e.target.value)}
+                placeholder="First name (optional)"
+                aria-label="First name"
+                className="w-full rounded-full border border-white/15 bg-background/60 px-5 py-3 text-sm text-foreground placeholder:text-muted-foreground/60 focus:outline-none focus:border-gold/50 transition-colors"
+              />
+              <input
                 type="email"
                 required
                 value={email}
