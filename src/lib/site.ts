@@ -22,10 +22,12 @@ export const BUFO_INTAKE_URL =
   "https://grow.divineemergence.org/widget/bookings/bufointake";
 
 // Email capture popup ("Welcome to the Divine Emergence Community").
-// Paste a GoHighLevel form/webhook POST endpoint here to store submissions in
-// the CRM. While it is blank the popup still shows and confirms to the visitor,
-// but nothing is saved server-side, so wire this up before going live.
-export const NEWSLETTER_ENDPOINT = "";
+// GoHighLevel inbound-webhook endpoint. The popup posts the email here as a
+// form-urlencoded `email` field; a GHL workflow maps it to Create/Update
+// Contact and tags the newsletter list. Publish that workflow (not Draft) for
+// submissions to actually land.
+export const NEWSLETTER_ENDPOINT =
+  "https://services.leadconnectorhq.com/hooks/Xf8ncPOdulMSwnurGzU0/webhook-trigger/fffc36fd-af4e-4ff3-8df3-524e97c2138d";
 
 // Existing detail pages on the live site. These currently resolve on GoHighLevel;
 // update them here if the pages move.

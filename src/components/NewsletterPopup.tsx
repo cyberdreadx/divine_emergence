@@ -61,10 +61,15 @@ const NewsletterPopup = () => {
     setStatus("submitting");
     try {
       if (NEWSLETTER_ENDPOINT) {
-        const form = new FormData();
-        form.append("email", email);
-        const res = await fetch(NEWSLETTER_ENDPOINT, { method: "POST", body: form });
-        if (!res.ok) throw new Error(`Request failed: ${res.status}`);
+        // GoHighLevel's inbound-webhook host does not send CORS headers, so a
+        // browser cannot read its response. We post "no-cors" as form-urlencoded
+        // (a CORS-safelisted content type) and treat a completed request as
+        // success. GHL receives `email` as a form field to map in the workflow.
+        await fetch(NEWSLETTER_ENDPOINT, {
+          method: "POST",
+          mode: "no-cors",
+          body: new URLSearchParams({ email }),
+        });
       } else {
         // No endpoint configured yet. Confirm to the visitor anyway.
         console.warn(
