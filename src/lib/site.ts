@@ -27,7 +27,7 @@ export const BUFO_INTAKE_URL =
 // Contact and tags the newsletter list. Publish that workflow (not Draft) for
 // submissions to actually land.
 export const NEWSLETTER_ENDPOINT =
-  "https://services.leadconnectorhq.com/hooks/Xf8ncPOdulMSwnurGzU0/webhook-trigger/fffc36fd-af4e-4ff3-8df3-524e97c2138d";
+  "https://services.leadconnectorhq.com/hooks/Xf8ncPOdulMSwnurGzU0/webhook-trigger/5efcaf76-369a-404f-93c7-fc49df33d076";
 
 // Existing detail pages on the live site. These currently resolve on GoHighLevel;
 // update them here if the pages move.
