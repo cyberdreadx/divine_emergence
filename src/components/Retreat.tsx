@@ -31,7 +31,7 @@ const Retreat = () => {
               return to yourself, alongside women walking the same path.
             </p>
             <Link
-              to="/retreat"
+              to="/womansretreat"
               className="group inline-flex items-center gap-2.5 self-start bg-gradient-to-r from-gold to-blush text-blush-foreground px-7 py-3.5 rounded-full font-medium tracking-wide shadow-lg shadow-gold/10 hover:brightness-110 transition"
             >
               Explore the Retreat
