@@ -4,6 +4,9 @@ import { NEWSLETTER_ENDPOINT } from "@/lib/site";
 
 const STORAGE_KEY = "de-newsletter-dismissed";
 const SHOW_DELAY_MS = 6000;
+// A real person cannot read the popup and type an email in under ~2s; anything
+// faster is almost certainly a bot auto-filling the form.
+const MIN_FILL_MS = 2000;
 
 /**
  * A one-time email capture popup inviting visitors into the Divine Emergence
@@ -18,7 +21,10 @@ const NewsletterPopup = () => {
   const [open, setOpen] = useState(false);
   const [email, setEmail] = useState("");
   const [status, setStatus] = useState<"idle" | "submitting" | "done" | "error">("idle");
+  // Honeypot: a hidden field real users leave empty and bots tend to fill.
+  const [botField, setBotField] = useState("");
   const inputRef = useRef<HTMLInputElement>(null);
+  const shownAtRef = useRef(0);
 
   useEffect(() => {
     if (typeof window === "undefined") return;
@@ -33,6 +39,7 @@ const NewsletterPopup = () => {
 
   useEffect(() => {
     if (!open) return;
+    shownAtRef.current = Date.now();
     inputRef.current?.focus();
     const onKey = (e: KeyboardEvent) => {
       if (e.key === "Escape") dismiss();
@@ -58,6 +65,17 @@ const NewsletterPopup = () => {
   const submit = async (e: React.FormEvent) => {
     e.preventDefault();
     if (!email || status === "submitting") return;
+
+    // Bot filters: if the honeypot is filled, or the form was submitted faster
+    // than any human could, silently show success without posting so the bot
+    // gets no signal and no webhook execution is spent.
+    const tooFast = Date.now() - shownAtRef.current < MIN_FILL_MS;
+    if (botField || tooFast) {
+      setStatus("done");
+      remember();
+      return;
+    }
+
     setStatus("submitting");
     try {
       if (NEWSLETTER_ENDPOINT) {
@@ -143,6 +161,18 @@ const NewsletterPopup = () => {
             </p>
 
             <form onSubmit={submit} className="space-y-3">
+              {/* Honeypot: hidden from real users, off the tab order and screen
+                  readers. Bots that auto-fill every field will populate it. */}
+              <input
+                type="text"
+                name="company"
+                tabIndex={-1}
+                autoComplete="off"
+                aria-hidden="true"
+                value={botField}
+                onChange={(e) => setBotField(e.target.value)}
+                className="absolute left-[-9999px] top-0 h-0 w-0 opacity-0"
+              />
               <input
                 ref={inputRef}
                 type="email"
