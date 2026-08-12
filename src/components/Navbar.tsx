@@ -10,7 +10,6 @@ const sectionLinks = [
   { label: "About", hash: "#about" },
   { label: "Offerings", hash: "#offerings" },
   { label: "Breathwork", hash: "#breathwork" },
-  { label: "Retreat", hash: "#retreat" },
 ];
 
 const Navbar = () => {
@@ -41,6 +40,13 @@ const Navbar = () => {
               {l.label}
             </a>
           ))}
+
+          <Link
+            to="/womensretreat"
+            className="text-muted-foreground text-xs tracking-[0.18em] uppercase hover:text-foreground transition-colors"
+          >
+            Retreat
+          </Link>
 
           <Link
             to="/events"
@@ -87,6 +93,13 @@ const Navbar = () => {
               {l.label}
             </a>
           ))}
+          <Link
+            to="/womensretreat"
+            onClick={() => setOpen(false)}
+            className="block text-muted-foreground text-sm tracking-wide uppercase hover:text-foreground transition-colors"
+          >
+            Retreat
+          </Link>
           <Link
             to="/events"
             onClick={() => setOpen(false)}
