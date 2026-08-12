@@ -43,6 +43,13 @@ const Navbar = () => {
           ))}
 
           <Link
+            to="/events"
+            className="text-muted-foreground text-xs tracking-[0.18em] uppercase hover:text-foreground transition-colors"
+          >
+            Events
+          </Link>
+
+          <Link
             to="/ebook"
             className="text-muted-foreground text-xs tracking-[0.18em] uppercase hover:text-foreground transition-colors"
           >
@@ -80,6 +87,13 @@ const Navbar = () => {
               {l.label}
             </a>
           ))}
+          <Link
+            to="/events"
+            onClick={() => setOpen(false)}
+            className="block text-muted-foreground text-sm tracking-wide uppercase hover:text-foreground transition-colors"
+          >
+            Events
+          </Link>
           <Link
             to="/ebook"
             onClick={() => setOpen(false)}

@@ -320,8 +320,8 @@ export const offerings: Offering[] = [
     },
     image: circleImg,
     imageAlt: "A breathwork circle gathered in person",
-    ctaLabel: "Ask about upcoming events",
-    ctaHref: BOOKING_URL,
+    ctaLabel: "See upcoming events",
+    ctaHref: "/events",
   },
   {
     slug: "coaching",

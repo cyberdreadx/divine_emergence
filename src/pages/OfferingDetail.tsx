@@ -317,15 +317,25 @@ const OfferingDetail = ({ slug: slugOverride }: { slug?: string }) => {
             <p className="text-muted-foreground max-w-xl mx-auto mb-8 leading-relaxed">
               Every journey starts with a conversation. Reach out and take the first step toward {title.toLowerCase()}.
             </p>
-            <a
-              href={ctaHref}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="inline-flex items-center gap-2 px-7 py-3 rounded-full bg-gradient-to-r from-gold to-blush text-blush-foreground text-xs tracking-[0.16em] uppercase font-medium shadow-lg shadow-gold/10 hover:brightness-110 transition"
-            >
-              {ctaLabel}
-              <ArrowUpRight className="w-4 h-4" />
-            </a>
+            {ctaHref.startsWith("/") ? (
+              <Link
+                to={ctaHref}
+                className="inline-flex items-center gap-2 px-7 py-3 rounded-full bg-gradient-to-r from-gold to-blush text-blush-foreground text-xs tracking-[0.16em] uppercase font-medium shadow-lg shadow-gold/10 hover:brightness-110 transition"
+              >
+                {ctaLabel}
+                <ArrowUpRight className="w-4 h-4" />
+              </Link>
+            ) : (
+              <a
+                href={ctaHref}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center gap-2 px-7 py-3 rounded-full bg-gradient-to-r from-gold to-blush text-blush-foreground text-xs tracking-[0.16em] uppercase font-medium shadow-lg shadow-gold/10 hover:brightness-110 transition"
+              >
+                {ctaLabel}
+                <ArrowUpRight className="w-4 h-4" />
+              </a>
+            )}
           </div>
         </div>
       </main>
