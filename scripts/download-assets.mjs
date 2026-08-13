@@ -1,9 +1,14 @@
-// Download all Lovable assets to local src/assets/ for local development.
-// Usage: node scripts/download-assets.mjs
+// Download remote source assets referenced by .asset.json files into
+// src/assets/ for local development.
+// Usage: ASSET_BASE_URL="https://host" node scripts/download-assets.mjs
 import { readdir, readFile, writeFile, mkdir } from "node:fs/promises";
 import { join, dirname } from "node:path";
 
-const BASE = "https://id-preview--f80ef90a-6ab0-4e9e-875d-952abe985269.lovable.app";
+const BASE = process.env.ASSET_BASE_URL;
+if (!BASE) {
+  console.error("Set ASSET_BASE_URL to the host that serves the .asset.json url paths.");
+  process.exit(1);
+}
 const ROOT = "src/assets";
 
 async function* walk(dir) {
