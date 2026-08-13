@@ -25,24 +25,25 @@ const Breathwork = () => {
           <div className="absolute inset-0 bg-gradient-to-t from-background/70 via-transparent to-transparent" />
         </div>
 
-        <div className="grid md:grid-cols-2 gap-x-12 gap-y-6 text-muted-foreground leading-relaxed">
+        <div className="max-w-3xl mx-auto space-y-6 text-muted-foreground leading-relaxed">
           <p>
-            Every inhale and exhale is influencing your mind, your emotions, and your
-            entire nervous system, whether you realize it or not.
+            People often underestimate the power of something they do thousands of
+            times a day: their breath. Your breathing isn't just keeping you alive; it
+            is constantly communicating with your brain and influencing your nervous
+            system, heart rate, attention, emotional state, and physical health.
           </p>
           <p>
-            If you're anxious, overwhelmed, stuck, or just ready to feel like yourself
-            again, breathwork meets you exactly where you are.
+            But learning how to use your breath effectively is very different from
+            simply taking deep breaths. Working with a trained breathwork practitioner
+            gives you guidance, structure, and a safe container to explore the full
+            range of what this modality can offer. A skilled facilitator can teach you
+            different breathing techniques, recognize when your body is becoming
+            overwhelmed or underactivated, help you understand what you're experiencing,
+            and guide you through the process without pushing you beyond your capacity.
           </p>
           <p>
-            You don't need experience. You don't need a spiritual practice. You just
-            need to learn how to actually breathe, and everything starts to shift for
-            the better.
-          </p>
-          <p>
-            You can practice on your own, but working with a trained facilitator takes
-            you somewhere you can't usually get to. Having someone hold the space while
-            you move through your breath makes all the difference.
+            You don't need years of meditation experience or a spiritual practice. You
+            already carry this tool. You just need to learn how to utilize it.
           </p>
         </div>
 

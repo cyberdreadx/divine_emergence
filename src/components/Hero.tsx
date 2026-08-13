@@ -22,7 +22,7 @@ const Hero = () => {
         <p className="mt-6 text-muted-foreground text-base md:text-lg leading-relaxed max-w-xl">
           A psychospiritual practice guiding you out of survival mode and into
           authentic living through breathwork, psychedelic-assisted support,
-          and immersive retreats.
+          immersive retreats, and extensive integration.
         </p>
 
         <div className="mt-10 flex flex-col sm:flex-row items-center gap-4">

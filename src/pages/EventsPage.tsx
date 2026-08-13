@@ -2,6 +2,7 @@ import { Link } from "react-router-dom";
 import { ArrowLeft, ArrowUpRight, MapPin, Clock, CalendarHeart } from "lucide-react";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
+import EmailSignup from "@/components/EmailSignup";
 import { BOOKING_URL } from "@/lib/site";
 import { getUpcomingEvents, formatEventDate, DEFAULT_EVENT_CTA } from "@/lib/events";
 
@@ -120,6 +121,11 @@ const EventsPage = () => {
               </a>
             </div>
           )}
+
+          {/* Stay connected / email capture */}
+          <div className="mt-16 md:mt-20">
+            <EmailSignup />
+          </div>
         </div>
       </main>
 
