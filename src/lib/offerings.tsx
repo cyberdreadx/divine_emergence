@@ -18,7 +18,6 @@ import {
 import { BOOKING_URL, TRAINING_APPLY_URL, BUFO_INTAKE_URL } from "@/lib/site";
 
 import waterfallImg from "@/assets/waterfall.jpg";
-import swimImg from "@/assets/synergy-swim.jpg";
 import circleImg from "@/assets/de-circle.webp";
 
 export type Feature = { title: string; text: string };
@@ -302,8 +301,8 @@ export const offerings: Offering[] = [
       { q: "Do I need any experience?", a: "None. Most participants are exploring breathwork, plant medicine, or retreats for the very first time." },
       { q: "Tell me about the plant medicine.", a: "Offerings include cacao ceremony, hapé, sananga, and rose, none of which are psychoactive. Optional magic mushroom microdosing is available. Everything is fully explained before you decide, and all of it is optional." },
     ],
-    image: swimImg,
-    imageAlt: "Stillness by the water",
+    image: "/offerings/retreat-hero.webp",
+    imageAlt: "Retreat sisters gathered together, come in as strangers and leave as sisters",
     gallery: [
       "/offerings/retreat-1.webp",
       "/offerings/retreat-2.webp",
@@ -326,6 +325,7 @@ export const offerings: Offering[] = [
       "/offerings/retreat-19.webp",
       "/offerings/retreat-20.webp",
       "/offerings/retreat-21.webp",
+      "/offerings/retreat-22.webp",
     ],
     ctaLabel: "Book your retreat clarity call",
     ctaHref: BOOKING_URL,
