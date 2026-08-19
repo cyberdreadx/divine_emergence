@@ -1,0 +1,119 @@
+<!-- Divine Emergence — Weekly (Monday) email template.
+     Matches the house style of the welcome email: dark indigo card, gold + blush
+     accents, warm off-white text, all inline styles for email-client safety.
+
+     HOW TO USE (full guide: docs/weekly-email-setup.md):
+     1. GoHighLevel > Marketing > Emails > Templates > + New Template > Blank.
+     2. Add a "Code / Custom HTML" element and paste this whole block in.
+     3. Save as a Template named "Weekly Email — Base". Never send this one.
+     4. Each Monday: duplicate it and edit ONLY the parts marked [ EDIT ].
+        Everything else stays the same so branding is consistent week to week.
+
+     Merge fields use GHL syntax, e.g. {{contact.first_name}}, {{unsubscribe_link}}. -->
+<div style="margin:0;padding:0;background-color:#110c1d;">
+  <!-- [ EDIT ] Preheader: the hidden preview line shown in the inbox list -->
+  <div style="display:none;max-height:0;overflow:hidden;opacity:0;color:#110c1d;font-size:1px;line-height:1px;">
+    A note from me to start your week.
+  </div>
+
+  <table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0" style="background-color:#110c1d;">
+    <tr>
+      <td align="center" style="padding:32px 16px;">
+
+        <!-- Card -->
+        <table role="presentation" width="600" cellpadding="0" cellspacing="0" border="0" style="width:600px;max-width:600px;background-color:#1b1430;border:1px solid rgba(228,177,88,0.18);border-radius:24px;overflow:hidden;">
+
+          <!-- Header / wordmark -->
+          <tr>
+            <td align="center" style="padding:44px 40px 8px 40px;font-family:Georgia,'Times New Roman',serif;">
+              <div style="color:#e4b158;font-size:13px;letter-spacing:6px;text-transform:uppercase;font-family:Arial,Helvetica,sans-serif;">
+                Divine Emergence
+              </div>
+              <div style="color:#b9b1a3;font-size:12px;letter-spacing:2px;text-transform:uppercase;margin-top:8px;font-family:Arial,Helvetica,sans-serif;">
+                Awaken Your Inner Light
+              </div>
+            </td>
+          </tr>
+
+          <!-- Gold divider -->
+          <tr>
+            <td align="center" style="padding:24px 40px 0 40px;">
+              <table role="presentation" cellpadding="0" cellspacing="0" border="0"><tr>
+                <td style="width:56px;height:2px;background-color:#e4b158;line-height:2px;font-size:0;">&nbsp;</td>
+              </tr></table>
+            </td>
+          </tr>
+
+          <!-- Body -->
+          <tr>
+            <td style="padding:28px 40px 8px 40px;font-family:Georgia,'Times New Roman',serif;">
+              <!-- [ EDIT ] Eyebrow / week label -->
+              <div style="color:#e4b158;font-size:12px;letter-spacing:4px;text-transform:uppercase;font-family:Arial,Helvetica,sans-serif;text-align:center;">
+                Monday Note
+              </div>
+              <!-- [ EDIT ] Headline -->
+              <h1 style="margin:16px 0 0 0;color:#f5f1eb;font-size:34px;line-height:1.2;font-weight:normal;text-align:center;font-style:italic;">
+                Your headline here.
+              </h1>
+            </td>
+          </tr>
+
+          <tr>
+            <td style="padding:20px 40px 0 40px;font-family:Arial,Helvetica,sans-serif;color:#d6cfc2;font-size:16px;line-height:1.7;">
+              <!-- [ EDIT ] Greeting -->
+              <p style="margin:0 0 18px 0;">Hi {{contact.first_name}},</p>
+              <!-- [ EDIT ] Body copy — add or remove paragraphs as needed -->
+              <p style="margin:0 0 18px 0;">
+                Write this week's message here. Speak the way you would to one person —
+                a single reflection, invitation, or story lands better than a list of
+                announcements.
+              </p>
+              <p style="margin:0 0 8px 0;">
+                Keep paragraphs short. Add a second or third only if the moment calls for it.
+              </p>
+            </td>
+          </tr>
+
+          <!-- [ EDIT ] Button — update the label and link, or delete this whole <tr> if no CTA this week -->
+          <tr>
+            <td align="center" style="padding:28px 40px 8px 40px;">
+              <table role="presentation" cellpadding="0" cellspacing="0" border="0"><tr>
+                <td align="center" bgcolor="#e4b158" style="border-radius:999px;background-color:#e4b158;background-image:linear-gradient(90deg,#e4b158,#dc8c56);">
+                  <a href="https://grow.divineemergence.org/widget/booking/8FEdtQqFLFvSMLL4yl4O"
+                     target="_blank"
+                     style="display:inline-block;padding:15px 34px;font-family:Arial,Helvetica,sans-serif;font-size:13px;letter-spacing:2px;text-transform:uppercase;font-weight:bold;color:#14101f;text-decoration:none;border-radius:999px;; mso-style-textfill-fill-color: #14101f;"><!--[if mso]><font color="#14101f"><![endif]-->
+                    Book your free clarity call
+                  <!--[if mso]></font><![endif]--></a>
+                </td>
+              </tr></table>
+            </td>
+          </tr>
+
+          <!-- Sign off -->
+          <tr>
+            <td style="padding:24px 40px 40px 40px;font-family:Arial,Helvetica,sans-serif;color:#d6cfc2;font-size:16px;line-height:1.7;">
+              <!-- [ EDIT ] Optional closing line -->
+              <p style="margin:0 0 4px 0;">Breathe easy. I'll be in touch soon.</p>
+              <p style="margin:18px 0 0 0;color:#b9b1a3;">With love,</p>
+              <p style="margin:2px 0 0 0;font-family:Georgia,'Times New Roman',serif;font-style:italic;font-size:20px;color:#f5f1eb;">Laura</p>
+              <p style="margin:2px 0 0 0;color:#b9b1a3;font-size:13px;letter-spacing:1px;">Divine Emergence</p>
+            </td>
+          </tr>
+
+        </table>
+
+        <!-- Footer -->
+        <table role="presentation" width="600" cellpadding="0" cellspacing="0" border="0" style="width:600px;max-width:600px;">
+          <tr>
+            <td align="center" style="padding:22px 24px;font-family:Arial,Helvetica,sans-serif;color:#7d768c;font-size:12px;line-height:1.6;">
+              Divine Emergence &middot; South Florida<br />
+              You're receiving this because you joined the community at divineemergence.org.<br />
+              <a href="{{unsubscribe_link}}" style="color:#9a92a8;text-decoration:underline;; mso-style-textfill-fill-color: #9a92a8;"><!--[if mso]><font color="#9a92a8"><![endif]-->Unsubscribe<!--[if mso]></font><![endif]--></a>
+            </td>
+          </tr>
+        </table>
+
+      </td>
+    </tr>
+  </table>
+</div>
