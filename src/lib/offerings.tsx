@@ -289,6 +289,13 @@ export const offerings: Offering[] = [
         ],
       },
     ],
+    pricing: {
+      title: "Investment",
+      tiers: [
+        { name: "Solo Sister", price: "$1,199", note: "For one woman, all inclusive" },
+        { name: "Bestie Package", price: "$1,999", note: "Bring a friend, your mom, or your sister and share the experience" },
+      ],
+    },
     faq: [
       { q: "Where is the retreat?", a: "A private lake house on Lake Michigan. The full address is shared after your spot is confirmed." },
       { q: "Is it really women only?", a: "Yes. It is intentionally designed as a women-only experience to preserve the specific group dynamic and safety." },
