@@ -1,6 +1,6 @@
 import { useEffect } from "react";
 import { Star, ArrowUpRight } from "lucide-react";
-import { REVIEWS } from "@/lib/reviews";
+import content from "@/content/reviews.json";
 
 const WIDGET_SRC = "https://widgets.sociablekit.com/google-reviews/widget.js";
 
@@ -32,23 +32,23 @@ const Reviews = () => {
       <div className="max-w-6xl mx-auto">
         <div className="max-w-2xl mb-14">
           <span className="text-gold font-sans text-xs uppercase tracking-[0.3em] block mb-5">
-            Kind words
+            {content.eyebrow}
           </span>
           <h2 className="font-serif text-4xl md:text-6xl text-foreground leading-[1.1]">
-            Loved by the <span className="italic">people I work with</span>.
+            {content.heading} <span className="italic">{content.headingItalic}</span>.
           </h2>
 
           {/* Real, verifiable aggregate from the Google Business Profile. */}
           <a
-            href={REVIEWS.url}
+            href={content.reviewsUrl}
             target="_blank"
             rel="noopener noreferrer"
             className="group mt-7 inline-flex items-center gap-3 rounded-full border border-white/10 bg-card/40 backdrop-blur-sm pl-4 pr-3 py-2 hover:border-gold/40 transition-colors"
           >
-            <span className="font-serif text-xl text-foreground leading-none">{REVIEWS.rating}</span>
+            <span className="font-serif text-xl text-foreground leading-none">{content.rating}</span>
             <Stars />
             <span className="text-muted-foreground text-sm">
-              {REVIEWS.count} Google reviews
+              {content.count} Google reviews
             </span>
             <ArrowUpRight className="w-4 h-4 text-muted-foreground group-hover:text-gold transition-colors" />
           </a>

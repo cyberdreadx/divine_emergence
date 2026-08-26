@@ -1,6 +1,8 @@
 import { ArrowUpRight } from "lucide-react";
 import { Link } from "react-router-dom";
 import { gridOfferings } from "@/lib/offerings";
+import content from "@/content/offerings-section.json";
+import { renderRichText } from "@/lib/richText";
 
 const Offerings = () => {
   return (
@@ -8,14 +10,13 @@ const Offerings = () => {
       <div className="max-w-6xl mx-auto">
         <div className="max-w-2xl mb-14">
           <span className="text-gold font-sans text-xs uppercase tracking-[0.3em] block mb-5">
-            Ways to work together
+            {content.eyebrow}
           </span>
           <h2 className="font-serif text-4xl md:text-6xl text-foreground leading-[1.1]">
-            Guiding you out of <span className="italic">survival mode</span>.
+            {content.heading} <span className="italic">{content.headingItalic}</span>.
           </h2>
           <p className="mt-6 text-muted-foreground leading-relaxed">
-            Through breathwork, private coaching, natural medicine, and immersive
-            retreats, I guide people out of survival mode and into authentic living.
+            {renderRichText(content.intro)}
           </p>
         </div>
 
