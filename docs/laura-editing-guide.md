@@ -10,9 +10,16 @@ You can update the words on your homepage yourself — no code, no waiting.
 
 ## How to make a change
 
-1. On the left you'll see the site sections: **Top menu, Hero, About Laura,
-   Offerings, Breathwork, Retreat, Mission, Reviews, Closing call-to-action,
-   Footer.** Click the one you want to change.
+1. On the left you'll see two groups:
+   - **Homepage** — the sections of divineemergence.org top to bottom (Top menu,
+     Hero, About Laura, Offerings, Breathwork, Retreat, Mission, Reviews, Closing
+     call-to-action, Footer).
+   - **Offering pages** — the full detail pages (Breathwork, Bufo Alvarius, Kambo,
+     Women's Retreat, Workshops & Events, Private Coaching, Training Program,
+     Regulation Is Power). Edit headlines, intros, body text, FAQs, pricing, and
+     more. Photos, icons, and links are set by your developer.
+
+   Click the section you want to change.
 2. You'll see labeled boxes like *Headline*, *Intro paragraph*, *Button label*.
    Edit the text right in the boxes.
    - To add a paragraph or a fact, click the **+** button in a list.

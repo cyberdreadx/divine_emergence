@@ -1,0 +1,103 @@
+{
+  "slug": "training",
+  "title": "Breathwork Training Program",
+  "eyebrow": "Certification",
+  "cardDesc": "For those called to carry this work forward. Learn to hold space and facilitate transformational breath.",
+  "headline": "Become a certified breathwork practitioner",
+  "intro": "Learn how to safely guide others through trauma-informed breathwork, integration, and transformation. This is an 8-week immersive training for those called to hold this work with respect, integrity, and grace.",
+  "body": [
+    "Laura Kazimer established Divine Emergence, LLC after years of hands-on experience. She has trained dozens of facilitators as a Master Trainer with Awakened Breath, conducted hundreds of private sessions, and led sold-out workshops and international retreats.",
+    "The training emphasizes trauma-informed breathwork supported by modern science. Intentional breathing has been shown to help process stress and emotion, trauma, anxiety, depression, addictive patterns, OCD, and so much more. It is for corporate professionals seeking meaningful careers, empaths called to service, therapists, yoga instructors, coaches, and anyone drawn to teach breathwork transformation."
+  ],
+  "curriculum": {
+    "title": "The 8-week curriculum",
+    "steps": [
+      {
+        "label": "Week 1",
+        "title": "Introduction to Breathwork",
+        "text": "History and techniques across cultures, including Pranayama, Wim Hof, and Holotropic breathing."
+      },
+      {
+        "label": "Week 2",
+        "title": "The Autonomic Nervous System",
+        "text": "Somatics and the mind-body connection."
+      },
+      {
+        "label": "Week 3",
+        "title": "Altered States of Consciousness",
+        "text": "Deep breathwork journeys and circular breathing."
+      },
+      {
+        "label": "Week 4",
+        "title": "The Art of Facilitation",
+        "text": "Creating safe spaces, active listening, and energetic processing."
+      },
+      {
+        "label": "Week 5",
+        "title": "Trauma Awareness",
+        "text": "Contraindications, integration, and client assessment."
+      },
+      {
+        "label": "Week 6",
+        "title": "Growing Your Practice",
+        "text": "Business structuring, branding, and marketing strategies."
+      },
+      {
+        "label": "Week 7",
+        "title": "Creating Your Offerings",
+        "text": "Designing workshops and 1:1 sessions using Canva, Eventbrite, AI tools, and CRM systems."
+      },
+      {
+        "label": "Week 8",
+        "title": "Integration and Certification",
+        "text": "Final assessment, workshop launch, and certification ceremony."
+      }
+    ]
+  },
+  "values": {
+    "title": "Core values",
+    "features": [
+      {
+        "title": "Authenticity",
+        "text": "Show up as your true self in every session."
+      },
+      {
+        "title": "Safety",
+        "text": "Create a container of trust and protection."
+      },
+      {
+        "title": "Integrity",
+        "text": "Honor the nature and history of this work."
+      }
+    ]
+  },
+  "includes": {
+    "title": "What is included",
+    "items": [
+      "8 weeks of immersive training",
+      "Live group calls and breathwork journeys",
+      "Facilitation practice with feedback",
+      "Business-building strategies",
+      "Weekly individual and group check-ins",
+      "Certification upon completion",
+      "Curated reading and resource library",
+      "Ongoing Voxer and WhatsApp community support"
+    ]
+  },
+  "testimonials": [
+    {
+      "name": "Juno",
+      "quote": "Laura is an exceptional coach and facilitator. She has a rare ability to transform daunting situations into achievable goals."
+    },
+    {
+      "name": "Danielle",
+      "quote": "Laura is an amazing instructor. You can feel her authentic energy and love towards you when teaching."
+    },
+    {
+      "name": "Catherine",
+      "quote": "Laura is an incredibly kind, intuitive leader who created safety enabling deep connection."
+    }
+  ],
+  "imageAlt": "A breathwork facilitation workshop",
+  "ctaLabel": "Apply now"
+}
