@@ -1,4 +1,6 @@
 import { BOOKING_URL } from "@/lib/site";
+import content from "@/content/breathwork.json";
+import { renderRichText } from "@/lib/richText";
 import circle from "@/assets/de-circle.webp";
 
 const Breathwork = () => {
@@ -7,11 +9,10 @@ const Breathwork = () => {
       <div className="max-w-5xl mx-auto">
         <div className="text-center max-w-3xl mx-auto mb-14">
           <span className="text-gold font-sans text-xs uppercase tracking-[0.3em] block mb-5">
-            Why breathwork is for everyone
+            {content.eyebrow}
           </span>
           <p className="font-serif text-2xl md:text-4xl text-foreground leading-[1.3] italic font-light">
-            "Breathwork is for everyone because your breath is always with you.
-            It's the simplest tool you have, and one of the most powerful."
+            {renderRichText(content.quote)}
           </p>
         </div>
 
@@ -26,25 +27,9 @@ const Breathwork = () => {
         </div>
 
         <div className="max-w-3xl mx-auto space-y-6 text-muted-foreground leading-relaxed">
-          <p>
-            People often underestimate the power of something they do thousands of
-            times a day: their breath. Your breathing isn't just keeping you alive; it
-            is constantly communicating with your brain and influencing your nervous
-            system, heart rate, attention, emotional state, and physical health.
-          </p>
-          <p>
-            But learning how to use your breath effectively is very different from
-            simply taking deep breaths. Working with a trained breathwork practitioner
-            gives you guidance, structure, and a safe container to explore the full
-            range of what this modality can offer. A skilled facilitator can teach you
-            different breathing techniques, recognize when your body is becoming
-            overwhelmed or underactivated, help you understand what you're experiencing,
-            and guide you through the process without pushing you beyond your capacity.
-          </p>
-          <p>
-            You don't need years of meditation experience or a spiritual practice. You
-            already carry this tool. You just need to learn how to utilize it.
-          </p>
+          {content.paragraphs.map((p, i) => (
+            <p key={i}>{renderRichText(p)}</p>
+          ))}
         </div>
 
         <div className="mt-12 text-center">
@@ -54,7 +39,7 @@ const Breathwork = () => {
             rel="noopener noreferrer"
             className="inline-block font-serif text-lg text-foreground border-b border-gold pb-1 hover:text-gold transition-colors"
           >
-            Schedule a clarity call to begin your journey home to yourself
+            {content.ctaLabel}
           </a>
         </div>
       </div>
