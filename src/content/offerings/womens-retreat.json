@@ -1,0 +1,85 @@
+{
+  "slug": "womens-retreat",
+  "title": "Women's Reset Retreat",
+  "cardTitle": "Retreats",
+  "eyebrow": "Immersive Retreat",
+  "cardDesc": "A few days away from the noise: breath, ceremony, and community in an intimate lakeside setting. Come in as strangers, leave as sisters.",
+  "headline": "Women's Reset Retreat",
+  "intro": "5 days, 4 nights on Lake Michigan. A true reset. Join us for five transformative days and four nights in a beautiful private lake house on Lake Michigan, intentionally designed to give you the space, support, and environment to step away from everyday life and reconnect with yourself.",
+  "body": [
+    "Throughout the retreat, we'll explore multiple breathwork modalities, somatic practices, nervous system regulation, integration work, and intentional community experiences. You'll also be introduced to the world of plant medicine in a grounded, digestible, and approachable way, giving you the opportunity to explore these modalities without feeling overwhelmed or needing any prior experience.",
+    "This retreat is about more than what happens during the individual practices. It's about learning how to trust, connect, receive support, and be witnessed by other women. You'll have the opportunity to experience what it feels like to be held in community while also learning practical tools to integrate powerful healing experiences into your everyday life.",
+    "This is for the woman who is craving something more. The woman who needs a break from the noise, responsibilities, and demands of everyday life. The woman who knows she needs a reset and is ready to prioritize herself.",
+    "And with the holidays approaching, there is no better time to give yourself something that lasts beyond another gift under the tree.",
+    "Give yourself five days to breathe, regulate, reconnect, and remember who you are. Come for the reset. Stay for the connection. Leave with tools, memories, and a deeper relationship with yourself."
+  ],
+  "approach": {
+    "title": "What to expect",
+    "features": [
+      {
+        "title": "Daily Breathwork",
+        "text": "Relaxation for nervous system regulation, functional breathing for stress and hormone balance, and trauma release sessions."
+      },
+      {
+        "title": "Workshops and Adventure",
+        "text": "Somatic workshops, sound healing, journaling, mindfulness meditation, and nature hikes."
+      },
+      {
+        "title": "Gentle Plant Medicine",
+        "text": "Cacao ceremony, hapé, sananga, and rose, all non-psychoactive. Optional magic mushroom microdosing, with full participant autonomy."
+      },
+      {
+        "title": "Private Lake House and Chef",
+        "text": "A private, comfortable setting with fresh, nourishing meals prepared on-site."
+      },
+      {
+        "title": "Lifelong Friends and Integration",
+        "text": "You come in as strangers and leave as sisters, with an online integration call two weeks after the retreat."
+      }
+    ]
+  },
+  "sections": [
+    {
+      "heading": "Why an all women's retreat?",
+      "paragraphs": [
+        "Women have been holding it down for everyone else, and they deserve a dedicated space to heal. When women gather with intention, healing happens faster, deeper, and more honestly.",
+        "You will come in as strangers and leave as sisters. Bring a female friend or family member to share the experience, or come on your own and find your people."
+      ]
+    }
+  ],
+  "pricing": {
+    "title": "Investment",
+    "tiers": [
+      {
+        "name": "Solo Sister",
+        "price": "$1,199",
+        "note": "For one woman, all inclusive"
+      },
+      {
+        "name": "Bestie Package",
+        "price": "$1,999",
+        "note": "Bring a friend, your mom, or your sister and share the experience"
+      }
+    ]
+  },
+  "faq": [
+    {
+      "q": "Where is the retreat?",
+      "a": "A private lake house on Lake Michigan. The full address is shared after your spot is confirmed."
+    },
+    {
+      "q": "Is it really women only?",
+      "a": "Yes. It is intentionally designed as a women-only experience to preserve the specific group dynamic and safety."
+    },
+    {
+      "q": "Do I need any experience?",
+      "a": "None. Most participants are exploring breathwork, plant medicine, or retreats for the very first time."
+    },
+    {
+      "q": "Tell me about the plant medicine.",
+      "a": "Offerings include cacao ceremony, hapé, sananga, and rose, none of which are psychoactive. Optional magic mushroom microdosing is available. Everything is fully explained before you decide, and all of it is optional."
+    }
+  ],
+  "imageAlt": "Retreat sisters gathered together, come in as strangers and leave as sisters",
+  "ctaLabel": "Book your retreat clarity call"
+}
