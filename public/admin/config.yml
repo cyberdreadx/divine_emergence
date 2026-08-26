@@ -1,0 +1,89 @@
+# Divine Emergence — content editor configuration.
+# This tells the editor which text on the site Laura can change, and gives each
+# piece a friendly label. It saves edits back to the GitHub repo as a pull
+# request (a "suggested change") for the developer to review before it goes live.
+
+backend:
+  name: github
+  repo: cyberdreadx/divine_emergence
+  branch: main
+
+# Every save becomes a pull request (draft -> in review -> ready) instead of
+# publishing straight to the live site. Nothing goes live until the dev merges.
+publish_mode: editorial_workflow
+
+# Lets the dev test the editor locally with `npx decap-server` (no login needed).
+local_backend: true
+
+# Where uploaded images would go, if we add image editing later.
+media_folder: "public/uploads"
+public_folder: "/uploads"
+
+collections:
+  - name: homepage
+    label: "Homepage"
+    description: "The main sections of the divineemergence.org homepage, top to bottom."
+    editor:
+      preview: false
+    files:
+      - name: hero
+        label: "Hero (top of the page)"
+        file: "src/content/hero.json"
+        fields:
+          - { label: "Headline", name: headline, widget: string, hint: "The big italic line under the logo." }
+          - { label: "Intro paragraph", name: body, widget: text }
+          - { label: "Main button label", name: primaryCtaLabel, widget: string, hint: "Text on the gold Book a Call button." }
+          - { label: "Second link label", name: secondaryCtaLabel, widget: string }
+          - { label: "Second link target", name: secondaryCtaHref, widget: hidden }
+
+      - name: story
+        label: "About Laura"
+        file: "src/content/story.json"
+        fields:
+          - { label: "Small label above heading", name: eyebrow, widget: string }
+          - { label: "Heading", name: heading, widget: string, hint: "The gold highlighted words are set separately below." }
+          - { label: "Highlighted words in heading", name: headingHighlight, widget: string, hint: "Shown in gold italic at the end of the heading." }
+          - { label: "Story paragraphs", name: paragraphs, widget: list, hint: "Each item is one paragraph. Use + to add, drag to reorder. Wrap a word in **double asterisks** to make it gold." }
+          - { label: "Closing pull-quote", name: pullQuote, widget: text }
+          - { label: "Facts heading", name: factsHeading, widget: string }
+          - { label: "Facts about Laura", name: facts, widget: list, hint: "Short one-line facts." }
+
+      - name: breathwork
+        label: "Breathwork section"
+        file: "src/content/breathwork.json"
+        fields:
+          - { label: "Small label above quote", name: eyebrow, widget: string }
+          - { label: "Feature quote", name: quote, widget: text }
+          - { label: "Body paragraphs", name: paragraphs, widget: list }
+          - { label: "Link label", name: ctaLabel, widget: string }
+
+      - name: retreat
+        label: "Retreat teaser"
+        file: "src/content/retreat.json"
+        fields:
+          - { label: "Small label", name: eyebrow, widget: string }
+          - { label: "Heading", name: heading, widget: string }
+          - { label: "Description", name: body, widget: text }
+          - { label: "Button label", name: ctaLabel, widget: string }
+
+      - name: mission
+        label: "Mission & values"
+        file: "src/content/mission.json"
+        fields:
+          - { label: "Small label", name: eyebrow, widget: string }
+          - { label: "Mission statement", name: statement, widget: text }
+          - label: "Values (three cards)"
+            name: values
+            widget: list
+            hint: "The icons are fixed by the developer; edit the words here."
+            fields:
+              - { label: "Title", name: title, widget: string }
+              - { label: "Description", name: desc, widget: text }
+
+      - name: connect
+        label: "Closing call-to-action"
+        file: "src/content/connect.json"
+        fields:
+          - { label: "Heading", name: heading, widget: string }
+          - { label: "Paragraph", name: body, widget: text }
+          - { label: "Button label", name: ctaLabel, widget: string }

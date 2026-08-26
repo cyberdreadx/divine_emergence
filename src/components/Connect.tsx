@@ -1,5 +1,7 @@
 import { ArrowRight, Phone } from "lucide-react";
 import { BOOKING_URL } from "@/lib/site";
+import content from "@/content/connect.json";
+import { renderRichText } from "@/lib/richText";
 
 const Connect = () => {
   return (
@@ -10,12 +12,10 @@ const Connect = () => {
         </span>
 
         <h2 className="font-serif text-3xl md:text-5xl text-foreground leading-[1.15] mb-5">
-          Start your transformation today.
+          {content.heading}
         </h2>
         <p className="text-muted-foreground leading-relaxed max-w-xl mx-auto mb-10">
-          If you're ready to stop managing your pain and start moving through it,
-          let's talk. Your first clarity call is free, a warm, no-pressure
-          conversation about where you are and where you want to go.
+          {renderRichText(content.body)}
         </p>
 
         <a
@@ -24,7 +24,7 @@ const Connect = () => {
           rel="noopener noreferrer"
           className="group inline-flex items-center gap-2.5 bg-gradient-to-r from-gold to-blush text-blush-foreground px-9 py-4 rounded-full font-medium tracking-wide shadow-xl shadow-gold/15 hover:brightness-110 transition"
         >
-          Book Your Free Clarity Call
+          {content.ctaLabel}
           <ArrowRight className="w-4 h-4 transition-transform group-hover:translate-x-1" />
         </a>
       </div>

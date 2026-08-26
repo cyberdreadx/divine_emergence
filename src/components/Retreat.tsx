@@ -1,5 +1,7 @@
 import { ArrowRight, MapPin } from "lucide-react";
 import { Link } from "react-router-dom";
+import content from "@/content/retreat.json";
+import { renderRichText } from "@/lib/richText";
 import connection from "@/assets/de-connection.webp";
 
 const Retreat = () => {
@@ -20,21 +22,19 @@ const Retreat = () => {
           <div className="relative bg-card/50 backdrop-blur-sm p-8 md:p-14 flex flex-col justify-center">
             <span className="inline-flex items-center gap-2 text-gold font-sans text-xs uppercase tracking-[0.3em] mb-5">
               <MapPin className="w-3.5 h-3.5" />
-              Immersive Retreat
+              {content.eyebrow}
             </span>
             <h2 className="font-serif text-4xl md:text-5xl text-foreground leading-[1.1] mb-6">
-              Women's Lakehouse Retreat
+              {content.heading}
             </h2>
             <p className="text-muted-foreground leading-relaxed mb-8">
-              A few days away from the noise: breath, ceremony, and community in an
-              intimate setting. Space to move through what you've been carrying and
-              return to yourself, alongside women walking the same path.
+              {renderRichText(content.body)}
             </p>
             <Link
               to="/womensretreat"
               className="group inline-flex items-center gap-2.5 self-start bg-gradient-to-r from-gold to-blush text-blush-foreground px-7 py-3.5 rounded-full font-medium tracking-wide shadow-lg shadow-gold/10 hover:brightness-110 transition"
             >
-              Explore the Retreat
+              {content.ctaLabel}
               <ArrowRight className="w-4 h-4 transition-transform group-hover:translate-x-1" />
             </Link>
           </div>
