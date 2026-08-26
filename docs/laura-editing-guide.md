@@ -10,8 +10,9 @@ You can update the words on your homepage yourself — no code, no waiting.
 
 ## How to make a change
 
-1. On the left you'll see the homepage sections: **Hero, About Laura, Breathwork,
-   Retreat, Mission, Closing call-to-action.** Click the one you want to change.
+1. On the left you'll see the site sections: **Top menu, Hero, About Laura,
+   Offerings, Breathwork, Retreat, Mission, Reviews, Closing call-to-action,
+   Footer.** Click the one you want to change.
 2. You'll see labeled boxes like *Headline*, *Intro paragraph*, *Button label*.
    Edit the text right in the boxes.
    - To add a paragraph or a fact, click the **+** button in a list.

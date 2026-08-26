@@ -26,6 +26,19 @@ collections:
     editor:
       preview: false
     files:
+      - name: navbar
+        label: "Top menu (navigation)"
+        file: "src/content/navbar.json"
+        fields:
+          - { label: "Menu: About", name: linkAbout, widget: string }
+          - { label: "Menu: Offerings", name: linkOfferings, widget: string }
+          - { label: "Menu: Breathwork", name: linkBreathwork, widget: string }
+          - { label: "Menu: Retreat", name: linkRetreat, widget: string }
+          - { label: "Menu: Events", name: linkEvents, widget: string }
+          - { label: "Menu: Free Ebook", name: linkEbook, widget: string }
+          - { label: "Button label (desktop)", name: ctaLabel, widget: string }
+          - { label: "Button label (mobile)", name: ctaLabelMobile, widget: string }
+
       - name: hero
         label: "Hero (top of the page)"
         file: "src/content/hero.json"
@@ -47,6 +60,15 @@ collections:
           - { label: "Closing pull-quote", name: pullQuote, widget: text }
           - { label: "Facts heading", name: factsHeading, widget: string }
           - { label: "Facts about Laura", name: facts, widget: list, hint: "Short one-line facts." }
+
+      - name: offerings_section
+        label: "Offerings section header"
+        file: "src/content/offerings-section.json"
+        fields:
+          - { label: "Small label above heading", name: eyebrow, widget: string }
+          - { label: "Heading", name: heading, widget: string, hint: "The italic words are set separately below." }
+          - { label: "Italic words in heading", name: headingItalic, widget: string }
+          - { label: "Intro paragraph", name: intro, widget: text }
 
       - name: breathwork
         label: "Breathwork section"
@@ -80,6 +102,17 @@ collections:
               - { label: "Title", name: title, widget: string }
               - { label: "Description", name: desc, widget: text }
 
+      - name: reviews
+        label: "Reviews section"
+        file: "src/content/reviews.json"
+        fields:
+          - { label: "Small label above heading", name: eyebrow, widget: string }
+          - { label: "Heading", name: heading, widget: string, hint: "The italic words are set separately below." }
+          - { label: "Italic words in heading", name: headingItalic, widget: string }
+          - { label: "Star rating", name: rating, widget: string, hint: "e.g. 5.0" }
+          - { label: "Number of Google reviews", name: count, widget: number, value_type: int, min: 0 }
+          - { label: "Link to Google reviews", name: reviewsUrl, widget: string }
+
       - name: connect
         label: "Closing call-to-action"
         file: "src/content/connect.json"
@@ -87,3 +120,16 @@ collections:
           - { label: "Heading", name: heading, widget: string }
           - { label: "Paragraph", name: body, widget: text }
           - { label: "Button label", name: ctaLabel, widget: string }
+
+      - name: footer
+        label: "Footer"
+        file: "src/content/footer.json"
+        fields:
+          - { label: "Footer blurb", name: blurb, widget: text }
+          - { label: "Column 1 heading", name: exploreHeading, widget: string }
+          - { label: "Column 2 heading", name: beginHeading, widget: string }
+          - { label: "Link: About", name: linkAbout, widget: string }
+          - { label: "Link: Offerings", name: linkOfferings, widget: string }
+          - { label: "Link: Retreat", name: linkRetreat, widget: string }
+          - { label: "Link: Free Clarity Call", name: linkClarityCall, widget: string }
+          - { label: "Link: Contact", name: linkContact, widget: string }

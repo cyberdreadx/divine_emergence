@@ -2,14 +2,23 @@ import { useState } from "react";
 import { Link, useLocation } from "react-router-dom";
 import { Menu, X } from "lucide-react";
 import { BOOKING_URL } from "@/lib/site";
+import content from "@/content/navbar.json";
 import logo from "@/assets/de-logo.svg";
 
 // Section links live on the home page. From any other route we prefix with "/"
-// so the browser routes home first, then scrolls to the section.
+// so the browser routes home first, then scrolls to the section. Labels come
+// from navbar.json (editable); the hrefs/routes stay in code so navigation
+// targets can't be broken from the CMS.
 const sectionLinks = [
-  { label: "About", hash: "#about" },
-  { label: "Offerings", hash: "#offerings" },
-  { label: "Breathwork", hash: "#breathwork" },
+  { label: content.linkAbout, hash: "#about" },
+  { label: content.linkOfferings, hash: "#offerings" },
+  { label: content.linkBreathwork, hash: "#breathwork" },
+];
+
+const routeLinks = [
+  { label: content.linkRetreat, to: "/womensretreat" },
+  { label: content.linkEvents, to: "/events" },
+  { label: content.linkEbook, to: "/ebook" },
 ];
 
 const Navbar = () => {
@@ -41,26 +50,15 @@ const Navbar = () => {
             </a>
           ))}
 
-          <Link
-            to="/womensretreat"
-            className="text-muted-foreground text-xs tracking-[0.18em] uppercase hover:text-foreground transition-colors"
-          >
-            Retreat
-          </Link>
-
-          <Link
-            to="/events"
-            className="text-muted-foreground text-xs tracking-[0.18em] uppercase hover:text-foreground transition-colors"
-          >
-            Events
-          </Link>
-
-          <Link
-            to="/ebook"
-            className="text-muted-foreground text-xs tracking-[0.18em] uppercase hover:text-foreground transition-colors"
-          >
-            Free Ebook
-          </Link>
+          {routeLinks.map((l) => (
+            <Link
+              key={l.to}
+              to={l.to}
+              className="text-muted-foreground text-xs tracking-[0.18em] uppercase hover:text-foreground transition-colors"
+            >
+              {l.label}
+            </Link>
+          ))}
 
           <a
             href={BOOKING_URL}
@@ -68,7 +66,7 @@ const Navbar = () => {
             rel="noopener noreferrer"
             className="px-5 py-2 rounded-full bg-gradient-to-r from-gold to-blush text-blush-foreground text-xs tracking-[0.16em] uppercase font-medium shadow-lg shadow-gold/10 hover:brightness-110 transition"
           >
-            Free Clarity Call
+            {content.ctaLabel}
           </a>
         </div>
 
@@ -93,27 +91,16 @@ const Navbar = () => {
               {l.label}
             </a>
           ))}
-          <Link
-            to="/womensretreat"
-            onClick={() => setOpen(false)}
-            className="block text-muted-foreground text-sm tracking-wide uppercase hover:text-foreground transition-colors"
-          >
-            Retreat
-          </Link>
-          <Link
-            to="/events"
-            onClick={() => setOpen(false)}
-            className="block text-muted-foreground text-sm tracking-wide uppercase hover:text-foreground transition-colors"
-          >
-            Events
-          </Link>
-          <Link
-            to="/ebook"
-            onClick={() => setOpen(false)}
-            className="block text-muted-foreground text-sm tracking-wide uppercase hover:text-foreground transition-colors"
-          >
-            Free Ebook
-          </Link>
+          {routeLinks.map((l) => (
+            <Link
+              key={l.to}
+              to={l.to}
+              onClick={() => setOpen(false)}
+              className="block text-muted-foreground text-sm tracking-wide uppercase hover:text-foreground transition-colors"
+            >
+              {l.label}
+            </Link>
+          ))}
           <a
             href={BOOKING_URL}
             target="_blank"
@@ -121,7 +108,7 @@ const Navbar = () => {
             onClick={() => setOpen(false)}
             className="block text-center px-5 py-3 rounded-full bg-gradient-to-r from-gold to-blush text-blush-foreground text-sm tracking-wide uppercase font-medium"
           >
-            Book Your Free Clarity Call
+            {content.ctaLabelMobile}
           </a>
         </div>
       )}

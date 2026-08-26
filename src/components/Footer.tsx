@@ -1,4 +1,5 @@
 import { BRAND, BOOKING_URL, LINKS } from "@/lib/site";
+import content from "@/content/footer.json";
 import logo from "@/assets/de-logo.svg";
 
 const Footer = () => {
@@ -11,34 +12,32 @@ const Footer = () => {
           <div className="max-w-sm">
             <img src={logo} alt="Divine Emergence" className="h-11 w-auto mb-4" />
             <p className="text-muted-foreground text-sm leading-relaxed">
-              A psychospiritual practice with {BRAND.founder}, based in {BRAND.location}.
-              Reconnect to your wholeness through breathwork, psychedelic therapies,
-              and integration.
+              {content.blurb}
             </p>
           </div>
 
           <div className="flex gap-16">
             <div>
               <h4 className="font-serif text-foreground text-xs uppercase tracking-[0.2em] mb-4">
-                Explore
+                {content.exploreHeading}
               </h4>
               <ul className="space-y-2.5 text-sm text-muted-foreground">
-                <li><a href="#about" className="hover:text-foreground transition-colors">About</a></li>
-                <li><a href="#offerings" className="hover:text-foreground transition-colors">Offerings</a></li>
-                <li><a href={LINKS.retreat} target="_blank" rel="noopener noreferrer" className="hover:text-foreground transition-colors">Retreat</a></li>
+                <li><a href="#about" className="hover:text-foreground transition-colors">{content.linkAbout}</a></li>
+                <li><a href="#offerings" className="hover:text-foreground transition-colors">{content.linkOfferings}</a></li>
+                <li><a href={LINKS.retreat} target="_blank" rel="noopener noreferrer" className="hover:text-foreground transition-colors">{content.linkRetreat}</a></li>
               </ul>
             </div>
             <div>
               <h4 className="font-serif text-foreground text-xs uppercase tracking-[0.2em] mb-4">
-                Begin
+                {content.beginHeading}
               </h4>
               <ul className="space-y-2.5 text-sm text-muted-foreground">
                 <li>
                   <a href={BOOKING_URL} target="_blank" rel="noopener noreferrer" className="hover:text-foreground transition-colors">
-                    Free Clarity Call
+                    {content.linkClarityCall}
                   </a>
                 </li>
-                <li><a href="#connect" className="hover:text-foreground transition-colors">Contact</a></li>
+                <li><a href="#connect" className="hover:text-foreground transition-colors">{content.linkContact}</a></li>
               </ul>
             </div>
           </div>
