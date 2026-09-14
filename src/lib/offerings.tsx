@@ -68,6 +68,7 @@ export type Offering = {
   embedEbook?: boolean; // render the free page-turning ebook on the detail page
   secondaryCta?: SecondaryCta; // an extra call-to-action block above the main CTA
   hideFromGrid?: boolean;
+  disabled?: boolean; // fully retire the offering: no grid card, no detail page
 };
 
 // Code-only per-offering config: icon component, images, link targets, and
@@ -79,6 +80,7 @@ type OfferingMeta = {
   ctaHref: string;
   embedEbook?: boolean;
   hideFromGrid?: boolean;
+  disabled?: boolean;
   secondaryCtaHref?: string;
 };
 
@@ -102,6 +104,9 @@ const meta: Record<string, OfferingMeta> = {
   },
   "womens-retreat": {
     Icon: Users,
+    // Retreat retired (Laura is no longer running it). Flip `disabled` back to
+    // false to restore the grid card and the /womensretreat detail page.
+    disabled: true,
     image: "/offerings/retreat-hero.webp",
     gallery: [
       "/offerings/retreat-1.webp",
@@ -196,6 +201,7 @@ export const offerings: Offering[] = contentInOrder.map((content) => {
     ctaHref: m.ctaHref,
     embedEbook: m.embedEbook,
     hideFromGrid: m.hideFromGrid,
+    disabled: m.disabled,
     secondaryCta:
       "secondaryCta" in content && content.secondaryCta
         ? { ...(content.secondaryCta as Omit<SecondaryCta, "href">), href: m.secondaryCtaHref as string }
@@ -204,7 +210,8 @@ export const offerings: Offering[] = contentInOrder.map((content) => {
   return merged;
 });
 
+// Disabled offerings resolve to nothing, so their detail route redirects home.
 export const getOffering = (slug?: string) =>
-  offerings.find((o) => o.slug === slug);
+  offerings.find((o) => o.slug === slug && !o.disabled);
 
-export const gridOfferings = offerings.filter((o) => !o.hideFromGrid);
+export const gridOfferings = offerings.filter((o) => !o.hideFromGrid && !o.disabled);
