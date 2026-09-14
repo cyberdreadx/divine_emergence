@@ -1,25 +1,35 @@
 {
-  "slug": "coaching",
-  "title": "Private Coaching",
-  "cardTitle": "Private 1:1 Coaching",
-  "eyebrow": "Nervous System Reset",
   "cardDesc": "Breathwork-focused 1:1 coaching. Join the 6-week Regulation Is Power program, a full nervous system reset built around your breath.",
-  "headline": "Join my 6-week Regulation Is Power program",
-  "intro": "A full nervous system reset. Regulation Is Power is a one-of-a-kind 6-week private, breathwork-focused journey designed to help you overcome emotional blocks and regulate your autonomic nervous system. In six weeks, you will reconnect to your breath, release old patterns, and feel whole again.",
   "body": [
     "If traditional talk therapy has not given you the results you are looking for, or if you are searching for a more integrative, holistic approach, this is the container you have been seeking. We combine breathwork, somatic practices, mindfulness, and my professional background in mental health into a mind-body-spirit approach that is both practical and transformative.",
     "The core focus is integration, ensuring the changes we create in our sessions are potent, lasting, and easily applied to your everyday life. This is deep, personalized, one-on-one work for anyone ready to step into a more integrated, empowered, and fully present version of themselves."
   ],
-  "benefits": {
-    "title": "What you will experience in this work",
-    "items": [
-      "True nervous system regulation and emotional resilience",
-      "Release of stored trauma, limiting beliefs, and unprocessed tension",
-      "Deep reconnection to your mind, body, and spirit",
-      "Embodied self-love, boundaries, and emotional empowerment",
-      "Sustainable habits and breath practices that support your long-term growth"
+  "ctaLabel": "Book your free clarity call",
+  "pricing": {
+    "title": "Investment",
+    "tiers": [
+      {
+        "name": "Pay in full",
+        "price": "$2,000",
+        "note": "Total value $5,000"
+      }
     ]
   },
+  "cardTitle": "Private 1:1 Coaching",
+  "eyebrow": "Nervous System Reset",
+  "includes": {
+    "title": "The program includes",
+    "items": [
+      "Weekly 1:1 breathwork focused coaching sessions, 60 to 90 minutes",
+      "Guided somatic practices and nervous system regulation tools",
+      "Deep emotional release and trauma integration support",
+      "Embodied self-love, boundary work, and empowerment practices",
+      "Personalized strategies and practices for lasting transformation",
+      "Access to recordings, exercises, and ongoing check-ins"
+    ]
+  },
+  "slug": "coaching",
+  "intro": "A full nervous system reset. Regulation Is Power is a one-of-a-kind 6-week private, breathwork-focused journey designed to help you overcome emotional blocks and regulate your autonomic nervous system. In six weeks, you will reconnect to your breath, release old patterns, and feel whole again.",
   "sections": [
     {
       "heading": "Who this is for",
@@ -35,12 +45,47 @@
       ]
     }
   ],
+  "imageAlt": "A one on one coaching conversation",
+  "headline": "Join my 6-week Regulation Is Power program",
+  "testimonials": [
+    {
+      "name": "Shannon Weston",
+      "quote": "When I began my six weeks of one-on-one coaching, I was in a very dark headspace. She was a true source of light, realness, and connection."
+    },
+    {
+      "name": "William Savoie",
+      "quote": "I have been working with Laura for two years and have benefitted immensely from her services. She has been a huge part of my healing journey."
+    },
+    {
+      "name": "Robin Smyth",
+      "quote": "Laura has a beautiful gift and is enthusiastic to share it with others. She is very involved in what she practices and has an abundance of knowledge to share."
+    }
+  ],
+  "faq": [
+    {
+      "q": "Do I need prior experience with breathwork or somatic practices?",
+      "a": "Nope. This container works whether you are brand new or already experienced. I will guide you gently from foundational techniques up."
+    },
+    {
+      "q": "How much time will this require each week?",
+      "a": "Each week we have one, one-hour call. The third week runs 90 minutes. In between sessions, plan for 3 to 5 hours a week to dedicate to your self help and breathwork practices."
+    },
+    {
+      "q": "Will this work if I am already on medication or in therapy?",
+      "a": "Yes. This is complementary work, not a substitute for medical or mental health treatment. Always check with your provider."
+    },
+    {
+      "q": "What support can I expect after the program?",
+      "a": "Lifetime access to breathwork and somatic practices, plus exclusive future discounts and promotions for Divine Emergence events and programs."
+    }
+  ],
+  "title": "Private Coaching",
   "curriculum": {
     "title": "Your six weeks together",
     "steps": [
       {
         "label": "Week 1",
-        "title": "Foundational and Calming Breathwork",
+        "title": "Foundational and Calming Breathwork for Anxiety",
         "items": [
           "Baseline breath test and assessment",
           "Diaphragmatic and foundational breathing",
@@ -99,64 +144,19 @@
       }
     ]
   },
-  "includes": {
-    "title": "The program includes",
+  "benefits": {
+    "title": "What you will experience in this work",
     "items": [
-      "Weekly 1:1 breathwork focused coaching sessions, 60 to 90 minutes",
-      "Guided somatic practices and nervous system regulation tools",
-      "Deep emotional release and trauma integration support",
-      "Embodied self-love, boundary work, and empowerment practices",
-      "Personalized strategies and practices for lasting transformation",
-      "Access to recordings, exercises, and ongoing check-ins"
+      "True nervous system regulation and emotional resilience",
+      "Release of stored trauma, limiting beliefs, and unprocessed tension",
+      "Deep reconnection to your mind, body, and spirit",
+      "Embodied self-love, boundaries, and emotional empowerment",
+      "Sustainable habits and breath practices that support your long-term growth"
     ]
   },
-  "pricing": {
-    "title": "Investment",
-    "tiers": [
-      {
-        "name": "Pay in full",
-        "price": "$2,000",
-        "note": "Total value $5,000"
-      }
-    ]
-  },
-  "testimonials": [
-    {
-      "name": "Shannon Weston",
-      "quote": "When I began my six weeks of one-on-one coaching, I was in a very dark headspace. She was a true source of light, realness, and connection."
-    },
-    {
-      "name": "William Savoie",
-      "quote": "I have been working with Laura for two years and have benefitted immensely from her services. She has been a huge part of my healing journey."
-    },
-    {
-      "name": "Robin Smyth",
-      "quote": "Laura has a beautiful gift and is enthusiastic to share it with others. She is very involved in what she practices and has an abundance of knowledge to share."
-    }
-  ],
-  "faq": [
-    {
-      "q": "Do I need prior experience with breathwork or somatic practices?",
-      "a": "Nope. This container works whether you are brand new or already experienced. I will guide you gently from foundational techniques up."
-    },
-    {
-      "q": "How much time will this require each week?",
-      "a": "Each week we have one, one-hour call. The third week runs 90 minutes. In between sessions, plan for 3 to 5 hours a week to dedicate to your self help and breathwork practices."
-    },
-    {
-      "q": "Will this work if I am already on medication or in therapy?",
-      "a": "Yes. This is complementary work, not a substitute for medical or mental health treatment. Always check with your provider."
-    },
-    {
-      "q": "What support can I expect after the program?",
-      "a": "Lifetime access to breathwork and somatic practices, plus exclusive future discounts and promotions for Divine Emergence events and programs."
-    }
-  ],
   "secondaryCta": {
     "heading": "Called to facilitate this work?",
     "text": "If you feel drawn to guide others, my Private Breathwork Facilitator Training Program teaches you to hold space and facilitate trauma-informed transformational breath.",
     "label": "Explore the training program"
-  },
-  "imageAlt": "A one on one coaching conversation",
-  "ctaLabel": "Book your free clarity call"
+  }
 }
