@@ -4,7 +4,6 @@ import Hero from "@/components/Hero";
 import Story from "@/components/Story";
 import Offerings from "@/components/Offerings";
 import Breathwork from "@/components/Breathwork";
-import Retreat from "@/components/Retreat";
 import Mission from "@/components/Mission";
 import Reviews from "@/components/Reviews";
 import Connect from "@/components/Connect";
@@ -51,7 +50,6 @@ const Index = () => {
       <Story />
       <Offerings />
       <Breathwork />
-      <Retreat />
       <Mission />
       <Reviews />
       <Connect />

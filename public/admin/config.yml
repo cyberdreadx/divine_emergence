@@ -252,61 +252,9 @@ collections:
           - { label: "Image description (for accessibility)", name: imageAlt, widget: string, required: false }
           - { label: "Button label", name: ctaLabel, widget: string, required: false }
 
-      - name: womens_retreat
-        label: "Women's Retreat"
-        file: "src/content/offerings/womens-retreat.json"
-        fields:
-          - { label: "Slug (do not change)", name: slug, widget: hidden }
-          - { label: "Title", name: title, widget: string, required: false }
-          - { label: "Card title (homepage)", name: cardTitle, widget: string, required: false }
-          - { label: "Small label", name: eyebrow, widget: string, required: false }
-          - { label: "Card description (homepage)", name: cardDesc, widget: text, required: false }
-          - { label: "Headline", name: headline, widget: text, required: false }
-          - { label: "Intro paragraph", name: intro, widget: text, required: false }
-          - { label: "Body paragraphs", name: body, widget: list, required: false }
-          - label: "Approach block (what sets this apart)"
-            name: approach
-            widget: object
-            required: false
-            fields:
-              - { label: "Title", name: title, widget: string, required: false }
-              - label: "Items"
-                name: features
-                widget: list
-                required: false
-                fields:
-                  - { label: "Title", name: title, widget: string, required: false }
-                  - { label: "Text", name: text, widget: text, required: false }
-          - label: "Prose sections"
-            name: sections
-            widget: list
-            required: false
-            fields:
-              - { label: "Heading", name: heading, widget: string, required: false }
-              - { label: "Paragraphs", name: paragraphs, widget: list, required: false }
-          - label: "Pricing block"
-            name: pricing
-            widget: object
-            required: false
-            fields:
-              - { label: "Title", name: title, widget: string, required: false }
-              - label: "Price tiers"
-                name: tiers
-                widget: list
-                required: false
-                fields:
-                  - { label: "Name", name: name, widget: string, required: false }
-                  - { label: "Price", name: price, widget: string, required: false }
-                  - { label: "Note", name: note, widget: text, required: false }
-          - label: "FAQ"
-            name: faq
-            widget: list
-            required: false
-            fields:
-              - { label: "Question", name: q, widget: string, required: false }
-              - { label: "Answer", name: a, widget: text, required: false }
-          - { label: "Image description (for accessibility)", name: imageAlt, widget: text, required: false }
-          - { label: "Button label", name: ctaLabel, widget: string, required: false }
+      # Women's Retreat retired (Laura is no longer running it). The content file
+      # src/content/offerings/womens-retreat.json is kept; to bring the page back,
+      # restore this editor block and flip `disabled` in src/lib/offerings.tsx.
 
       - name: workshops_events
         label: "Workshops & Events"

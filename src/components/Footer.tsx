@@ -1,4 +1,4 @@
-import { BRAND, BOOKING_URL, LINKS } from "@/lib/site";
+import { BRAND, BOOKING_URL } from "@/lib/site";
 import content from "@/content/footer.json";
 import logo from "@/assets/de-logo.svg";
 
@@ -24,7 +24,6 @@ const Footer = () => {
               <ul className="space-y-2.5 text-sm text-muted-foreground">
                 <li><a href="#about" className="hover:text-foreground transition-colors">{content.linkAbout}</a></li>
                 <li><a href="#offerings" className="hover:text-foreground transition-colors">{content.linkOfferings}</a></li>
-                <li><a href={LINKS.retreat} target="_blank" rel="noopener noreferrer" className="hover:text-foreground transition-colors">{content.linkRetreat}</a></li>
               </ul>
             </div>
             <div>

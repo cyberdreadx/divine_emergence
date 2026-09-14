@@ -16,7 +16,6 @@ const sectionLinks = [
 ];
 
 const routeLinks = [
-  { label: content.linkRetreat, to: "/womensretreat" },
   { label: content.linkEvents, to: "/events" },
   { label: content.linkEbook, to: "/ebook" },
 ];
