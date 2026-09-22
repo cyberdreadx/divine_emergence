@@ -1,59 +1,5 @@
 {
-  "slug": "training",
-  "title": "Breathwork Training Program",
-  "eyebrow": "Certification",
   "cardDesc": "For those called to carry this work forward. Learn to hold space and facilitate transformational breath.",
-  "headline": "Become a certified breathwork practitioner",
-  "intro": "Learn how to safely guide others through trauma-informed breathwork, integration, and transformation. This is an 8-week immersive training for those called to hold this work with respect, integrity, and grace.",
-  "body": [
-    "Laura Kazimer established Divine Emergence, LLC after years of hands-on experience. She has trained dozens of facilitators as a Master Trainer with Awakened Breath, conducted hundreds of private sessions, and led sold-out workshops and international retreats.",
-    "The training emphasizes trauma-informed breathwork supported by modern science. Intentional breathing has been shown to help process stress and emotion, trauma, anxiety, depression, addictive patterns, OCD, and so much more. It is for corporate professionals seeking meaningful careers, empaths called to service, therapists, yoga instructors, coaches, and anyone drawn to teach breathwork transformation."
-  ],
-  "curriculum": {
-    "title": "The 8-week curriculum",
-    "steps": [
-      {
-        "label": "Week 1",
-        "title": "Introduction to Breathwork",
-        "text": "History and techniques across cultures, including Pranayama, Wim Hof, and Holotropic breathing."
-      },
-      {
-        "label": "Week 2",
-        "title": "The Autonomic Nervous System",
-        "text": "Somatics and the mind-body connection."
-      },
-      {
-        "label": "Week 3",
-        "title": "Altered States of Consciousness",
-        "text": "Deep breathwork journeys and circular breathing."
-      },
-      {
-        "label": "Week 4",
-        "title": "The Art of Facilitation",
-        "text": "Creating safe spaces, active listening, and energetic processing."
-      },
-      {
-        "label": "Week 5",
-        "title": "Trauma Awareness",
-        "text": "Contraindications, integration, and client assessment."
-      },
-      {
-        "label": "Week 6",
-        "title": "Growing Your Practice",
-        "text": "Business structuring, branding, and marketing strategies."
-      },
-      {
-        "label": "Week 7",
-        "title": "Creating Your Offerings",
-        "text": "Designing workshops and 1:1 sessions using Canva, Eventbrite, AI tools, and CRM systems."
-      },
-      {
-        "label": "Week 8",
-        "title": "Integration and Certification",
-        "text": "Final assessment, workshop launch, and certification ceremony."
-      }
-    ]
-  },
   "values": {
     "title": "Core values",
     "features": [
@@ -71,6 +17,12 @@
       }
     ]
   },
+  "body": [
+    "Laura Kazimer established Divine Emergence, LLC after years of hands-on experience. She has trained dozens of facilitators as a Master Trainer with Awakened Breath, conducted hundreds of private sessions, and led sold-out workshops and international retreats.",
+    "The training emphasizes trauma-informed breathwork supported by modern science. Intentional breathing has been shown to help process stress and emotion, trauma, anxiety, depression, addictive patterns, OCD, and so much more. It is for corporate professionals seeking meaningful careers, empaths called to service, therapists, yoga instructors, coaches, and anyone drawn to teach breathwork transformation."
+  ],
+  "ctaLabel": "Apply now",
+  "eyebrow": "Certification",
   "includes": {
     "title": "What is included",
     "items": [
@@ -84,6 +36,10 @@
       "Ongoing Voxer and WhatsApp community support"
     ]
   },
+  "slug": "training",
+  "intro": "Learn how to safely guide others through trauma-informed breathwork, integration, and transformation. This is an 8-week immersive training for those called to hold this work with respect, integrity, and grace.",
+  "imageAlt": "A breathwork facilitation workshop",
+  "headline": "Become a certified breathwork practitioner",
   "testimonials": [
     {
       "name": "Juno",
@@ -98,6 +54,50 @@
       "quote": "Laura is an incredibly kind, intuitive leader who created safety enabling deep connection."
     }
   ],
-  "imageAlt": "A breathwork facilitation workshop",
-  "ctaLabel": "Apply now"
+  "title": "Breathwork Training Program",
+  "curriculum": {
+    "title": "The 8-week curriculum",
+    "steps": [
+      {
+        "label": "Week 1",
+        "title": "Introduction to Breathwork",
+        "text": "Explore the history, evolution, and different realms of breathwork, from ancient Pranayama to functional and modern dynamic practices. Learn foundational breathing mechanics, calming  techniques, and how to guide breathwork for nervous system regulation."
+      },
+      {
+        "label": "Week 2",
+        "title": "The Nervous System & Functional Breathing",
+        "text": "Dive into the autonomic nervous system, breathing physiology, and the relationship between breath, stress, and regulation. Learn functional breathing principles and how to assess and guide the breath for greater regulation, resilience, and overall health and wellness."
+      },
+      {
+        "label": "Week 3",
+        "title": "Altered States Breathwork",
+        "text": "Explore conscious circular breathing, and the use of the breath to access altered states of consciousness. Understand what happens physiologically during these experiences, how to prepare for a journey, and experience circular breathwork firsthand."
+      },
+      {
+        "label": "Week 4",
+        "title": "Trauma Awareness, Safety & Contraindications",
+        "text": "Understand how past experiences can influence the nervous system, behavior, and a person’s response during breathwork. Learn to recognize potential trauma responses while prioritizing safety, consent, autonomy, appropriate pacing, contraindications, and scope of practice."
+      },
+      {
+        "label": "Week 5",
+        "title": "The Art of Facilitation",
+        "text": "Learn the art of holding space and intentionally curating a breathwork experience from beginning to end. Develop the presence, awareness, and confidence to guide others while using music, verbal guidance, energy, environment, and intentional pacing to create a powerful and supportive experience."
+      },
+      {
+        "label": "Week 6",
+        "title": "Building & Growing Your Practice",
+        "text": "Turn your skills into a professional breathwork practice. Explore business structure, branding, positioning, pricing, marketing, client attraction, and the foundations needed to begin building a sustainable practice around your work."
+      },
+      {
+        "label": "Week 7",
+        "title": "Creating & Launching Your Offerings",
+        "text": "Learn how to turn your knowledge into experiences people can actually participate in. Design workshops, group breathwork experiences, and 1:1 sessions while learning how to use tools such as Canva, Eventbrite, AI, booking systems, and CRM platforms to organize, market, and launch your offerings."
+      },
+      {
+        "label": "Week 8",
+        "title": "Integration, Practicum & Certification",
+        "text": "Bring everything together through practical application. Demonstrate your understanding of breathwork, safety, facilitation, and session design through your final assessment and practicum. Complete the training by preparing to launch your own offering and celebrating your certification as a breathwork practitioner."
+      }
+    ]
+  }
 }
