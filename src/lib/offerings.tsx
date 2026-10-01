@@ -233,18 +233,22 @@ const contentInOrder = [
 // Merge editable JSON copy with the code-only meta into the final Offering list.
 export const offerings: Offering[] = contentInOrder.map((content) => {
   const m = meta[content.slug];
+  const c = content as unknown as Partial<Offering>;
   const merged = {
     ...(content as unknown as Offering),
     Icon: m.Icon,
-    image: m.image,
-    gallery: m.gallery,
+    // Photos prefer the editable JSON (CMS) and fall back to the code meta.
+    // Uploading a new photo in the CMS writes a /uploads/... path into the JSON.
+    image: c.image || m.image,
+    gallery: c.gallery && c.gallery.length > 0 ? c.gallery : m.gallery,
+    faqImage: c.faqImage || m.faqImage,
+    // Videos stay code-managed (they need transcoding; not CMS-uploadable).
     spaceVideo: m.spaceVideo,
     spaceVideoPoster: m.spaceVideoPoster,
     practiceVideo: m.practiceVideo,
     practiceVideoPoster: m.practiceVideoPoster,
     tourVideo: m.tourVideo,
     tourVideoPoster: m.tourVideoPoster,
-    faqImage: m.faqImage,
     ctaHref: m.ctaHref,
     embedEbook: m.embedEbook,
     hideFromGrid: m.hideFromGrid,
