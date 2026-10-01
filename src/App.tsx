@@ -23,8 +23,10 @@ const App = () => (
         <Routes>
           <Route path="/" element={<Index />} />
           <Route path="/offerings/:slug" element={<OfferingDetail />} />
+          <Route path="/reverence-retreat" element={<OfferingDetail slug="reverence-retreat" />} />
+          <Route path="/reverenceretreat" element={<Navigate to="/reverence-retreat" replace />} />
+          <Route path="/retreat" element={<Navigate to="/reverence-retreat" replace />} />
           <Route path="/womensretreat" element={<OfferingDetail slug="womens-retreat" />} />
-          <Route path="/retreat" element={<Navigate to="/womensretreat" replace />} />
           <Route path="/womansretreat" element={<Navigate to="/womensretreat" replace />} />
           <Route path="/events" element={<EventsPage />} />
           <Route path="/ebook" element={<Ebook />} />

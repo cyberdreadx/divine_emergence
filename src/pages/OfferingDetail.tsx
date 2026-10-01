@@ -22,6 +22,7 @@ const OfferingDetail = ({ slug: slugOverride }: { slug?: string }) => {
 
   const {
     title, Icon, eyebrow, headline, intro, body, image, imageAlt, gallery,
+    spaceVideo, spaceVideoPoster, practiceVideo, practiceVideoPoster, tourVideo, tourVideoPoster,
     approach, benefits, sections, curriculum, values, includes, pricing,
     testimonials, faq, ctaLabel, ctaHref, embedEbook, secondaryCta,
   } = offering;
@@ -62,26 +63,72 @@ const OfferingDetail = ({ slug: slugOverride }: { slug?: string }) => {
           </div>
 
           <div className="space-y-16 md:space-y-24">
-            {/* Lead body */}
-            {body && body.length > 0 && (
-              <div className="max-w-3xl space-y-6">
-                {body.map((para, i) => (
-                  <p key={i} className="text-muted-foreground leading-relaxed">{para}</p>
-                ))}
+            {/* Lead body, paired with the ambient space video when present */}
+            {body && body.length > 0 && spaceVideo ? (
+              <div className="grid md:grid-cols-2 gap-10 md:gap-14 items-center">
+                <div className="space-y-6">
+                  {body.map((para, i) => (
+                    <p key={i} className="text-muted-foreground leading-relaxed">{para}</p>
+                  ))}
+                </div>
+                <div className="w-full max-w-[360px] mx-auto">
+                  <span className="text-gold font-sans text-xs uppercase tracking-[0.3em] block mb-4 text-center">The space</span>
+                  <div className="aspect-[9/16] rounded-3xl overflow-hidden border border-white/10 shadow-2xl shadow-black/40 bg-black">
+                    <video
+                      className="w-full h-full object-cover"
+                      autoPlay
+                      muted
+                      loop
+                      playsInline
+                      preload="metadata"
+                      poster={spaceVideoPoster}
+                    >
+                      <source src={spaceVideo} type="video/mp4" />
+                    </video>
+                  </div>
+                </div>
               </div>
+            ) : (
+              body && body.length > 0 && (
+                <div className="max-w-3xl space-y-6">
+                  {body.map((para, i) => (
+                    <p key={i} className="text-muted-foreground leading-relaxed">{para}</p>
+                  ))}
+                </div>
+              )
             )}
 
             {/* Approach / feature cards */}
             {approach && (
               <div>
                 <h2 className="font-serif text-3xl md:text-4xl text-foreground mb-8">{approach.title}</h2>
-                <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-5">
+                <div className={`grid gap-5 ${approach.features.length % 2 === 0 ? "sm:grid-cols-2" : "sm:grid-cols-2 lg:grid-cols-3"}`}>
                   {approach.features.map((f, i) => (
                     <div key={i} className="rounded-2xl border border-white/10 bg-card/40 backdrop-blur-sm p-7">
                       <h3 className="font-serif text-xl text-foreground mb-3">{f.title}</h3>
                       <p className="text-muted-foreground text-sm leading-relaxed">{f.text}</p>
                     </div>
                   ))}
+                </div>
+              </div>
+            )}
+
+            {/* Practice video (full-width landscape, muted loop) */}
+            {practiceVideo && (
+              <div>
+                <Eyebrow>In session</Eyebrow>
+                <div className="aspect-video rounded-3xl overflow-hidden border border-white/10 shadow-2xl shadow-black/40 bg-black">
+                  <video
+                    className="w-full h-full object-cover"
+                    autoPlay
+                    muted
+                    loop
+                    playsInline
+                    preload="none"
+                    poster={practiceVideoPoster}
+                  >
+                    <source src={practiceVideo} type="video/mp4" />
+                  </video>
                 </div>
               </div>
             )}
@@ -193,7 +240,7 @@ const OfferingDetail = ({ slug: slugOverride }: { slug?: string }) => {
             {pricing && (
               <div>
                 <h2 className="font-serif text-3xl md:text-4xl text-foreground mb-8">{pricing.title}</h2>
-                <div className="grid sm:grid-cols-2 gap-5 max-w-3xl">
+                <div className={`grid gap-5 ${pricing.tiers.length === 3 ? "sm:grid-cols-3 max-w-5xl" : "sm:grid-cols-2 max-w-3xl"}`}>
                   {pricing.tiers.map((tier, i) => (
                     <div key={i} className="rounded-2xl border border-gold/20 bg-card/40 backdrop-blur-sm p-8 text-center">
                       <div className="text-muted-foreground text-xs uppercase tracking-[0.2em] mb-3">{tier.name}</div>
@@ -244,10 +291,41 @@ const OfferingDetail = ({ slug: slugOverride }: { slug?: string }) => {
               </div>
             )}
 
+            {/* Property tour video (click to play) */}
+            {tourVideo && (
+              <div className="grid md:grid-cols-2 gap-10 md:gap-14 items-center">
+                <div>
+                  <Eyebrow>Take a tour</Eyebrow>
+                  <h2 className="font-serif text-3xl md:text-4xl text-foreground mb-6">Step inside the property</h2>
+                  <p className="text-muted-foreground leading-relaxed mb-4">
+                    Walk through the jungle villa, the open-air gathering spaces, and the
+                    candlelit cenote where much of the retreat unfolds. Press play for the
+                    full tour.
+                  </p>
+                  <p className="text-muted-foreground/60 text-xs">
+                    Property tour courtesy of our Tulum retreat venue.
+                  </p>
+                </div>
+                <div className="w-full max-w-[360px] mx-auto">
+                  <div className="aspect-[9/16] rounded-3xl overflow-hidden border border-white/10 shadow-2xl shadow-black/40 bg-black">
+                    <video
+                      className="w-full h-full object-cover"
+                      controls
+                      playsInline
+                      preload="none"
+                      poster={tourVideoPoster}
+                    >
+                      <source src={tourVideo} type="video/mp4" />
+                    </video>
+                  </div>
+                </div>
+              </div>
+            )}
+
             {/* FAQ */}
             {faq && faq.length > 0 && (
-              <div className="max-w-3xl">
-                <h2 className="font-serif text-3xl md:text-4xl text-foreground mb-8">Frequently asked</h2>
+              <div className="grid md:grid-cols-[0.75fr_1.25fr] gap-10 md:gap-14 items-start">
+                <h2 className="font-serif text-3xl md:text-4xl text-foreground">Frequently asked</h2>
                 <div className="divide-y divide-white/10 border-y border-white/10">
                   {faq.map((item, i) => (
                     <details key={i} className="group py-5">

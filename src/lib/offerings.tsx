@@ -17,9 +17,10 @@ import {
   Sparkles,
   Users,
   CalendarHeart,
+  Tent,
   type LucideIcon,
 } from "lucide-react";
-import { BOOKING_URL, TRAINING_APPLY_URL, BUFO_INTAKE_URL } from "@/lib/site";
+import { BOOKING_URL, TRAINING_APPLY_URL, BUFO_INTAKE_URL, REVERENCE_BOOKING_URL } from "@/lib/site";
 
 import waterfallImg from "@/assets/waterfall.jpg";
 import circleImg from "@/assets/de-circle.webp";
@@ -28,6 +29,7 @@ import breathworkContent from "@/content/offerings/breathwork.json";
 import bufoContent from "@/content/offerings/bufo-alvarius.json";
 import kamboContent from "@/content/offerings/kambo.json";
 import womensRetreatContent from "@/content/offerings/womens-retreat.json";
+import reverenceRetreatContent from "@/content/offerings/reverence-retreat.json";
 import workshopsEventsContent from "@/content/offerings/workshops-events.json";
 import coachingContent from "@/content/offerings/coaching.json";
 import trainingContent from "@/content/offerings/training.json";
@@ -53,6 +55,12 @@ export type Offering = {
   image: string;
   imageAlt: string;
   gallery?: string[];
+  spaceVideo?: string; // short, muted, looping ambient clip ("The space")
+  spaceVideoPoster?: string;
+  practiceVideo?: string; // full-width landscape loop of the practice in session
+  practiceVideoPoster?: string;
+  tourVideo?: string; // longer click-to-play property tour ("Take a tour")
+  tourVideoPoster?: string;
   ctaLabel: string;
   ctaHref: string;
   body?: string[];
@@ -77,6 +85,12 @@ type OfferingMeta = {
   Icon: LucideIcon;
   image: string;
   gallery?: string[];
+  spaceVideo?: string;
+  spaceVideoPoster?: string;
+  practiceVideo?: string;
+  practiceVideoPoster?: string;
+  tourVideo?: string;
+  tourVideoPoster?: string;
   ctaHref: string;
   embedEbook?: boolean;
   hideFromGrid?: boolean;
@@ -101,6 +115,28 @@ const meta: Record<string, OfferingMeta> = {
     Icon: Leaf,
     image: waterfallImg,
     ctaHref: BOOKING_URL,
+  },
+  "reverence-retreat": {
+    Icon: Tent,
+    image: "/offerings/reverence-retreat-hero.webp",
+    gallery: [
+      "/offerings/reverence-retreat-1.webp",
+      "/offerings/reverence-retreat-2.webp",
+      "/offerings/reverence-retreat-3.webp",
+      "/offerings/reverence-retreat-4.webp",
+      "/offerings/reverence-retreat-5.webp",
+      "/offerings/reverence-retreat-6.webp",
+      "/offerings/reverence-retreat-7.webp",
+      "/offerings/reverence-retreat-8.webp",
+      "/offerings/reverence-retreat-9.webp",
+    ],
+    spaceVideo: "/offerings/reverence-retreat-space.mp4",
+    spaceVideoPoster: "/offerings/reverence-retreat-space-poster.webp",
+    practiceVideo: "/offerings/reverence-retreat-practice.mp4",
+    practiceVideoPoster: "/offerings/reverence-retreat-practice-poster.webp",
+    tourVideo: "/offerings/reverence-retreat-tour.mp4",
+    tourVideoPoster: "/offerings/reverence-retreat-tour-poster.webp",
+    ctaHref: REVERENCE_BOOKING_URL,
   },
   "womens-retreat": {
     Icon: Users,
@@ -183,6 +219,7 @@ const contentInOrder = [
   breathworkContent,
   bufoContent,
   kamboContent,
+  reverenceRetreatContent,
   womensRetreatContent,
   workshopsEventsContent,
   coachingContent,
@@ -198,6 +235,12 @@ export const offerings: Offering[] = contentInOrder.map((content) => {
     Icon: m.Icon,
     image: m.image,
     gallery: m.gallery,
+    spaceVideo: m.spaceVideo,
+    spaceVideoPoster: m.spaceVideoPoster,
+    practiceVideo: m.practiceVideo,
+    practiceVideoPoster: m.practiceVideoPoster,
+    tourVideo: m.tourVideo,
+    tourVideoPoster: m.tourVideoPoster,
     ctaHref: m.ctaHref,
     embedEbook: m.embedEbook,
     hideFromGrid: m.hideFromGrid,

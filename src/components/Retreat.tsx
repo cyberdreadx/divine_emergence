@@ -2,7 +2,6 @@ import { ArrowRight, MapPin } from "lucide-react";
 import { Link } from "react-router-dom";
 import content from "@/content/retreat.json";
 import { renderRichText } from "@/lib/richText";
-import connection from "@/assets/de-connection.webp";
 
 const Retreat = () => {
   return (
@@ -11,8 +10,8 @@ const Retreat = () => {
         <div className="relative overflow-hidden rounded-3xl ring-1 ring-white/10 shadow-2xl grid md:grid-cols-2">
           <div className="relative min-h-[20rem]">
             <img
-              src={connection}
-              alt="Women connecting at a Divine Emergence retreat"
+              src="/offerings/reverence-retreat-1.webp"
+              alt="The Reverence Retreat villa in the jungle outside Tulum, Mexico"
               className="absolute inset-0 w-full h-full object-cover"
               loading="lazy"
             />
@@ -31,7 +30,7 @@ const Retreat = () => {
               {renderRichText(content.body)}
             </p>
             <Link
-              to="/womensretreat"
+              to="/reverence-retreat"
               className="group inline-flex items-center gap-2.5 self-start bg-gradient-to-r from-gold to-blush text-blush-foreground px-7 py-3.5 rounded-full font-medium tracking-wide shadow-lg shadow-gold/10 hover:brightness-110 transition"
             >
               {content.ctaLabel}
