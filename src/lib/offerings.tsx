@@ -61,6 +61,7 @@ export type Offering = {
   practiceVideoPoster?: string;
   tourVideo?: string; // longer click-to-play property tour ("Take a tour")
   tourVideoPoster?: string;
+  faqImage?: string; // optional portrait photo beside the FAQ
   ctaLabel: string;
   ctaHref: string;
   body?: string[];
@@ -91,6 +92,7 @@ type OfferingMeta = {
   practiceVideoPoster?: string;
   tourVideo?: string;
   tourVideoPoster?: string;
+  faqImage?: string;
   ctaHref: string;
   embedEbook?: boolean;
   hideFromGrid?: boolean;
@@ -136,6 +138,7 @@ const meta: Record<string, OfferingMeta> = {
     practiceVideoPoster: "/offerings/reverence-retreat-practice-poster.webp",
     tourVideo: "/offerings/reverence-retreat-tour.mp4",
     tourVideoPoster: "/offerings/reverence-retreat-tour-poster.webp",
+    faqImage: "/offerings/reverence-retreat-faq.webp",
     ctaHref: REVERENCE_BOOKING_URL,
   },
   "womens-retreat": {
@@ -241,6 +244,7 @@ export const offerings: Offering[] = contentInOrder.map((content) => {
     practiceVideoPoster: m.practiceVideoPoster,
     tourVideo: m.tourVideo,
     tourVideoPoster: m.tourVideoPoster,
+    faqImage: m.faqImage,
     ctaHref: m.ctaHref,
     embedEbook: m.embedEbook,
     hideFromGrid: m.hideFromGrid,
