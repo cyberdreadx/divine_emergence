@@ -22,7 +22,7 @@ const OfferingDetail = ({ slug: slugOverride }: { slug?: string }) => {
 
   const {
     title, Icon, eyebrow, headline, intro, body, image, imageAlt, gallery,
-    spaceVideo, spaceVideoPoster, practiceVideo, practiceVideoPoster, tourVideo, tourVideoPoster,
+    spaceVideo, spaceVideoPoster, practiceVideo, practiceVideoPoster, tourVideo, tourVideoPoster, faqImage,
     approach, benefits, sections, curriculum, values, includes, pricing,
     testimonials, faq, ctaLabel, ctaHref, embedEbook, secondaryCta,
   } = offering;
@@ -325,7 +325,14 @@ const OfferingDetail = ({ slug: slugOverride }: { slug?: string }) => {
             {/* FAQ */}
             {faq && faq.length > 0 && (
               <div className="grid md:grid-cols-[0.75fr_1.25fr] gap-10 md:gap-14 items-start">
-                <h2 className="font-serif text-3xl md:text-4xl text-foreground">Frequently asked</h2>
+                <div>
+                  <h2 className="font-serif text-3xl md:text-4xl text-foreground">Frequently asked</h2>
+                  {faqImage && (
+                    <div className="mt-8 rounded-3xl overflow-hidden border border-white/10 shadow-2xl shadow-black/40">
+                      <img src={faqImage} alt={`${title} host`} className="w-full h-full object-cover" loading="lazy" />
+                    </div>
+                  )}
+                </div>
                 <div className="divide-y divide-white/10 border-y border-white/10">
                   {faq.map((item, i) => (
                     <details key={i} className="group py-5">
