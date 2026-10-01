@@ -263,6 +263,7 @@ collections:
           - { label: "Card description (homepage)", name: cardDesc, widget: text, required: false }
           - { label: "Headline", name: headline, widget: text, required: false }
           - { label: "Intro paragraph", name: intro, widget: text, required: false, hint: "Location, dates, and the opening hook." }
+          - { label: "Hero photo (top of the page)", name: image, widget: image, required: false, hint: "The large photo next to the title. Upload a new one to replace it." }
           - { label: "Body paragraphs", name: body, widget: list, required: false }
           - label: "At a glance block"
             name: approach
@@ -306,6 +307,13 @@ collections:
             fields:
               - { label: "Question", name: q, widget: string, required: false }
               - { label: "Answer", name: a, widget: text, required: false }
+          - { label: "Host photo (beside the FAQ)", name: faqImage, widget: image, required: false, hint: "The portrait photo shown next to Frequently Asked." }
+          - label: "Photo gallery (Moments)"
+            name: gallery
+            widget: list
+            required: false
+            hint: "The grid of photos lower on the page. Add, remove, or reorder. Each item is one photo."
+            field: { label: "Photo", name: image, widget: image }
           - { label: "Image description (for accessibility)", name: imageAlt, widget: string, required: false }
           - { label: "Button label", name: ctaLabel, widget: string, required: false }
 

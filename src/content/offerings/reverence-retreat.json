@@ -101,6 +101,19 @@
       "a": "The remaining retreat balance must be paid in full no later than one week before the retreat begins."
     }
   ],
+  "image": "/offerings/reverence-retreat-hero.webp",
+  "gallery": [
+    "/offerings/reverence-retreat-1.webp",
+    "/offerings/reverence-retreat-2.webp",
+    "/offerings/reverence-retreat-3.webp",
+    "/offerings/reverence-retreat-4.webp",
+    "/offerings/reverence-retreat-5.webp",
+    "/offerings/reverence-retreat-6.webp",
+    "/offerings/reverence-retreat-7.webp",
+    "/offerings/reverence-retreat-8.webp",
+    "/offerings/reverence-retreat-9.webp"
+  ],
+  "faqImage": "/offerings/reverence-retreat-faq.webp",
   "imageAlt": "The Reverence Retreat property in the jungle outside Tulum, Mexico",
   "ctaLabel": "Schedule Your Free Clarity Call"
 }
