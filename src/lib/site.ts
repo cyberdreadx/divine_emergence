@@ -21,6 +21,11 @@ export const TRAINING_APPLY_URL =
 export const BUFO_INTAKE_URL =
   "https://grow.divineemergence.org/widget/bookings/bufointake";
 
+// GoHighLevel booking widget for the Reverence Retreat free clarity call.
+// Note: the "reverance" spelling is Laura's actual widget slug, keep it as-is.
+export const REVERENCE_BOOKING_URL =
+  "https://grow.divineemergence.org/widget/bookings/reverance-retreat-tulum-mexico";
+
 // Email capture popup ("Welcome to the Divine Emergence Community").
 // GoHighLevel inbound-webhook endpoint. The popup posts the email here as a
 // form-urlencoded `email` field; a GHL workflow maps it to Create/Update
@@ -37,7 +42,7 @@ export const LINKS = {
   kambo: "https://divineemergence.org/kambo",
   coaching: "https://divineemergence.org/coaching",
   training: "https://divineemergence.org/training",
-  retreat: "https://www.divineemergence.org/womensretreat",
+  retreat: "https://divineemergence.org/reverence-retreat",
   regulation: "https://divineemergence.org/regulation-is-power",
   booking: BOOKING_URL,
   // Social - fill in when handles are confirmed.

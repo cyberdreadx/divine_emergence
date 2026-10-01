@@ -20,6 +20,10 @@ dist-ssr
 # Claude Code
 .claude/
 
+# Source media drops (large zips of Laura's photos/videos, not for the repo).
+# Selected, optimized images live in public/offerings/ instead.
+media/
+
 # Editor directories and files
 .vscode/*
 !.vscode/extensions.json

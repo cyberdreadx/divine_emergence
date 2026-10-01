@@ -252,6 +252,63 @@ collections:
           - { label: "Image description (for accessibility)", name: imageAlt, widget: string, required: false }
           - { label: "Button label", name: ctaLabel, widget: string, required: false }
 
+      - name: reverence_retreat
+        label: "Reverence Retreat"
+        file: "src/content/offerings/reverence-retreat.json"
+        fields:
+          - { label: "Slug (do not change)", name: slug, widget: hidden }
+          - { label: "Title", name: title, widget: string, required: false }
+          - { label: "Card title (homepage)", name: cardTitle, widget: string, required: false }
+          - { label: "Small label", name: eyebrow, widget: string, required: false }
+          - { label: "Card description (homepage)", name: cardDesc, widget: text, required: false }
+          - { label: "Headline", name: headline, widget: text, required: false }
+          - { label: "Intro paragraph", name: intro, widget: text, required: false, hint: "Location, dates, and the opening hook." }
+          - { label: "Body paragraphs", name: body, widget: list, required: false }
+          - label: "At a glance block"
+            name: approach
+            widget: object
+            required: false
+            fields:
+              - { label: "Title", name: title, widget: string, required: false }
+              - label: "Items"
+                name: features
+                widget: list
+                required: false
+                fields:
+                  - { label: "Title", name: title, widget: string, required: false }
+                  - { label: "Text", name: text, widget: text, required: false }
+          - label: "What's included block"
+            name: includes
+            widget: object
+            required: false
+            fields:
+              - { label: "Title", name: title, widget: string, required: false }
+              - { label: "Bullet points", name: items, widget: list, required: false }
+          - label: "Pricing block"
+            name: pricing
+            widget: object
+            required: false
+            fields:
+              - { label: "Title", name: title, widget: string, required: false }
+              - label: "Price tiers"
+                name: tiers
+                widget: list
+                required: false
+                fields:
+                  - { label: "Name", name: name, widget: string, required: false }
+                  - { label: "Price", name: price, widget: string, required: false }
+                  - { label: "Note", name: note, widget: text, required: false }
+              - { label: "Pricing note", name: note, widget: text, required: false, hint: "Early bird, deposit, and balance terms shown under the prices." }
+          - label: "FAQ"
+            name: faq
+            widget: list
+            required: false
+            fields:
+              - { label: "Question", name: q, widget: string, required: false }
+              - { label: "Answer", name: a, widget: text, required: false }
+          - { label: "Image description (for accessibility)", name: imageAlt, widget: string, required: false }
+          - { label: "Button label", name: ctaLabel, widget: string, required: false }
+
       # Women's Retreat retired (Laura is no longer running it). The content file
       # src/content/offerings/womens-retreat.json is kept; to bring the page back,
       # restore this editor block and flip `disabled` in src/lib/offerings.tsx.
