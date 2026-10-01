@@ -1,55 +1,12 @@
 {
-  "slug": "reverence-retreat",
-  "title": "Reverence Retreat",
-  "cardTitle": "Reverence Retreat",
-  "eyebrow": "Immersive Retreat",
-  "cardDesc": "Five days in the jungle outside Tulum: a full transformative immersion in ceremony, breath, and integration. Not a vacation, a reverent container for those seeking something more.",
-  "headline": "Reverence Retreat",
-  "intro": "Tulum, Mexico. April 1 to 5. Five days, four nights. The Reverence Retreat is for those who are looking for something more in this space. This is a container built around reverence: respect for ourselves, respect for the land, and respect for the medicine we will be working with.",
+  "cardDesc": "Five days in the jungle outside Tulum: a full transformative immersion in medicine ceremony, breath, and integration. Not a vacation, a reverent container for those seeking something more for their lives. ",
   "body": [
-    "This is not a little yoga retreat or a simple vacation. This is a full transformative immersion.",
-    "Based on my years of experience working in this space, I have intentionally curated these retreat containers so participants can step away from the distractions of everyday life and fully immerse themselves in the experience, the medicine, and the integration process.",
-    "Participants receive support before arriving, experience the retreat alongside trained practitioners, and have the opportunity to integrate on-site throughout the experience. Preparation and integration support are included as part of the retreat experience."
+    "This is more than a retreat or vacation. It is five intentional days to disconnect from everyday distractions and fully focus on yourself",
+    "the medicine",
+    "and your experience."
   ],
-  "approach": {
-    "title": "At a glance",
-    "features": [
-      {
-        "title": "Location",
-        "text": "A private retreat property in the jungle outside of Tulum, Mexico, with an on-site private cenote. Our group has the space entirely to ourselves for the duration of the experience."
-      },
-      {
-        "title": "Dates and arrival",
-        "text": "April 1 to 5. Five days and four nights. Plan to arrive before 2pm on April 1st."
-      },
-      {
-        "title": "The medicine",
-        "text": "One Kambo ceremony and three Bufo ceremonies, held with reverence alongside trained practitioners, woven together with daily breathwork and daily integration."
-      },
-      {
-        "title": "Who it is for",
-        "text": "Co-ed and open to both men and women over 18 who are ready for a full transformative immersion. Every participant completes a clarity call and screening process prior to acceptance."
-      }
-    ]
-  },
-  "includes": {
-    "title": "What's included",
-    "items": [
-      "Five days and four nights of accommodations",
-      "One Kambo ceremony",
-      "Three Bufo ceremonies",
-      "Daily breathwork",
-      "Daily integration",
-      "Other transformative workshops",
-      "Temazcal",
-      "Sound healing",
-      "Access to an on-site private cenote",
-      "Handcrafted, organic meals prepared by our private on-site chef",
-      "Preparation support before the retreat",
-      "Integration support throughout the retreat experience",
-      "One surprise experience"
-    ]
-  },
+  "ctaLabel": "Schedule Your Free Clarity Call",
+  "faqImage": "/offerings/reverence-retreat-faq.webp",
   "pricing": {
     "title": "Retreat pricing",
     "tiers": [
@@ -71,6 +28,62 @@
     ],
     "note": "Early bird pricing is available during the month of October only. Reserve your spot in October to receive $500 off the regular price. An $800 non-refundable deposit reserves your spot and is applied to your overall retreat cost. The remaining balance is due in full no later than one week before the retreat begins."
   },
+  "cardTitle": "Reverence Retreat",
+  "approach": {
+    "title": "At a glance",
+    "features": [
+      {
+        "title": "Location",
+        "text": "A private retreat property in the jungle outside of Tulum, Mexico, with an on-site private cenote, fire pit, and private chef. Our group has the space entirely to ourselves for the duration of the experience."
+      },
+      {
+        "title": "Dates and arrival",
+        "text": "April 1 to 5. Five days and four nights. Plan to arrive before 2pm on April 1st."
+      },
+      {
+        "title": "The medicine",
+        "text": "One Kambo ceremony and three Bufo ceremonies, held with reverence alongside trained practitioners, paired with daily breathwork, workshops, and daily integration."
+      },
+      {
+        "title": "Who it is for",
+        "text": "Co-ed and open to both men and women over 18 who are ready for a full transformative immersion. Every participant completes a clarity call and screening process prior to acceptance."
+      }
+    ]
+  },
+  "eyebrow": "Immersive Retreat",
+  "includes": {
+    "title": "What's included",
+    "items": [
+      "Five days and four nights of accommodations",
+      "One Kambo ceremony",
+      "Three Bufo ceremonies",
+      "Daily breathwork",
+      "Daily integration",
+      "Other transformative workshops",
+      "Temazcal",
+      "Sound healing",
+      "Access to an on-site private cenote",
+      "Handcrafted, organic meals prepared by our private on-site chef",
+      "Preparation support before the retreat",
+      "Integration support throughout the retreat experience",
+      "One surprise experience"
+    ]
+  },
+  "slug": "reverence-retreat",
+  "intro": "The Reverence Retreat is for those who know they are ready for something deeper.\n\nThis is an intentional container built around reverence: respect for ourselves, respect for the land that will hold us, and deep respect for the medicine we will have the opportunity to work with.\n\nFor five days, you will have the space to disconnect from the distractions and responsibilities of everyday life and give your full attention to yourself. Through breathwork, medicine, ceremony, nature, and integration, you will be invited to slow down, listen, and take care of yourself in ways that can be difficult to do when life is constantly demanding your attention.\n\nThis is time intentionally set aside to meet yourself, take care of yourself, and give yourself the space you deserve. ",
+  "imageAlt": "The Reverence Retreat property in the jungle outside Tulum, Mexico",
+  "gallery": [
+    "/offerings/reverence-retreat-1.webp",
+    "/offerings/reverence-retreat-2.webp",
+    "/offerings/reverence-retreat-3.webp",
+    "/offerings/reverence-retreat-4.webp",
+    "/offerings/reverence-retreat-5.webp",
+    "/offerings/reverence-retreat-6.webp",
+    "/offerings/reverence-retreat-7.webp",
+    "/offerings/reverence-retreat-8.webp",
+    "/offerings/reverence-retreat-9.webp"
+  ],
+  "headline": "Reverence Retreat\nTulum, Mexico | April 1–5 ",
   "faq": [
     {
       "q": "Is this retreat co-ed?",
@@ -101,19 +114,6 @@
       "a": "The remaining retreat balance must be paid in full no later than one week before the retreat begins."
     }
   ],
-  "image": "/offerings/reverence-retreat-hero.webp",
-  "gallery": [
-    "/offerings/reverence-retreat-1.webp",
-    "/offerings/reverence-retreat-2.webp",
-    "/offerings/reverence-retreat-3.webp",
-    "/offerings/reverence-retreat-4.webp",
-    "/offerings/reverence-retreat-5.webp",
-    "/offerings/reverence-retreat-6.webp",
-    "/offerings/reverence-retreat-7.webp",
-    "/offerings/reverence-retreat-8.webp",
-    "/offerings/reverence-retreat-9.webp"
-  ],
-  "faqImage": "/offerings/reverence-retreat-faq.webp",
-  "imageAlt": "The Reverence Retreat property in the jungle outside Tulum, Mexico",
-  "ctaLabel": "Schedule Your Free Clarity Call"
+  "title": "Reverence Retreat",
+  "image": "/uploads/e33e435d-c528-4b2e-8ddd-e524f491fe05_1_105_c.jpeg"
 }
