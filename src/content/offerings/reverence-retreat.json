@@ -10,21 +10,21 @@
     "tiers": [
       {
         "name": "Private King Suite",
-        "price": "$5,000",
-        "note": "Early bird. Regular $5,500. Only 1 available."
+        "price": "$5,000 ",
+        "note": "Early bird.\nRegular $5,500. Only 1 available."
       },
       {
         "name": "Private Shared Room, 2 Beds",
         "price": "$4,250",
-        "note": "Per person. Early bird. Regular $4,750."
+        "note": "Per person. Early bird. \nRegular $4,750."
       },
       {
         "name": "Shared Community Room",
         "price": "$3,750",
-        "note": "Per person. Early bird. Regular $4,250."
+        "note": "Per person. Early bird. \nRegular $4,250."
       }
     ],
-    "note": "Early bird pricing is available during the month of October only. Reserve your spot in October to receive $500 off the regular price. An $800 non-refundable deposit reserves your spot and is applied to your overall retreat cost. The remaining balance is due in full no later than one week before the retreat begins."
+    "note": "Early bird pricing is available during the month of October only. Reserve your spot in October to receive $500 off the regular price. An $800 non-refundable deposit reserves your spot and is applied to your overall retreat cost. Payment plans are available and the remaining balance is due in full no later than one week before the retreat begins."
   },
   "cardTitle": "Reverence Retreat",
   "approach": {
@@ -36,15 +36,15 @@
       },
       {
         "title": "Dates and arrival",
-        "text": "April 1 to 5. Five days and four nights. Plan to arrive before 2pm on April 1st."
+        "text": "April 1 to 5. Five days and four nights. Plan to arrive before 2pm at Tulum Airport on April 1st."
       },
       {
         "title": "The medicine",
-        "text": "One Kambo ceremony and three Bufo ceremonies, held with reverence alongside trained practitioners, paired with daily breathwork, workshops, and daily integration."
+        "text": "One Kambo ceremony and three Bufo ceremonies, held with reverence alongside trained practitioners, paired with daily breathwork, workshops, and daily integration. Bufo is from Mexico so the connection to the medicine is much different here. "
       },
       {
         "title": "Who it is for",
-        "text": "Co-ed and open to both men and women over 18 who are ready for a full transformative immersion. Every participant completes a clarity call and screening process prior to acceptance."
+        "text": "The Reverence Retreat is for high-functioning professionals, wisdom seekers, and those who know they are ready to find a new way to live. It is for people seeking deeper self-understanding, meaningful transformation, and a more intentional relationship with themselves and their lives. This retreat is co-ed and open to men and women 18+ who are ready for a full transformative immersion. Every participant completes a clarity call and screening process prior to acceptance."
       }
     ]
   },
@@ -52,23 +52,23 @@
   "includes": {
     "title": "What's included",
     "items": [
-      "Five days and four nights of accommodations",
-      "One Kambo ceremony",
-      "Three Bufo ceremonies",
-      "Daily breathwork",
-      "Daily integration",
-      "Other transformative workshops",
-      "Temazcal",
-      "Sound healing",
-      "Access to an on-site private cenote",
-      "Handcrafted, organic meals prepared by our private on-site chef",
-      "Preparation support before the retreat",
-      "Integration support throughout the retreat experience",
-      "One surprise experience"
+      "Five Days And Four Nights Of Accommodations (Transport And Lodging)",
+      "One Kambo Ceremony",
+      "Three Bufo Ceremonies",
+      "Daily Breathwork",
+      "Daily Meditation",
+      "Other Transformative Workshops",
+      "Temazcal (Sweat Lodge)",
+      "Sound Healing",
+      "Access To An On-Site Private Cenote",
+      "Handcrafted Organic Meals Prepared By Our Private On-Site Chef",
+      "Preparation Support Before The Retreat",
+      "Integration Support Throughout The Retreat Experience",
+      "One Surprise Experience"
     ]
   },
   "slug": "reverence-retreat",
-  "intro": "The Reverence Retreat is for those who know they are ready for something deeper.\n\nThis is an intentional container built around reverence: respect for ourselves, respect for the land that will hold us, and deep respect for the medicine we will have the opportunity to work with.\n\nFor five days, you will have the space to disconnect from the distractions and responsibilities of everyday life and give your full attention to yourself. Through breathwork, medicine, ceremony, nature, and integration, you will be invited to slow down, listen, and take care of yourself in ways that can be difficult to do when life is constantly demanding your attention.\n\nThis is time intentionally set aside to meet yourself, take care of yourself, and give yourself the space you deserve. ",
+  "intro": "The Reverence Retreat is for those who know they are ready to stop living in survival mode and begin living the lives they came here to live.\n\nThis is a deep, intentional retreat container built around reverence.\n\nWhat is reverence?\n\nSimply put, reverence means respect.\n\nRespect for ourselves. \nRespect for each other.\nRespect for the land that will hold us. \nAnd deep respect for the medicine we will have the opportunity to work with and integrate.\n\nFor five days, we step away from the chaos of everyday life and immerse ourselves in the space to truly slow down, reconnect, and intentionally meet ourselves through breathwork, medicine, ceremony, nature, and integration.\n\nThis is not a vacation or a recreational experience. \nIt is an opportunity to give yourself the time, attention, and respect that your life deserves.",
   "imageAlt": "The Reverence Retreat property in the jungle outside Tulum, Mexico",
   "gallery": [
     "/offerings/reverence-retreat-1.webp",
@@ -93,7 +93,7 @@
     },
     {
       "q": "Can I attend if I am taking antidepressants or mood stabilizers?",
-      "a": "No. Participants must be off all pharmaceutical medications to attend this retreat. Every participant also goes through our screening process prior to acceptance."
+      "a": "No. Participants must be off all mental health pharmaceutical medications to attend this retreat. Every participant also goes through our screening process prior to acceptance."
     },
     {
       "q": "Where should I fly into?",
@@ -105,11 +105,11 @@
     },
     {
       "q": "How do I reserve my spot?",
-      "a": "An $800 non-refundable deposit is required to reserve your spot and is applied to the overall retreat cost."
+      "a": "You must first book a retreat clarity call using the link below! An $800 non-refundable deposit is required to reserve your spot and is applied to the overall retreat cost."
     },
     {
       "q": "When is the remaining balance due?",
-      "a": "The remaining retreat balance must be paid in full no later than one week before the retreat begins."
+      "a": "The remaining retreat balance must be paid in full no later than one week before the retreat begins. A payment plan will be discussed with the host, and pay in full discounts are also available. "
     }
   ],
   "title": "Reverence Retreat",
