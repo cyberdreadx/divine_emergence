@@ -132,8 +132,6 @@ const meta: Record<string, OfferingMeta> = {
       "/offerings/reverence-retreat-8.webp",
       "/offerings/reverence-retreat-9.webp",
     ],
-    spaceVideo: "/offerings/reverence-retreat-space.mp4",
-    spaceVideoPoster: "/offerings/reverence-retreat-space-poster.webp",
     practiceVideo: "/offerings/reverence-retreat-practice.mp4",
     practiceVideoPoster: "/offerings/reverence-retreat-practice-poster.webp",
     tourVideo: "/offerings/reverence-retreat-tour.mp4",
