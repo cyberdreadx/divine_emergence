@@ -248,6 +248,37 @@ const OfferingDetail = ({ slug: slugOverride }: { slug?: string }) => {
               </div>
             )}
 
+            {/* Property tour video (click to play) */}
+            {tourVideo && (
+              <div className="grid md:grid-cols-2 gap-10 md:gap-14 items-center">
+                <div>
+                  <Eyebrow>Take a tour</Eyebrow>
+                  <h2 className="font-serif text-3xl md:text-4xl text-foreground mb-6">Step inside the property</h2>
+                  <p className="text-muted-foreground leading-relaxed mb-4">
+                    Walk through the jungle villa, the open-air gathering spaces, and the
+                    candlelit cenote where much of the retreat unfolds. Press play for the
+                    full tour.
+                  </p>
+                  <p className="text-muted-foreground/60 text-xs">
+                    Property tour courtesy of our Tulum retreat venue.
+                  </p>
+                </div>
+                <div className="w-full max-w-[360px] mx-auto">
+                  <div className="aspect-[9/16] rounded-3xl overflow-hidden border border-white/10 shadow-2xl shadow-black/40 bg-black">
+                    <video
+                      className="w-full h-full object-cover"
+                      controls
+                      playsInline
+                      preload="none"
+                      poster={tourVideoPoster}
+                    >
+                      <source src={tourVideo} type="video/mp4" />
+                    </video>
+                  </div>
+                </div>
+              </div>
+            )}
+
             {/* Pricing */}
             {pricing && (
               <div>
@@ -299,37 +330,6 @@ const OfferingDetail = ({ slug: slugOverride }: { slug?: string }) => {
                       />
                     </div>
                   ))}
-                </div>
-              </div>
-            )}
-
-            {/* Property tour video (click to play) */}
-            {tourVideo && (
-              <div className="grid md:grid-cols-2 gap-10 md:gap-14 items-center">
-                <div>
-                  <Eyebrow>Take a tour</Eyebrow>
-                  <h2 className="font-serif text-3xl md:text-4xl text-foreground mb-6">Step inside the property</h2>
-                  <p className="text-muted-foreground leading-relaxed mb-4">
-                    Walk through the jungle villa, the open-air gathering spaces, and the
-                    candlelit cenote where much of the retreat unfolds. Press play for the
-                    full tour.
-                  </p>
-                  <p className="text-muted-foreground/60 text-xs">
-                    Property tour courtesy of our Tulum retreat venue.
-                  </p>
-                </div>
-                <div className="w-full max-w-[360px] mx-auto">
-                  <div className="aspect-[9/16] rounded-3xl overflow-hidden border border-white/10 shadow-2xl shadow-black/40 bg-black">
-                    <video
-                      className="w-full h-full object-cover"
-                      controls
-                      playsInline
-                      preload="none"
-                      poster={tourVideoPoster}
-                    >
-                      <source src={tourVideo} type="video/mp4" />
-                    </video>
-                  </div>
                 </div>
               </div>
             )}
