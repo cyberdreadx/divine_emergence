@@ -1,14 +1,30 @@
 {
-  "slug": "breathwork",
-  "title": "Breathwork",
-  "eyebrow": "Nervous System Regulation",
-  "cardDesc": "The most direct tool you have for regulating your nervous system. Science-backed sessions that calm the stress response and release what the body has been holding.",
-  "headline": "Breathwork for a regulated nervous system",
-  "intro": "When stress and trauma overwhelm the body, the nervous system can become stuck in survival mode, feeding anxiety and burnout. Breathwork engages the autonomic nervous system to guide the body back to relaxation.",
+  "cardDesc": "Breath is the most direct tool you have for regulating your nervous system. These sessions calm your stress response and help you release years of stored emotion.",
   "body": [
     "For those managing anxiety or moving off antidepressants, it offers natural support, and it is one of the most effective tools we have for creating neuroplasticity in the brain. Sessions are available online or in person.",
     "Breathwork is for everyone, because your breath is the one tool you always have access to and it directly affects every system in your body. You do not need to be spiritual, flexible, or even into wellness. You just need lungs and a willingness to show up."
   ],
+  "ctaLabel": "Book a session",
+  "approach": {
+    "title": "What sets this apart",
+    "features": [
+      {
+        "title": "Relaxing",
+        "text": "Pranayama and yogic techniques that downshift the autonomic nervous system, quiet the stress response, and ease anxiety into rest."
+      },
+      {
+        "title": "Activating",
+        "text": "Functional breathwork that builds CO2 tolerance, resilience, and clean energy, training your system to meet stress without tipping into overwhelm."
+      },
+      {
+        "title": "Trauma releasing",
+        "text": "Influenced by holotropic breathing, deep conscious connected breath accesses stored trauma layers and moves emotion the thinking mind cannot reach."
+      }
+    ]
+  },
+  "eyebrow": "The Real Nervous System Regulation Technique",
+  "slug": "breathwork",
+  "intro": "Breathwork is using your breath in specific ways to change how your body and mind feel. Breathing is one of the few automatic functions you can also control. Slow it down and your body calms. Speed it up with guidance and you build energy and stir up what you've been holding.\n\nWe use different styles for different needs. Calming breathwork helps your body shift out of stress mode. Activating breathwork builds energy and trains you to handle stress better. Deeper journey sessions give emotion room to move. In private coaching, group events, and retreats, I guide you through the style that fits where you are, with a strong focus on nervous system regulation.\n\nI kept the claims to what breathwork does in the moment and left out promises about outcomes. That's safer for you and more believable to a skeptical reader. If you want, I can add one short line naming a technique you teach, like Hormetic Stress Breathing, to make it more specific.",
   "sections": [
     {
       "heading": "The three realms of breathwork",
@@ -36,23 +52,9 @@
       ]
     }
   ],
-  "approach": {
-    "title": "What sets this apart",
-    "features": [
-      {
-        "title": "Relaxing",
-        "text": "Pranayama and yogic techniques that downshift the autonomic nervous system, quiet the stress response, and ease anxiety into rest."
-      },
-      {
-        "title": "Activating",
-        "text": "Functional breathwork that builds CO2 tolerance, resilience, and clean energy, training your system to meet stress without tipping into overwhelm."
-      },
-      {
-        "title": "Trauma releasing",
-        "text": "Influenced by holotropic breathing, deep conscious connected breath accesses stored trauma layers and moves emotion the thinking mind cannot reach."
-      }
-    ]
-  },
+  "imageAlt": "A guided breathwork session",
+  "headline": "What is breathwork and how do we use it?",
+  "title": "Breathwork",
   "benefits": {
     "title": "What breathwork can do",
     "items": [
@@ -62,7 +64,5 @@
       "Strengthen your immune system",
       "Increase body awareness and resilience"
     ]
-  },
-  "imageAlt": "A guided breathwork session",
-  "ctaLabel": "Book a session"
+  }
 }
