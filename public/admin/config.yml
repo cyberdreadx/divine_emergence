@@ -261,10 +261,10 @@ collections:
           - { label: "Card title (homepage)", name: cardTitle, widget: string, required: false }
           - { label: "Small label", name: eyebrow, widget: string, required: false }
           - { label: "Card description (homepage)", name: cardDesc, widget: text, required: false }
-          - { label: "Headline", name: headline, widget: text, required: false }
-          - { label: "Intro paragraph", name: intro, widget: text, required: false, hint: "Location, dates, and the opening hook." }
+          - { label: "Headline", name: headline, widget: text, required: false, hint: "The big title. Press Enter for a second line (e.g. a location/date subtitle)." }
+          - { label: "Intro paragraph", name: intro, widget: text, required: false, hint: "The text under the title. Press Enter twice to start a new paragraph." }
           - { label: "Hero photo (top of the page)", name: image, widget: image, required: false, hint: "The large photo next to the title. Upload a new one to replace it." }
-          - { label: "Body paragraphs", name: body, widget: list, required: false }
+          - { label: "Body paragraphs", name: body, widget: list, required: false, hint: "Each item is one full paragraph. Keep a whole sentence in a single item; use + to add another paragraph." }
           - label: "At a glance block"
             name: approach
             widget: object

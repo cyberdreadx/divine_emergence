@@ -48,10 +48,22 @@ const OfferingDetail = ({ slug: slugOverride }: { slug?: string }) => {
                 <Icon className="w-4 h-4" strokeWidth={1.5} />
                 {eyebrow}
               </span>
-              <h1 className="font-serif text-4xl md:text-6xl text-foreground leading-[1.05] mb-6">
-                {headline}
-              </h1>
-              <p className="text-lg text-muted-foreground leading-relaxed">{intro}</p>
+              {(() => {
+                const [titleLine, ...subLines] = headline.split("\n").map((s) => s.trim()).filter(Boolean);
+                return (
+                  <>
+                    <h1 className={`font-serif text-4xl md:text-6xl text-foreground leading-[1.05] ${subLines.length ? "mb-3" : "mb-6"}`}>
+                      {titleLine}
+                    </h1>
+                    {subLines.length > 0 && (
+                      <p className="font-serif text-xl md:text-2xl text-gold/90 mb-6">{subLines.join(" ")}</p>
+                    )}
+                  </>
+                );
+              })()}
+              {intro.split(/\n+/).map((s) => s.trim()).filter(Boolean).map((para, i) => (
+                <p key={i} className="text-lg text-muted-foreground leading-relaxed mb-4 last:mb-0">{para}</p>
+              ))}
             </div>
 
             <div className="relative">
