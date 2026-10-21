@@ -6,7 +6,7 @@
     "and your experience."
   ],
   "ctaLabel": "Schedule Your Free Clarity Call",
-  "faqImage": "/offerings/reverence-retreat-faq.webp",
+  "faqImage": "https://assets.cdn.filesafe.space/Xf8ncPOdulMSwnurGzU0/media/6a39841f9aae5140d0b0d576.jpeg",
   "pricing": {
     "title": "Retreat pricing",
     "tiers": [
@@ -80,8 +80,11 @@
     "/offerings/reverence-retreat-4.webp",
     "/offerings/reverence-retreat-circle.webp",
     "/offerings/reverence-retreat-river.webp",
-    "/offerings/reverence-retreat-6.webp",
-    "/offerings/reverence-retreat-integration.webp"
+    "/offerings/reverence-retreat-integration.webp",
+    "https://assets.cdn.filesafe.space/Xf8ncPOdulMSwnurGzU0/media/6ad91b3dfdcb71bb825c2bf5.jpg",
+    "https://assets.cdn.filesafe.space/Xf8ncPOdulMSwnurGzU0/media/6ad91b3da0c3fa1f7d5d8a85.jpg",
+    "https://assets.cdn.filesafe.space/Xf8ncPOdulMSwnurGzU0/media/6ad91a2ba0bb969dd934f0af.jpeg",
+    "https://assets.cdn.filesafe.space/Xf8ncPOdulMSwnurGzU0/media/6ad91b3b89ad2537e4a4dd86.jpg"
   ],
   "headline": "Reverence Retreat\nTulum, Mexico | April 1–5 ",
   "faq": [
@@ -115,5 +118,5 @@
     }
   ],
   "title": "Reverence Retreat",
-  "image": "https://assets.cdn.filesafe.space/Xf8ncPOdulMSwnurGzU0/media/6ad908b389ad2537e4a2971b.jpg"
+  "image": "https://assets.cdn.filesafe.space/Xf8ncPOdulMSwnurGzU0/media/6ad91c0b89ad2537e4a4f67f.jpg"
 }
