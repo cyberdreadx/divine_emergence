@@ -12,6 +12,10 @@
         "name": "Pay in full",
         "price": "$2,000",
         "note": "Total value $5,000"
+      },
+      {
+        "name": "Pay over Time",
+        "price": "$2,5000"
       }
     ]
   },
@@ -29,7 +33,7 @@
     ]
   },
   "slug": "coaching",
-  "intro": "A full nervous system reset. Regulation Is Power is a one-of-a-kind 6-week private, breathwork-focused journey designed to help you overcome emotional blocks and regulate your autonomic nervous system. In six weeks, you will reconnect to your breath, release old patterns, and feel whole again.",
+  "intro": "A full nervous system reset. Regulation Is Power is a one-of-a-kind 6-week private, breathwork-focused journey designed to help you overcome emotional blocks and regulate your autonomic nervous system. In six weeks, you will reconnect to your breath, release old patterns, and feel whole again. All while overcoming stress, anxiety, fear, and other co-occurring disorders.",
   "sections": [
     {
       "heading": "Who this is for",
@@ -110,7 +114,7 @@
           "Conscious circular breathing",
           "Deep emotional access and full release",
           "Applying somatic tools for support throughout the session",
-          "Integration practices to help you settle and stay present afterward"
+          "Integration practices to help you settle and stay present afterwar"
         ]
       },
       {
@@ -125,7 +129,7 @@
       },
       {
         "label": "Week 5",
-        "title": "Self-Love, Boundaries, and Emotional Empowerment",
+        "title": "2nd Full Release: Divine Emergence Breathwork Session",
         "items": [
           "Defining your boundaries and values, and learning to honor them",
           "Sensing when your energy is being drained versus uplifted",
