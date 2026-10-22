@@ -15,7 +15,8 @@
       },
       {
         "name": "Pay over Time",
-        "price": "$2,5000"
+        "price": "$2,500",
+        "note": "With a $500 Deposit Down"
       }
     ]
   },
