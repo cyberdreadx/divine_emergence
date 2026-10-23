@@ -13,15 +13,15 @@
       {
         "name": "Private King Suite",
         "price": "$5,000 ",
-        "note": "Early bird.\nRegular $5,500. Only 1 available."
+        "note": "Early bird.\nRegular $5,500, 1 Room left."
       },
       {
-        "name": "Private Shared Room, 1 Left ",
+        "name": "Private Shared Room",
         "price": "$4,250",
-        "note": "Per person. Early bird. \nRegular $4,750."
+        "note": "Per person. Early bird. 1 Room Left.\nRegular $4,750."
       },
       {
-        "name": "Shared Community Room",
+        "name": "Shared Room",
         "price": "$3,750",
         "note": "Per person. Early bird. \nRegular $4,250."
       }
