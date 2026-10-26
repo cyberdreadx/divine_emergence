@@ -60,7 +60,8 @@ export default async (req) => {
   try {
     // 1. Find the File Upload field by its key.
     const { customFields = [] } = await ghl(`/locations/${locationId}/customFields?model=contact`, {}, token);
-    const field = customFields.find((f) => f.fieldKey === fieldKey);
+    const bare = fieldKey.replace(/^contact\./, "");
+    const field = customFields.find((f) => f.fieldKey === fieldKey || f.fieldKey === bare || f.fieldKey === `contact.${bare}`);
     if (!field) return json(500, { error: `No contact custom field with key ${fieldKey}` });
 
     // 2. Create or update the contact by email.
