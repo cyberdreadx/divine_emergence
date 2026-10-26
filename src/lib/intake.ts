@@ -320,7 +320,7 @@ export const SECTIONS: Section[] = [
         required: true,
         noneOption: NONE,
         options: [
-          "N,N DMT",
+          "N,N DMT (ayahuasca, acacia, DMT pen)",
           "5 MeO DMT (synthetic)",
           "Bufo Alvarius (natural)",
           "Kambo",
@@ -427,7 +427,7 @@ export const WAIVER: WaiverClause[] = [
   },
   {
     title: "Photos and Recording",
-    body: "Ceremonies are not photographed or recorded without my written permission.",
+    body: "Ceremonies are not photographed or recorded without my consent.",
   },
   {
     title: "Confidentiality",
