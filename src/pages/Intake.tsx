@@ -3,7 +3,7 @@ import { Check, Download, ShieldCheck } from "lucide-react";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import SignaturePad from "@/components/SignaturePad";
-import { BRAND, INTAKE_ENDPOINT } from "@/lib/site";
+import { BRAND, INTAKE_ENDPOINT, INTAKE_PDF_ENDPOINT } from "@/lib/site";
 import {
   type Answers,
   type Contact,
@@ -131,6 +131,29 @@ const Intake = () => {
 
     setStatus("submitting");
     try {
+      // Save the signed PDF onto the client's GoHighLevel contact first (via
+      // netlify/functions/intake-pdf.mjs), so it is already there when the
+      // webhook below sets off the workflow's email alert. If this fails the
+      // answers still go through; the client also keeps their own copy.
+      try {
+        const pdfBase64 = buildIntakePdf(answers, now).output("datauristring").split(",")[1];
+        const res = await fetch(INTAKE_PDF_ENDPOINT, {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify({
+            email: (answers.email as string).trim(),
+            firstName: (answers.firstName as string).trim(),
+            lastName: (answers.lastName as string).trim(),
+            phone: (answers.phone as string).trim(),
+            fileName: intakeFileName(answers, now),
+            pdfBase64,
+          }),
+        });
+        if (!res.ok) console.warn("Intake: signed PDF was not saved to GoHighLevel", res.status);
+      } catch (err) {
+        console.warn("Intake: signed PDF was not saved to GoHighLevel", err);
+      }
+
       if (INTAKE_ENDPOINT) {
         // Each answer is sent as its own form field (named by its id in
         // src/lib/intake.ts) so it can be mapped to a contact field in

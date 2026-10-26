@@ -42,6 +42,11 @@ export const NEWSLETTER_ENDPOINT =
 export const INTAKE_ENDPOINT =
   "https://services.leadconnectorhq.com/hooks/Xf8ncPOdulMSwnurGzU0/webhook-trigger/6cd7419c-6ecc-4d6a-bdc8-2739238d04a5";
 
+// Netlify function that attaches the client's signed PDF to their GoHighLevel
+// contact (netlify/functions/intake-pdf.mjs). Needs GHL_PRIVATE_TOKEN set in
+// Netlify; until then the form still works, just without the PDF in GHL.
+export const INTAKE_PDF_ENDPOINT = "/api/intake-pdf";
+
 // Existing detail pages on the live site. These currently resolve on GoHighLevel;
 // update them here if the pages move.
 export const LINKS = {
