@@ -33,7 +33,10 @@ async function ghl(path, init, token) {
     last = `${res.status} ${text.slice(0, 300)}`;
     if (res.status === 401 || res.status === 403) break; // a bad token won't be fixed by another version
   }
-  throw new Error(`GoHighLevel ${init.method ?? "GET"} ${path.split("?")[0]} failed: ${last}`);
+  const err = new Error(`GoHighLevel ${init.method ?? "GET"} ${path.split("?")[0]} failed: ${last}`);
+  err.ghlStatus = Number(last.split(" ")[0]);
+  err.ghlMessage = last.slice(String(err.ghlStatus).length + 1, 200);
+  throw err;
 }
 
 export default async (req) => {
@@ -57,13 +60,16 @@ export default async (req) => {
   const pdf = Buffer.from(pdfBase64, "base64");
   if (pdf.length > MAX_PDF_BYTES || pdf.subarray(0, 5).toString() !== "%PDF-") return json(400, { error: "Not a valid PDF" });
 
+  let step = "custom-fields";
   try {
     // 1. Find the File Upload field by its key.
     const { customFields = [] } = await ghl(`/locations/${locationId}/customFields?model=contact`, {}, token);
-    const field = customFields.find((f) => f.fieldKey === fieldKey);
+    const bare = fieldKey.replace(/^contact\./, "");
+    const field = customFields.find((f) => f.fieldKey === fieldKey || f.fieldKey === bare || f.fieldKey === `contact.${bare}`);
     if (!field) return json(500, { error: `No contact custom field with key ${fieldKey}` });
 
     // 2. Create or update the contact by email.
+    step = "upsert-contact";
     const upsert = await ghl(
       "/contacts/upsert",
       {
@@ -84,6 +90,7 @@ export default async (req) => {
     if (!contactId) throw new Error("Upsert returned no contact id");
 
     // 3. Upload the PDF into that field. Key format: <customFieldId>_<randomId>.
+    step = "upload-pdf";
     const safeName = String(fileName).replace(/[^\w.-]+/g, "-").slice(0, 80) || "Intake.pdf";
     const form = new FormData();
     form.append(`${field.id}_${randomUUID()}`, new Blob([pdf], { type: "application/pdf" }), safeName);
@@ -92,8 +99,15 @@ export default async (req) => {
 
     return json(200, { ok: true });
   } catch (err) {
-    console.error(err);
-    return json(502, { error: "Could not save the PDF to GoHighLevel" });
+    console.error(step, err);
+    // Report which step failed and GoHighLevel's reply (status + message, no
+    // secrets) so problems can be diagnosed without digging through logs.
+    return json(502, {
+      error: "Could not save the PDF to GoHighLevel",
+      step,
+      ghlStatus: err.ghlStatus ?? null,
+      ghlMessage: err.ghlMessage ?? String(err.message).slice(0, 200),
+    });
   }
 };
 
