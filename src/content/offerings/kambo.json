@@ -76,5 +76,10 @@
     }
   ],
   "imageAlt": "Fresh water moving over stone",
-  "ctaLabel": "Schedule an intake call"
+  "ctaLabel": "Schedule an intake call",
+  "secondaryCta": {
+    "heading": "Complete your intake form",
+    "text": "Before your Kambo session, please complete your confidential intake form and sign the waiver. Your answers are private and used only to keep you safe.",
+    "label": "Open the intake form"
+  }
 }

@@ -213,6 +213,14 @@ collections:
             fields:
               - { label: "Question", name: q, widget: string, required: false }
               - { label: "Answer", name: a, widget: text, required: false }
+          - label: "Secondary call-to-action"
+            name: secondaryCta
+            widget: object
+            required: false
+            fields:
+              - { label: "Heading", name: heading, widget: string, required: false }
+              - { label: "Text", name: text, widget: text, required: false }
+              - { label: "Label", name: label, widget: string, required: false }
           - { label: "Image description (for accessibility)", name: imageAlt, widget: string, required: false }
           - { label: "Button label", name: ctaLabel, widget: string, required: false }
 
@@ -249,6 +257,14 @@ collections:
             fields:
               - { label: "Question", name: q, widget: string, required: false }
               - { label: "Answer", name: a, widget: text, required: false }
+          - label: "Secondary call-to-action"
+            name: secondaryCta
+            widget: object
+            required: false
+            fields:
+              - { label: "Heading", name: heading, widget: string, required: false }
+              - { label: "Text", name: text, widget: text, required: false }
+              - { label: "Label", name: label, widget: string, required: false }
           - { label: "Image description (for accessibility)", name: imageAlt, widget: string, required: false }
           - { label: "Button label", name: ctaLabel, widget: string, required: false }
 

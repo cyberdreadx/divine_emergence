@@ -112,11 +112,13 @@ const meta: Record<string, OfferingMeta> = {
     image: "/offerings/bufo-alvarius-1.webp",
     ctaHref: BUFO_INTAKE_URL,
     embedEbook: true,
+    secondaryCtaHref: "/intake",
   },
   kambo: {
     Icon: Leaf,
     image: waterfallImg,
     ctaHref: BOOKING_URL,
+    secondaryCtaHref: "/intake",
   },
   "reverence-retreat": {
     Icon: Tent,
