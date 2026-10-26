@@ -27,3 +27,11 @@ npm run test     # run unit tests (vitest)
 - `src/lib/events.ts` — upcoming events list
 - `src/lib/site.ts` — brand constants, booking + newsletter endpoints
 - `public/` — static assets (favicons, offering images, OG image)
+
+## Link previews (social sharing)
+
+Each page has its own share title, description and image, so a shared link
+previews the page it points to. Settings live in `scripts/share-pages.mjs`;
+`npm run build` bakes them into each page's HTML. After changing a photo or
+card wording, regenerate the cards with `node scripts/make-share-images.mjs`
+and commit `public/share/`.
