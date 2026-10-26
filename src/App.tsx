@@ -8,6 +8,7 @@ import OfferingDetail from "./pages/OfferingDetail.tsx";
 import EventsPage from "./pages/EventsPage.tsx";
 import Ebook from "./pages/Ebook.tsx";
 import ClarityCall from "./pages/ClarityCall.tsx";
+import Intake from "./pages/Intake.tsx";
 import NotFound from "./pages/NotFound.tsx";
 import ScrollToTop from "./components/ScrollToTop.tsx";
 
@@ -31,6 +32,7 @@ const App = () => (
           <Route path="/events" element={<EventsPage />} />
           <Route path="/ebook" element={<Ebook />} />
           <Route path="/coaching-call" element={<ClarityCall />} />
+          <Route path="/intake" element={<Intake />} />
           <Route path="*" element={<NotFound />} />
         </Routes>
       </BrowserRouter>

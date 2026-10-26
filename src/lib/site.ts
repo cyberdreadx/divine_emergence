@@ -34,6 +34,13 @@ export const REVERENCE_BOOKING_URL =
 export const NEWSLETTER_ENDPOINT =
   "https://services.leadconnectorhq.com/hooks/Xf8ncPOdulMSwnurGzU0/webhook-trigger/5efcaf76-369a-404f-93c7-fc49df33d076";
 
+// Ceremony Intake Form and Waiver (/intake). GoHighLevel inbound-webhook URL.
+// Each answer posts as a form field named by its id in src/lib/intake.ts, plus
+// `summary` (the whole form as readable text) and `signature` (a PNG data URL).
+// While this is blank, nothing is sent: clients are asked to download their
+// signed PDF and email it to BRAND.email instead.
+export const INTAKE_ENDPOINT = "";
+
 // Existing detail pages on the live site. These currently resolve on GoHighLevel;
 // update them here if the pages move.
 export const LINKS = {
