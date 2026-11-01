@@ -9,6 +9,7 @@ import EventsPage from "./pages/EventsPage.tsx";
 import Ebook from "./pages/Ebook.tsx";
 import ClarityCall from "./pages/ClarityCall.tsx";
 import Intake from "./pages/Intake.tsx";
+import GuidePage from "./pages/GuidePage.tsx";
 import NotFound from "./pages/NotFound.tsx";
 import ScrollToTop from "./components/ScrollToTop.tsx";
 
@@ -33,6 +34,9 @@ const App = () => (
           <Route path="/ebook" element={<Ebook />} />
           <Route path="/coaching-call" element={<ClarityCall />} />
           <Route path="/intake" element={<Intake />} />
+          <Route path="/prep/kambufo" element={<GuidePage slug="kambufo" />} />
+          <Route path="/prep/microdose" element={<GuidePage slug="microdose" />} />
+          <Route path="/integration" element={<GuidePage slug="integration" />} />
           <Route path="*" element={<NotFound />} />
         </Routes>
       </BrowserRouter>

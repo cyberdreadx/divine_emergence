@@ -47,6 +47,14 @@ export const INTAKE_ENDPOINT =
 // Netlify; until then the form still works, just without the PDF in GHL.
 export const INTAKE_PDF_ENDPOINT = "/api/intake-pdf";
 
+// Prep & integration guides (/prep/kambufo, /prep/microdose, /integration).
+// GoHighLevel inbound-webhook URL for the "Guide Signed" workflow. Posts
+// guide, guideSlug, guideTag, firstName, lastName, email, legalName,
+// signedDate, acknowledgments and submittedAt. While blank, clients are asked
+// to download their signed copy and email it instead. The signed PDF itself is
+// saved to the contact by INTAKE_PDF_ENDPOINT either way.
+export const GUIDE_ENDPOINT = "";
+
 // Existing detail pages on the live site. These currently resolve on GoHighLevel;
 // update them here if the pages move.
 export const LINKS = {
