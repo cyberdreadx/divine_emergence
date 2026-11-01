@@ -9,7 +9,11 @@
 // Netlify environment variables (Site configuration → Environment variables):
 //   GHL_PRIVATE_TOKEN  GoHighLevel Private Integration token (keep secret)
 //   GHL_LOCATION_ID    sub-account ID (defaults to Divine Emergence's)
-//   GHL_PDF_FIELD_KEY  custom field key (defaults to contact.signed_intake_pdf)
+//   GHL_PDF_FIELD_KEY  intake PDF field key (defaults to contact.signed_intake_pdf)
+//   GHL_GUIDE_FIELD_KEY signed guides field key (defaults to contact.signed_guides)
+//
+// The prep/integration guide pages (src/pages/GuidePage.tsx) post here too,
+// with kind: "guide", so their signed PDFs go to the guides field instead.
 
 import { randomUUID } from "node:crypto";
 
@@ -44,7 +48,6 @@ export default async (req) => {
 
   const token = process.env.GHL_PRIVATE_TOKEN;
   const locationId = process.env.GHL_LOCATION_ID || "Xf8ncPOdulMSwnurGzU0";
-  const fieldKey = process.env.GHL_PDF_FIELD_KEY || "contact.signed_intake_pdf";
   if (!token) return json(503, { error: "GHL_PRIVATE_TOKEN is not set in Netlify" });
 
   let data;
@@ -53,6 +56,10 @@ export default async (req) => {
   } catch {
     return json(400, { error: "Invalid JSON" });
   }
+  const isGuide = data?.kind === "guide";
+  const fieldKey = isGuide
+    ? process.env.GHL_GUIDE_FIELD_KEY || "contact.signed_guides"
+    : process.env.GHL_PDF_FIELD_KEY || "contact.signed_intake_pdf";
   const { email, firstName = "", lastName = "", phone = "", fileName = "Intake.pdf", pdfBase64 } = data ?? {};
   if (typeof email !== "string" || !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email.trim())) return json(400, { error: "Valid email required" });
   if (typeof pdfBase64 !== "string" || !pdfBase64) return json(400, { error: "PDF required" });
@@ -75,14 +82,20 @@ export default async (req) => {
       {
         method: "POST",
         headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({
-          locationId,
-          email: email.trim(),
-          firstName: String(firstName).slice(0, 100),
-          lastName: String(lastName).slice(0, 100),
-          phone: String(phone).slice(0, 40),
-          source: "Ceremony Intake Form",
-        }),
+        // Only send fields that have a value, so a blank never erases what
+        // GoHighLevel already has on an existing contact.
+        body: JSON.stringify(
+          Object.fromEntries(
+            Object.entries({
+              locationId,
+              email: email.trim(),
+              firstName: String(firstName).trim().slice(0, 100),
+              lastName: String(lastName).trim().slice(0, 100),
+              phone: String(phone).trim().slice(0, 40),
+              source: isGuide ? "Signed Guide" : "Ceremony Intake Form",
+            }).filter(([, v]) => v)
+          )
+        ),
       },
       token
     );
