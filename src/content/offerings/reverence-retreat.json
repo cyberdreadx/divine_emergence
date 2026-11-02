@@ -1,32 +1,28 @@
 {
   "cardDesc": "Five days in the jungle outside of Tulum, Mexico: a full transformative immersion including medicine ceremonies, breathwork, sound healing, traditional sweat lodge, and integration. This is not a vacation, however, a reverent container for those seeking something more for their lives. ",
-  "body": [
-    "This is more than a yoga retreat or family vacation. It is five intentional days to disconnect from everyday distractions and fully focus on yourself",
-    "the medicine",
-    "and your experience."
-  ],
+  "body": [],
   "ctaLabel": "Schedule Your Free Clarity Call",
-  "faqImage": "https://assets.cdn.filesafe.space/Xf8ncPOdulMSwnurGzU0/media/6a3984107b00529580a4a427.jpeg",
+  "faqImage": "https://assets.cdn.filesafe.space/Xf8ncPOdulMSwnurGzU0/media/69f891de273a62411d6c0c8b.jpg",
   "pricing": {
     "title": "Retreat pricing",
     "tiers": [
       {
         "name": "Private King Suite",
-        "price": "$5,000 ",
-        "note": "Early bird.\nRegular $5,500, 1 Room left."
+        "price": "$5,500 ",
+        "note": ""
       },
       {
         "name": "Private Shared Room",
-        "price": "$4,250",
-        "note": "Per person. Early bird. 1 Room Left.\nRegular $4,750."
+        "price": "$4,750",
+        "note": "2 Spaces Left"
       },
       {
         "name": "Shared Room",
-        "price": "$3,750",
-        "note": "Per person. Early bird. \nRegular $4,250."
+        "price": "$4,250",
+        "note": "Per person. 4 Spots Left."
       }
     ],
-    "note": "Early bird pricing is available during the month of October only. Reserve your spot in October to receive $500 off the regular price. An $800 non-refundable deposit reserves your spot and is applied to your overall retreat cost. Payment plans are available and the remaining balance is due in full no later than one week before the retreat begins."
+    "note": "An $800 non-refundable deposit reserves your spot and is applied to your overall retreat cost. Payment plans are available and the remaining balance is due in full no later than one week before the retreat begins."
   },
   "cardTitle": "Reverence Retreat",
   "approach": {
