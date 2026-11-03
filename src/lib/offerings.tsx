@@ -22,8 +22,6 @@ import {
 } from "lucide-react";
 import { BOOKING_URL, TRAINING_APPLY_URL, BUFO_INTAKE_URL, REVERENCE_BOOKING_URL } from "@/lib/site";
 
-import waterfallImg from "@/assets/waterfall.jpg";
-import circleImg from "@/assets/de-circle.webp";
 
 import breathworkContent from "@/content/offerings/breathwork.json";
 import bufoContent from "@/content/offerings/bufo-alvarius.json";
@@ -116,7 +114,7 @@ const meta: Record<string, OfferingMeta> = {
   },
   kambo: {
     Icon: Leaf,
-    image: waterfallImg,
+    image: "/offerings/kambo-1.jpg",
     ctaHref: BOOKING_URL,
     secondaryCtaHref: "/intake",
   },
@@ -175,7 +173,7 @@ const meta: Record<string, OfferingMeta> = {
   },
   "workshops-events": {
     Icon: CalendarHeart,
-    image: circleImg,
+    image: "/offerings/workshops-events-1.webp",
     ctaHref: "/events",
   },
   coaching: {

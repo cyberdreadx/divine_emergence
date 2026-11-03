@@ -18,8 +18,8 @@ const Breathwork = () => {
 
         <div className="relative overflow-hidden rounded-3xl ring-1 ring-white/10 shadow-2xl mb-14">
           <img
-            src={circle}
-            alt="A breathwork circle in session"
+            src={content.image || circle}
+            alt={content.imageAlt || "A breathwork circle in session"}
             className="w-full aspect-[16/9] object-cover"
             loading="lazy"
           />
