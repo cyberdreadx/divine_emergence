@@ -64,5 +64,10 @@
       "Strengthen your immune system",
       "Increase body awareness and resilience"
     ]
-  }
+  },
+  "image": "/offerings/breathwork-1.webp",
+  "gallery": [
+    "/offerings/breathwork-2.webp",
+    "/offerings/breathwork-3.webp"
+  ]
 }

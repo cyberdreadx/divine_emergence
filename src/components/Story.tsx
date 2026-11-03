@@ -13,8 +13,8 @@ const Story = () => {
         <div className="grid md:grid-cols-2 gap-10 md:gap-16 items-start">
           <div className="relative overflow-hidden rounded-2xl ring-1 ring-white/10 shadow-2xl md:sticky md:top-24">
             <img
-              src={meditation}
-              alt="A moment of stillness in breathwork"
+              src={content.image || meditation}
+              alt={content.imageAlt || "A moment of stillness in breathwork"}
               className="w-full aspect-[4/5] object-cover"
               loading="lazy"
             />

@@ -60,6 +60,8 @@ collections:
           - { label: "Closing pull-quote", name: pullQuote, widget: text }
           - { label: "Facts heading", name: factsHeading, widget: string }
           - { label: "Facts about Laura", name: facts, widget: list, hint: "Short one-line facts." }
+          - { label: "About Laura photo", name: image, widget: image, required: false, hint: "Upload a new photo to replace the current one." }
+          - { label: "Photo description (for accessibility)", name: imageAlt, widget: string, required: false }
 
       - name: offerings_section
         label: "Offerings section header"
@@ -78,6 +80,8 @@ collections:
           - { label: "Feature quote", name: quote, widget: text }
           - { label: "Body paragraphs", name: paragraphs, widget: list }
           - { label: "Link label", name: ctaLabel, widget: string }
+          - { label: "Breathwork section photo", name: image, widget: image, required: false, hint: "Upload a new photo to replace the current one." }
+          - { label: "Photo description (for accessibility)", name: imageAlt, widget: string, required: false }
 
       - name: retreat
         label: "Retreat teaser"
@@ -150,6 +154,7 @@ collections:
           - { label: "Card description (homepage)", name: cardDesc, widget: text, required: false }
           - { label: "Headline", name: headline, widget: text, required: false }
           - { label: "Intro paragraph", name: intro, widget: text, required: false }
+          - { label: "Hero photo (top of the page)", name: image, widget: image, required: false, hint: "The large photo next to the title. Upload a new one to replace it." }
           - { label: "Body paragraphs", name: body, widget: list, required: false }
           - label: "Prose sections"
             name: sections
@@ -178,6 +183,13 @@ collections:
             fields:
               - { label: "Title", name: title, widget: string, required: false }
               - { label: "Bullet points", name: items, widget: list, required: false }
+          - label: "Photo gallery"
+            name: gallery
+            widget: list
+            required: false
+            hint: "The grid of photos lower on the page. Add, remove, or reorder. Each item is one photo. Leave empty for no gallery."
+            field: { label: "Photo", name: image, widget: image }
+          - { label: "Host photo (beside the FAQ)", name: faqImage, widget: image, required: false, hint: "Optional portrait shown next to the FAQ. Leave empty for none." }
           - { label: "Image description (for accessibility)", name: imageAlt, widget: string, required: false }
           - { label: "Button label", name: ctaLabel, widget: string, required: false }
 
@@ -192,6 +204,7 @@ collections:
           - { label: "Card description (homepage)", name: cardDesc, widget: text, required: false }
           - { label: "Headline", name: headline, widget: text, required: false }
           - { label: "Intro paragraph", name: intro, widget: text, required: false }
+          - { label: "Hero photo (top of the page)", name: image, widget: image, required: false, hint: "The large photo next to the title. Upload a new one to replace it." }
           - label: "Prose sections"
             name: sections
             widget: list
@@ -221,6 +234,13 @@ collections:
               - { label: "Heading", name: heading, widget: string, required: false }
               - { label: "Text", name: text, widget: text, required: false }
               - { label: "Label", name: label, widget: string, required: false }
+          - label: "Photo gallery"
+            name: gallery
+            widget: list
+            required: false
+            hint: "The grid of photos lower on the page. Add, remove, or reorder. Each item is one photo. Leave empty for no gallery."
+            field: { label: "Photo", name: image, widget: image }
+          - { label: "Host photo (beside the FAQ)", name: faqImage, widget: image, required: false, hint: "Optional portrait shown next to the FAQ. Leave empty for none." }
           - { label: "Image description (for accessibility)", name: imageAlt, widget: string, required: false }
           - { label: "Button label", name: ctaLabel, widget: string, required: false }
 
@@ -234,6 +254,7 @@ collections:
           - { label: "Card description (homepage)", name: cardDesc, widget: text, required: false }
           - { label: "Headline", name: headline, widget: text, required: false }
           - { label: "Intro paragraph", name: intro, widget: text, required: false }
+          - { label: "Hero photo (top of the page)", name: image, widget: image, required: false, hint: "The large photo next to the title. Upload a new one to replace it." }
           - { label: "Body paragraphs", name: body, widget: list, required: false }
           - label: "Prose sections"
             name: sections
@@ -265,6 +286,13 @@ collections:
               - { label: "Heading", name: heading, widget: string, required: false }
               - { label: "Text", name: text, widget: text, required: false }
               - { label: "Label", name: label, widget: string, required: false }
+          - label: "Photo gallery"
+            name: gallery
+            widget: list
+            required: false
+            hint: "The grid of photos lower on the page. Add, remove, or reorder. Each item is one photo. Leave empty for no gallery."
+            field: { label: "Photo", name: image, widget: image }
+          - { label: "Host photo (beside the FAQ)", name: faqImage, widget: image, required: false, hint: "Optional portrait shown next to the FAQ. Leave empty for none." }
           - { label: "Image description (for accessibility)", name: imageAlt, widget: string, required: false }
           - { label: "Button label", name: ctaLabel, widget: string, required: false }
 
@@ -347,7 +375,15 @@ collections:
           - { label: "Card description (homepage)", name: cardDesc, widget: text, required: false }
           - { label: "Headline", name: headline, widget: text, required: false }
           - { label: "Intro paragraph", name: intro, widget: text, required: false }
+          - { label: "Hero photo (top of the page)", name: image, widget: image, required: false, hint: "The large photo next to the title. Upload a new one to replace it." }
           - { label: "Body paragraphs", name: body, widget: list, required: false }
+          - label: "Photo gallery"
+            name: gallery
+            widget: list
+            required: false
+            hint: "The grid of photos lower on the page. Add, remove, or reorder. Each item is one photo. Leave empty for no gallery."
+            field: { label: "Photo", name: image, widget: image }
+          - { label: "Host photo (beside the FAQ)", name: faqImage, widget: image, required: false, hint: "Optional portrait shown next to the FAQ. Leave empty for none." }
           - { label: "Image description (for accessibility)", name: imageAlt, widget: string, required: false }
           - { label: "Button label", name: ctaLabel, widget: string, required: false }
 
@@ -362,6 +398,7 @@ collections:
           - { label: "Card description (homepage)", name: cardDesc, widget: text, required: false }
           - { label: "Headline", name: headline, widget: text, required: false }
           - { label: "Intro paragraph", name: intro, widget: text, required: false }
+          - { label: "Hero photo (top of the page)", name: image, widget: image, required: false, hint: "The large photo next to the title. Upload a new one to replace it." }
           - { label: "Body paragraphs", name: body, widget: list, required: false }
           - label: "Benefits block"
             name: benefits
@@ -435,6 +472,13 @@ collections:
               - { label: "Heading", name: heading, widget: string, required: false }
               - { label: "Text", name: text, widget: text, required: false }
               - { label: "Label", name: label, widget: string, required: false }
+          - label: "Photo gallery"
+            name: gallery
+            widget: list
+            required: false
+            hint: "The grid of photos lower on the page. Add, remove, or reorder. Each item is one photo. Leave empty for no gallery."
+            field: { label: "Photo", name: image, widget: image }
+          - { label: "Host photo (beside the FAQ)", name: faqImage, widget: image, required: false, hint: "Optional portrait shown next to the FAQ. Leave empty for none." }
           - { label: "Image description (for accessibility)", name: imageAlt, widget: string, required: false }
           - { label: "Button label", name: ctaLabel, widget: string, required: false }
 
@@ -448,6 +492,7 @@ collections:
           - { label: "Card description (homepage)", name: cardDesc, widget: text, required: false }
           - { label: "Headline", name: headline, widget: text, required: false }
           - { label: "Intro paragraph", name: intro, widget: text, required: false }
+          - { label: "Hero photo (top of the page)", name: image, widget: image, required: false, hint: "The large photo next to the title. Upload a new one to replace it." }
           - { label: "Body paragraphs", name: body, widget: list, required: false }
           - label: "Curriculum block"
             name: curriculum
@@ -490,6 +535,13 @@ collections:
             fields:
               - { label: "Name", name: name, widget: string, required: false }
               - { label: "Quote", name: quote, widget: text, required: false }
+          - label: "Photo gallery"
+            name: gallery
+            widget: list
+            required: false
+            hint: "The grid of photos lower on the page. Add, remove, or reorder. Each item is one photo. Leave empty for no gallery."
+            field: { label: "Photo", name: image, widget: image }
+          - { label: "Host photo (beside the FAQ)", name: faqImage, widget: image, required: false, hint: "Optional portrait shown next to the FAQ. Leave empty for none." }
           - { label: "Image description (for accessibility)", name: imageAlt, widget: string, required: false }
           - { label: "Button label", name: ctaLabel, widget: string, required: false }
 
@@ -503,6 +555,7 @@ collections:
           - { label: "Card description (homepage)", name: cardDesc, widget: text, required: false }
           - { label: "Headline", name: headline, widget: text, required: false }
           - { label: "Intro paragraph", name: intro, widget: text, required: false }
+          - { label: "Hero photo (top of the page)", name: image, widget: image, required: false, hint: "The large photo next to the title. Upload a new one to replace it." }
           - label: "Benefits block"
             name: benefits
             widget: object
@@ -559,5 +612,12 @@ collections:
             fields:
               - { label: "Question", name: q, widget: string, required: false }
               - { label: "Answer", name: a, widget: text, required: false }
+          - label: "Photo gallery"
+            name: gallery
+            widget: list
+            required: false
+            hint: "The grid of photos lower on the page. Add, remove, or reorder. Each item is one photo. Leave empty for no gallery."
+            field: { label: "Photo", name: image, widget: image }
+          - { label: "Host photo (beside the FAQ)", name: faqImage, widget: image, required: false, hint: "Optional portrait shown next to the FAQ. Leave empty for none." }
           - { label: "Image description (for accessibility)", name: imageAlt, widget: string, required: false }
           - { label: "Button label", name: ctaLabel, widget: string, required: false }
