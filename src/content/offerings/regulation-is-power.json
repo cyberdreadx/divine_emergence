@@ -26,6 +26,14 @@
   "slug": "regulation-is-power",
   "intro": "A one of a kind 6-week private journey designed to help you overcome emotional blocks and regulate your autonomic nervous system. In six weeks, you will reconnect to your breath, regulate your nervous system, and release old patterns, so you can feel whole again.",
   "imageAlt": "Rising into your power",
+  "gallery": [
+    "/offerings/regulation-is-power-5.webp",
+    "/offerings/regulation-is-power-4.webp",
+    "/offerings/regulation-is-power-7.webp",
+    "/offerings/regulation-is-power-2.webp",
+    "/offerings/regulation-is-power-3.webp",
+    "/offerings/regulation-is-power-6.webp"
+  ],
   "headline": "Regulation is power",
   "testimonials": [
     {
@@ -132,6 +140,7 @@
       }
     ]
   },
+  "image": "https://assets.cdn.filesafe.space/Xf8ncPOdulMSwnurGzU0/media/68dc198b3f93001e06b3e066.jpeg",
   "benefits": {
     "title": "Who this is for",
     "items": [
@@ -141,14 +150,5 @@
       "People craving true transformation through somatic practice",
       "Anyone ready to release stored trauma and emotion and master lifelong nervous system regulation"
     ]
-  },
-  "image": "/offerings/regulation-is-power-12.webp",
-  "gallery": [
-    "/offerings/regulation-is-power-5.webp",
-    "/offerings/regulation-is-power-4.webp",
-    "/offerings/regulation-is-power-7.webp",
-    "/offerings/regulation-is-power-2.webp",
-    "/offerings/regulation-is-power-3.webp",
-    "/offerings/regulation-is-power-6.webp"
-  ]
+  }
 }
