@@ -1,14 +1,13 @@
 {
-  "slug": "kambo",
-  "title": "Kambo",
-  "eyebrow": "Sacred Cleanse",
   "cardDesc": "A traditional Amazonian cleanse using sacred frog medicine rich in natural peptides, to purify the body, strengthen immunity, and reset. Held with care and deep respect.",
-  "headline": "Kambo",
-  "intro": "A traditional Amazonian cleanse using the sacred secretion of the giant monkey frog. For generations, Kambo has been used to purify the body, strengthen the spirit, and clear what no longer serves.",
   "body": [
     "Applied to small points on the surface of the skin, Kambo works quickly and completely, moving through the body to release stagnant energy and physical toxins. The experience is short and intense, followed by a deep sense of lightness, clarity, and reset.",
     "Held with care, respect, and trauma-informed facilitation, every session honors the ancient roots of this medicine while keeping your safety and intention at the center. My training in Tulum with Madhu Anand and the Family of Light included formal initiation in working with Kambo safely and ethically."
   ],
+  "ctaLabel": "Schedule an intake call",
+  "eyebrow": "Sacred Cleanse",
+  "slug": "kambo",
+  "intro": "A traditional Amazonian cleanse using the sacred secretion of the giant monkey frog. For generations, Kambo has been used to purify the body, strengthen the spirit, and clear what no longer serves.",
   "sections": [
     {
       "heading": "The natural peptides inside Kambo",
@@ -31,16 +30,8 @@
       ]
     }
   ],
-  "benefits": {
-    "title": "The traditional gifts of Kambo",
-    "items": [
-      "Purify the body and release physical toxins",
-      "Strengthen immunity and vitality",
-      "Clear stagnant, heavy energy, known as panema",
-      "Sharpen mental clarity and focus",
-      "Reset the body and spirit"
-    ]
-  },
+  "imageAlt": "Fresh water moving over stone",
+  "headline": "Kambo",
   "faq": [
     {
       "q": "What is Kambo?",
@@ -75,12 +66,21 @@
       "a": "Integration is the process of giving yourself time to rest, reflect, and process the experience afterward. The ceremony may be brief, but allowing your body and mind time to integrate is an important part of the work."
     }
   ],
-  "imageAlt": "Fresh water moving over stone",
-  "ctaLabel": "Schedule an intake call",
+  "title": "Kambo",
+  "image": "https://assets.cdn.filesafe.space/Xf8ncPOdulMSwnurGzU0/media/6af243771ac4234dcd25ea30.jpeg",
+  "benefits": {
+    "title": "The traditional gifts of Kambo",
+    "items": [
+      "Purify the body and release physical toxins",
+      "Strengthen immunity and vitality",
+      "Clear stagnant, heavy energy, known as panema",
+      "Sharpen mental clarity and focus",
+      "Reset the body and spirit"
+    ]
+  },
   "secondaryCta": {
     "heading": "Complete your intake form",
     "text": "Before your Kambo session, please complete your confidential intake form and sign the waiver. Your answers are private and used only to keep you safe.",
     "label": "Open the intake form"
-  },
-  "image": "/offerings/kambo-1.jpg"
+  }
 }
