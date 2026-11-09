@@ -1,10 +1,9 @@
 {
-  "slug": "bufo-alvarius",
-  "title": "Bufo Alvarius",
+  "cardDesc": "Natural medicine for those ready to move beyond survival, held with safety, integrity, and deep reverence. Read the free ebook and schedule an intake.",
+  "ctaLabel": "Schedule your Bufo intake call",
   "cardTitle": "Bufo",
   "eyebrow": "Sacred Medicine",
-  "cardDesc": "Natural medicine for those ready to move beyond survival, held with safety, integrity, and deep reverence. Read the free ebook and schedule an intake.",
-  "headline": "Bufo Alvarius",
+  "slug": "bufo-alvarius",
   "intro": "The medicine enters the bloodstream immediately. Reality shifts within seconds. The peak lasts only minutes, yet what happens in that window can be profoundly life-changing.",
   "sections": [
     {
@@ -26,16 +25,8 @@
       ]
     }
   ],
-  "benefits": {
-    "title": "What people move through with Bufo",
-    "items": [
-      "Interrupting cycles of addiction, anxiety, depression, and trauma",
-      "A profound sense of unity, peace, and ego dissolution",
-      "Emotional releases that years of talk therapy never reached",
-      "Lasting shifts in self-perception and perspective",
-      "A felt reconnection to something larger than the self"
-    ]
-  },
+  "imageAlt": "Ceremony and community",
+  "headline": "Bufo Alvarius",
   "faq": [
     {
       "q": "What is Bufo?",
@@ -74,12 +65,21 @@
       "a": "No. This work is approached with intention, preparation, screening, respect, and integration. The experience may be brief, but the work surrounding it needs to be extensive and safe."
     }
   ],
-  "imageAlt": "Ceremony and community",
-  "ctaLabel": "Schedule your Bufo intake call",
+  "title": "Bufo Alvarius",
+  "image": "https://assets.cdn.filesafe.space/Xf8ncPOdulMSwnurGzU0/media/6af24268e9d59b97b0a26d94.jpg",
+  "benefits": {
+    "title": "What people move through with Bufo",
+    "items": [
+      "Interrupting cycles of addiction, anxiety, depression, and trauma",
+      "A profound sense of unity, peace, and ego dissolution",
+      "Emotional releases that years of talk therapy never reached",
+      "Lasting shifts in self-perception and perspective",
+      "A felt reconnection to something larger than the self"
+    ]
+  },
   "secondaryCta": {
     "heading": "Complete your intake form",
     "text": "Once your intake call is scheduled, please complete your confidential intake form and sign the waiver before your ceremony. Your answers are private and used only to keep you safe.",
     "label": "Open the intake form"
-  },
-  "image": "/offerings/bufo-alvarius-1.webp"
+  }
 }
