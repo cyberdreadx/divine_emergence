@@ -39,6 +39,12 @@
   "slug": "training",
   "intro": "Learn how to safely and confidently guide others through nervous system regulation, conscious circular breathwork, altered states, integration, and transformation. This 8-week immersive practitioner training is for those called to master the art of holding space and facilitate breathwork with safety, integrity, intention, and respect.\n",
   "imageAlt": "A breathwork facilitation workshop",
+  "gallery": [
+    "/offerings/training-2.webp",
+    "https://assets.cdn.filesafe.space/Xf8ncPOdulMSwnurGzU0/media/6822300b82348a09f80881cc.jpeg",
+    "https://assets.cdn.filesafe.space/Xf8ncPOdulMSwnurGzU0/media/681189deeb94a87c010bcedb.jpeg",
+    "https://assets.cdn.filesafe.space/Xf8ncPOdulMSwnurGzU0/media/6822369f25c6ca26a7d2eece.jpeg"
+  ],
   "headline": "Become a certified breathwork practitioner",
   "testimonials": [
     {
@@ -100,11 +106,5 @@
       }
     ]
   },
-  "image": "/offerings/training-4.webp",
-  "gallery": [
-    "/offerings/training-2.webp",
-    "/offerings/training-1.webp",
-    "/offerings/training-5.webp",
-    "/offerings/training-3.webp"
-  ]
+  "image": "https://assets.cdn.filesafe.space/Xf8ncPOdulMSwnurGzU0/media/6852e9f8b1f8e40c61648c7b.jpeg"
 }
