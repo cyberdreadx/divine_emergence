@@ -53,8 +53,14 @@
     }
   ],
   "imageAlt": "A guided breathwork session",
+  "gallery": [
+    "/offerings/breathwork-2.webp",
+    "/offerings/breathwork-3.webp",
+    "https://assets.cdn.filesafe.space/Xf8ncPOdulMSwnurGzU0/media/6af2363d12958b0af377edcf.jpeg"
+  ],
   "headline": "What is breathwork and how do we use it?",
   "title": "Breathwork",
+  "image": "https://assets.cdn.filesafe.space/Xf8ncPOdulMSwnurGzU0/media/6af23384ac5a20a1b0b262f1.jpg",
   "benefits": {
     "title": "What breathwork can do",
     "items": [
@@ -64,10 +70,5 @@
       "Strengthen your immune system",
       "Increase body awareness and resilience"
     ]
-  },
-  "image": "/offerings/breathwork-1.webp",
-  "gallery": [
-    "/offerings/breathwork-2.webp",
-    "/offerings/breathwork-3.webp"
-  ]
+  }
 }
