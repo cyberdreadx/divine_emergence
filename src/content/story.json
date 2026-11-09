@@ -1,15 +1,11 @@
 {
-  "eyebrow": "Welcome to Divine Emergence",
   "heading": "I'm Laura, a psychospiritual practitioner based in",
-  "headingHighlight": "South Florida",
   "paragraphs": [
-    "I'm Laura. If you've tried everything to heal your mental and emotional health",
-    "I get it.  I did too. Medication. Talk therapy. Rehab. Psychiatric care. I did the work that was supposed to work.  Years in",
-    "I felt defeated. None of it reached what was actually there. Unprocessed emotion and stored trauma",
-    "living in my body. Not just my mind.  Then I found breathwork. My nervous system started to regulate. Emotions I had carried for years finally had somewhere to go. It was the first thing that worked at the level I needed.  So I left my master's program in psychology. I left my career in dual diagnosis. I went all in. I had seen what happens when someone stops managing and masking their pain and starts moving through it.  Today I have nearly five years of breathwork experience. I've coached over 100 people. I've led over 70 events and more than a dozen retreats around the world. I bring a mental health background and lived experience into every session.  I don't offer quick symptom relief or coping tricks. We take a holistic approach with a strong emphasis on nervous system regulation."
+    "If you've tried everything to heal your mental and emotional health",
+    "I get it. I tried everything too. Medication. Talk therapy. Rehab. Psychiatric care. I TRIED EVERYTHING TO FEEL BETTER! Years in",
+    "I felt defeated Lost. Hopeless. BROKEN No amount of talking or medications could reach what was actually there. Unprocessed emotion and stored trauma",
+    "living in my body. Not just my mind. Then I found breathwork. My nervous system started to regulate. Emotions I had carried for years finally had somewhere to go. It was the first thing that worked at the level I needed. So I left my master's program in psychology. I left my career in dual diagnosis. I went all in. I had seen what happens when someone stops managing and masking their emotions and start moving through it.  Today I have nearly five years of breathwork experience. I've coached over hundreds of people. I've led over 80 events and more than a dozen retreats around the world. I bring a mental health background and lived experience into every session.  I don't offer quick symptom relief or coping tricks. We take a holistic approach with a strong emphasis on nervous system regulation."
   ],
-  "pullQuote": "My work is not about coping, bypassing, or manifesting. You can't think your way into freedom from self. I take a full mind, body, and spirit approach, using the breath and other modalities to support your overall health and wellness.",
-  "factsHeading": "Five facts about me",
   "facts": [
     "Going on 5 years of experience as a breathwork specialist.",
     "Over 100 people coached by me to regulate their nervous system.",
@@ -17,6 +13,10 @@
     "More than 70 community events hosted.",
     "12 retreats hosted around the world."
   ],
-  "image": "/site/about-laura.webp",
-  "imageAlt": "A moment of stillness in breathwork"
+  "eyebrow": "Welcome to Divine Emergence",
+  "imageAlt": "A moment of stillness in breathwork",
+  "headingHighlight": "Sunny South Florida",
+  "pullQuote": "My work is not about coping, bypassing, or manifesting. You can't think your way into freedom from self. I take a full mind, body, and spirit approach, using the breath and other modalities to support your overall health and wellness.",
+  "factsHeading": "Five facts about me",
+  "image": "/site/about-laura.webp"
 }
