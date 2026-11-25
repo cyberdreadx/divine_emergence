@@ -1,0 +1,13 @@
+{
+  "title": "Breathwork Circle (example)",
+  "eventType": "Breathwork Circle",
+  "date": "2026-12-12",
+  "time": "6:00 PM to 8:00 PM",
+  "location": "Delray Beach, FL",
+  "cost": "$45",
+  "description": "An example event to copy. In the CMS, open this event, choose Duplicate, then change the title, date, details and payment link, and switch on \"Show on website\".",
+  "image": "",
+  "paymentLink": "",
+  "soldOut": false,
+  "published": false
+}

@@ -45,3 +45,13 @@ there to catch typos or broken formatting — it keeps your site safe.
   need a link changed, just ask.
 
 Questions? Message your developer — that's the whole point of this setup.
+
+## Posting an event
+
+1. In the editor, open **Events**.
+2. Open an existing event (there's a hidden **Breathwork Circle (example)** to start from) and choose **Duplicate** from the menu next to Save.
+3. Change the **title, what the event is, date, time, location, cost, description** and (optionally) the **photo**.
+4. Paste the **Payment link** for this event. Make it in GoHighLevel under **Payments → Payment Links** (or use a Stripe or Square checkout link). Leave it empty for a free event.
+5. Make sure **Show on website** is on, then save and publish.
+
+On the site, each event gets its own page at `divineemergence.org/events/...`. People enter their name, **email and phone** (both required), then go straight to the payment link to pay. Past events drop off the list on their own. Switch on **Sold out** to stop sign-ups, or switch off **Show on website** to hide an event without deleting it.

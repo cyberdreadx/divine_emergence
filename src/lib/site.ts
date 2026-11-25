@@ -55,6 +55,14 @@ export const INTAKE_PDF_ENDPOINT = "/api/intake-pdf";
 // saved to the contact by INTAKE_PDF_ENDPOINT either way.
 export const GUIDE_ENDPOINT = "";
 
+// Event sign-ups (/events/<id>). GoHighLevel inbound-webhook URL for the
+// "Event Sign-up" workflow. Posts firstName, lastName, email, phone and the
+// event's details (eventTitle, eventId, eventType, eventDate, eventTime,
+// eventLocation, eventCost, paid, submittedAt). Paid events then go straight
+// to the event's payment link either way; while this is blank the sign-up
+// details are not saved to GoHighLevel.
+export const EVENT_REGISTRATION_ENDPOINT = "";
+
 // Existing detail pages on the live site. These currently resolve on GoHighLevel;
 // update them here if the pages move.
 export const LINKS = {
