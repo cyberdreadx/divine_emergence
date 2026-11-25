@@ -15,6 +15,7 @@ export interface GuideSignature {
 // plain characters that render reliably.
 const clean = (s: string) =>
   s
+    .replace(/\*\*(.+?)\*\*/g, "$1")
     .replace(/[‘’]/g, "'")
     .replace(/[“”]/g, '"')
     .replace(/[–—]/g, "-")
@@ -111,7 +112,7 @@ export function buildGuidePdf(guide: Guide, s: GuideSignature, submittedAt: Date
 
 /** File name like "Kambufo-Prep-Guide-Jane-Doe-2026-11-01.pdf". */
 export function guideFileName(guide: Guide, s: GuideSignature, date: Date): string {
-  const label = { kambufo: "Kambufo-Prep-Guide", microdose: "Microdose-Prep-Guide", integration: "Integration-Guide" }[guide.slug] ?? guide.slug;
+  const label = { kambufo: "Kambufo-Prep-Guide", microdose: "Microdose-Prep-Guide", integration: "Integration-Guide", bwintegration: "Breathwork-Integration-Guide" }[guide.slug] ?? guide.slug;
   const name = `${s.firstName}-${s.lastName}`.replace(/[^A-Za-z0-9-]+/g, "");
   return `${label}-${name || "Client"}-${date.toISOString().slice(0, 10)}.pdf`;
 }

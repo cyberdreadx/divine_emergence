@@ -37,6 +37,7 @@ const App = () => (
           <Route path="/prep/kambufo" element={<GuidePage slug="kambufo" />} />
           <Route path="/prep/microdose" element={<GuidePage slug="microdose" />} />
           <Route path="/integration" element={<GuidePage slug="integration" />} />
+          <Route path="/bwintegration" element={<GuidePage slug="bwintegration" />} />
           <Route path="*" element={<NotFound />} />
         </Routes>
       </BrowserRouter>

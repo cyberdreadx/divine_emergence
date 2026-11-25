@@ -8,7 +8,7 @@
 // Wording comes from Laura's Google Docs. Edit it here; keep the block shapes:
 //   { h: "Heading" }                 section heading
 //   { h3: "Subheading" }             smaller heading
-//   { p: "Paragraph" }               paragraph
+//   { p: "Paragraph" }               paragraph (wrap words in **stars** for gold)
 //   { ul: ["item", { text: "item", sub: ["nested"] }] }   bullet list
 //   { note: "Highlighted note" }     callout
 
@@ -601,6 +601,135 @@ const integration: Guide = {
   ],
 };
 
-export const GUIDES: Guide[] = [kambufo, microdose, integration];
+const breathworkIntegration: Guide = {
+  slug: "bwintegration",
+  path: "/bwintegration",
+  title: "Breathwork Integration Guide",
+  eyebrow: "After Your Breathwork Session",
+  blocks: [
+    { h: "What Is Integration?" },
+    { p: "Integration is what happens after your breathwork session. It's the process of noticing what came up, giving yourself time to process it, and slowly bringing what you learned, felt, or discovered into the way you actually live." },
+    { p: "Breathwork can bring up emotions, memories, insights, body sensations, questions, or new ways of seeing things. Some of it may make sense right away. Some of it may take days or weeks to understand. Integration is about staying curious instead of needing all the answers right now." },
+    { p: "Integration can happen through journaling, gentle breathwork, movement, meditation, creativity, time in nature, good conversations, therapy, rest, or just paying closer attention to yourself." },
+    { p: "Integration can also be practical:" },
+    {
+      ul: [
+        "If you realized a relationship needs more boundaries, integration might mean practicing those boundaries.",
+        "If you feel you aren't being paid enough at your job, integration could be asking for a raise.",
+        "If you realized your body needs more rest, integration might mean changing your schedule and your sleep.",
+        "If grief came up, integration might mean finally letting yourself feel it instead of pushing it away.",
+        "If you felt more compassion for yourself, integration is learning how to keep practicing that compassion in everyday life!",
+      ],
+    },
+    { p: "The goal isn't to hold onto how you felt in the session or to recreate it. It's to notice what still feels meaningful once you're back in your normal day." },
+    { p: "You also don't need to make big life decisions right after a session. Write down what came up. Sit with it. Notice it. Pray about it. All will be well." },
+    { h: "Gentle Session or Deep Journey: Every Experience Counts" },
+    { p: "Whether you did a calming breathwork session or a full release conscious circular journey, your experience is valid, and it deserves integration." },
+    { p: "If you did a **gentle or calming session**, your experience may have felt quiet or subtle. You may have noticed your body relax, a wave of emotion, a little more clarity, or feeling more present. Sometimes the effects show up slowly over the next few days. You might react differently, sleep better, or feel more connected to yourself without one big moment to point to. That still counts. A quieter session isn't a lesser one." },
+    { p: "If you did a **full release journey**, your experience may have felt intense, emotional, or hard to put into words. You may have cried, laughed, shaken, felt tingling or tightness, or lost track of time. You may remember some parts clearly and others not at all. All of this is normal. Deeper sessions can take longer to settle, and it's common to feel tender, open, or tired in the days after. Be extra gentle with yourself." },
+    { p: "No matter what kind of session you had, the practices in this guide apply to you. Take what feels supportive and leave the rest." },
+    { h: "The First 24 to 72 Hours" },
+    { p: "Give yourself some space after your session." },
+    { p: "You may feel clear, emotional, energized, tired, peaceful, sensitive, creative, or just more like yourself. After a gentle session, you may feel mostly normal with small shifts over time. After a deep journey, you may feel moved, raw, or wiped out. Your experience is your experience." },
+    { p: "If you can, try not to pack your schedule with obligations, big decisions, or heavy conversations right away. Instead, give yourself a chance to notice." },
+    {
+      ul: [
+        "Notice what you're feeling.",
+        "Notice what you're thinking.",
+        "Notice what feels different.",
+        "Notice what's asking for your attention.",
+      ],
+    },
+    { p: "You don't have to turn every insight into an action today. This is how we start to learn to SLOWWW DOWN." },
+    { h: "Support Your Body" },
+    { p: "Breathwork moves a lot of energy through the body, so take good care of it for the next day or two. No strict rules here. Just a few simple things that help:" },
+    {
+      ul: [
+        "Drink plenty of water. Breathwork can leave you a little dehydrated.",
+        "Eat regular, nourishing meals that make you feel good.",
+        "Add electrolytes if you feel tired, crampy, or lightheaded.",
+        "Go easy on caffeine if you notice it makes you anxious or wired.",
+        "Give yourself extra rest if your body is asking for it.",
+      ],
+    },
+    { p: "Most importantly, listen to your body. Notice what gives you energy, what feels grounding, when you want to move, and when you need to rest. Listening to those signals is part of rebuilding trust with yourself." },
+    { p: "**Move your body.** Integration doesn't have to happen only through thinking or talking. Sometimes your body needs to move. Try yoga, walking, dancing, stretching, flow arts, or gentle exercise. Put on music and let your body move without worrying about what it looks like. There doesn't need to be a goal." },
+    { h: "Rest and Sleep" },
+    { p: "Sleep is a big part of emotional and physical recovery. For the first few nights after a deeper session, try to keep a regular sleep schedule." },
+    { p: "Before bed, cut back on screens, dim the lights, take a warm shower or bath, journal, or do a few minutes of slow breathing." },
+    { p: "You may notice vivid dreams or emotions coming up at night. That's normal. Keep a journal by your bed and write down anything that feels important." },
+    { p: "If you have ongoing trouble sleeping, or notice big changes in your mood or behavior, reach out to me or a healthcare professional." },
+    { h: "Get Into Nature" },
+    { p: "Nature is one of the simplest and most supportive tools for integration." },
+    { p: "Spend time outside. Walk barefoot when you can, sit under a tree, go to the ocean, or watch the sunrise or sunset. Feel the air on your skin, notice the sounds around you, and reconnect through your senses." },
+    { p: "You don't have to do anything profound. Sometimes integration is just giving your nervous system fewer inputs, slowing down, and being present where you are. Notice how nature is perfect, exactly the way it is." },
+    { h: "Create Grounding and Mindful Moments" },
+    { p: "Familiar, comforting things can bring you back into your body when you feel overwhelmed or disconnected. You may enjoy:" },
+    {
+      ul: [
+        "Essential oils",
+        "Incense or Palo Santo",
+        "A warm shower or epsom salt bath",
+        "Comfortable clothes",
+        "Calm music or playing an instrument",
+        "Meditation",
+        "Gentle stretching",
+        "Sitting in the sun",
+      ],
+    },
+    { p: "Choose the smells, sounds, textures, foods, and spaces that feel like comfort to you." },
+    { p: "If you start feeling dysregulated, bring your attention back to what's physically happening. Look at your feet and feel them on the ground. Notice the room around you, listen to the sounds, and focus on something familiar. Remind yourself where you are and that you're here, right now. Give yourself time to come back." },
+    { h: "Keep Breathing" },
+    { p: "Your breath is one of your best tools during integration." },
+    { p: "For the next few days, keep your practice gentle. Use the calming techniques from your sessions, like foundational breath, box breathing, humming breath, or 4 6 8 breath." },
+    { p: "Breathe slowly, in through the nose and deep into the belly. There's no need for fast breathing, long holds, or another intense journey right away. The goal now is to reconnect with your breath, stay regulated, and give yourself space to process." },
+    { p: "If any technique makes you feel dizzy, anxious, numb, or uncomfortable, stop and return to your natural breath." },
+    { h: "Create" },
+    { p: "This is a great time to reconnect with your creativity." },
+    {
+      ul: [
+        "If you want to write, write.",
+        "If you want to sing, sing.",
+        "If you want to dance, dance.",
+        "If you want to paint, paint.",
+        "If you want to make music, make music.",
+      ],
+    },
+    { p: "Don't put limits on what creating means or what it should \"look like.\" You don't have to be an artist to create. Creativity gives you another language for things that are hard to explain with words." },
+    { h: "Journal and Reflect" },
+    { p: "Try journaling with questions like these:" },
+    {
+      ul: [
+        "What came up for me?",
+        "What surprised me?",
+        "What does my body need from me right now?",
+        "Is there anything I feel called to change?",
+      ],
+    },
+    { p: "Write without editing yourself. You can always come back and read it later." },
+    { h: "Be Mindful of Big Decisions" },
+    { p: "A powerful session can change the way you see yourself, your relationships, your work, or your life for a while. That's true after a deep journey, and it can be just as true after a gentle session where insights build quietly over a few days." },
+    { p: "Wait at least a couple of weeks before making any major life decisions. You may leave a session feeling clear, inspired, or certain about something, but how you feel today may not be how you feel two weeks from now." },
+    { p: "Write down what came up and keep checking in with it. If it still feels true after you've had time to process, then decide what you want to do with it. Not every realization needs action right away." },
+    { h: "Stay Connected" },
+    { p: "You don't have to integrate alone! Reach out when you need support." },
+    { p: "Talk with trusted people who can listen without telling you what your experience means." },
+    { p: "If hard emotions, anxiety, trouble sleeping, or other concerning symptoms continue or get in the way of your daily life, reach out to a qualified medical or mental health professional. If you believe you're having a medical emergency, get emergency care right away." },
+    { h: "Keep Going" },
+    { p: "There's no finish line with breathwork. A gentle session and a deep journey are both complete experiences, and neither one is better than the other." },
+    { p: "Some people love a steady, regular calming practice. Others feel called to go deeper with full release journeys. Many move between the two as their needs change. What matters is what's right for you, right now." },
+    { p: "Divine Emergence, LLC offers private breathwork sessions, group events, one on one coaching, and retreats for every stage of your journey." },
+    { h: "Integration Support" },
+    { p: "If you need more support processing or integrating your experience, the best way to connect with me is to visit www.DivineEmergence.org and schedule an integration call." },
+    { p: "Scheduling a call lets me set aside the proper time, space, and energy to sit with you, hear what's coming up, and really dive into your experience together. That's what the calls are for!" },
+  ],
+  acknowledgments: [
+    "I have read and understand the Breathwork Integration Guide.",
+    "I will keep my breathwork gentle for the next few days and take care of my body with water, nourishing food, and rest.",
+    "I will wait before making big life decisions, and reach out for support if I need it.",
+  ],
+};
+
+export const GUIDES: Guide[] = [kambufo, microdose, integration, breathworkIntegration];
 
 export const getGuide = (slug: string) => GUIDES.find((g) => g.slug === slug);
