@@ -16,6 +16,23 @@ The one recurring piece is a **reminder** so the email always gets written in ti
 
 ---
 
+## The easy way: the Weekly Email Builder
+
+Open **divineemergence.org/email-builder** (not linked anywhere on the site).
+Type the **note title** and **message** — leave a blank line between paragraphs,
+and wrap a word in `**double stars**` to make it gold. Check the preview, tap
+**Copy email**, then paste into the **Code / Custom HTML** block of the week's
+GoHighLevel campaign (replacing what's there). Your draft stays saved in that
+browser. "More options" covers the inbox preview line, label, greeting, button
+and closing line.
+
+The builder's HTML is built to hold up in Gmail, Apple Mail, Outlook (desktop
+and web), Yahoo and phone apps: tables for layout, solid colors set twice
+(attributes + inline CSS), a fluid width up to 600px, and an Outlook-specific
+button. The old template broke outside Gmail because it used a fixed 600px
+width, semi-transparent colors, a gradient button and a background set only on
+a `<div>`, which several apps strip.
+
 ## Part 1 — Save the branded template (do this once)
 
 1. Go to **Marketing → Emails → Templates**.
@@ -41,7 +58,9 @@ Best done **the Thursday/Friday before** (see Part 3 reminder).
    (this is a Broadcast — a one-time send).
 2. **Choose a template →** `Weekly Email — Base`. This gives you a fresh copy;
    editing it does **not** change the master.
-3. Edit **only** the parts marked `[ EDIT ]` in the HTML:
+3. Easiest: make the week's email in the **Weekly Email Builder** (above), tap
+   **Copy email**, and paste it over the Code block's contents. Or edit by hand,
+   changing **only** these parts in the HTML:
    - **Preheader** — the inbox preview line.
    - **Eyebrow** — e.g. "Monday Note", "This Week".
    - **Headline** — the one-line hook.
