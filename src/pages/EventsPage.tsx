@@ -1,10 +1,10 @@
 import { Link } from "react-router-dom";
-import { ArrowLeft, ArrowUpRight, MapPin, Clock, CalendarHeart } from "lucide-react";
+import { ArrowLeft, ArrowRight, ArrowUpRight, MapPin, Clock, CalendarHeart, Ticket } from "lucide-react";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import EmailSignup from "@/components/EmailSignup";
 import { BOOKING_URL } from "@/lib/site";
-import { getUpcomingEvents, formatEventDate, DEFAULT_EVENT_CTA } from "@/lib/events";
+import { getUpcomingEvents, formatEventDate, eventDateLabel } from "@/lib/events";
 
 const EventsPage = () => {
   const upcoming = getUpcomingEvents();
@@ -42,10 +42,9 @@ const EventsPage = () => {
             <div className="space-y-5">
               {upcoming.map((e) => {
                 const d = formatEventDate(e.date);
-                const href = e.ctaHref ?? DEFAULT_EVENT_CTA;
                 return (
                   <div
-                    key={e.slug}
+                    key={e.id}
                     className="rounded-3xl border border-white/10 bg-card/40 backdrop-blur-sm p-6 md:p-8 flex flex-col md:flex-row gap-6 md:gap-8"
                   >
                     {/* Date badge */}
@@ -58,11 +57,16 @@ const EventsPage = () => {
 
                     {/* Details */}
                     <div className="flex-1">
-                      <h2 className="font-serif text-2xl md:text-3xl text-foreground mb-3">{e.title}</h2>
+                      {e.eventType && (
+                        <span className="text-gold font-sans text-[11px] uppercase tracking-[0.28em] block mb-2">{e.eventType}</span>
+                      )}
+                      <h2 className="font-serif text-2xl md:text-3xl text-foreground mb-3">
+                        <Link to={`/events/${e.id}`} className="hover:text-gold transition-colors">{e.title}</Link>
+                      </h2>
                       <div className="flex flex-wrap gap-x-5 gap-y-2 text-muted-foreground text-sm mb-4">
                         <span className="inline-flex items-center gap-2">
                           <CalendarHeart className="w-4 h-4 text-gold/70" strokeWidth={1.5} />
-                          {d.full}
+                          {eventDateLabel(e)}
                         </span>
                         {e.time && (
                           <span className="inline-flex items-center gap-2">
@@ -74,23 +78,27 @@ const EventsPage = () => {
                           <MapPin className="w-4 h-4 text-gold/70" strokeWidth={1.5} />
                           {e.location}
                         </span>
+                        {e.cost && (
+                          <span className="inline-flex items-center gap-2">
+                            <Ticket className="w-4 h-4 text-gold/70" strokeWidth={1.5} />
+                            {e.cost}
+                          </span>
+                        )}
                       </div>
-                      <p className="text-muted-foreground leading-relaxed mb-6">{e.description}</p>
+                      <p className="text-muted-foreground leading-relaxed mb-6 whitespace-pre-line">{e.description.trim()}</p>
 
                       {e.soldOut ? (
                         <span className="inline-flex items-center gap-2 px-6 py-2.5 rounded-full border border-white/15 text-muted-foreground text-xs tracking-[0.16em] uppercase">
                           Sold out
                         </span>
                       ) : (
-                        <a
-                          href={href}
-                          target="_blank"
-                          rel="noopener noreferrer"
+                        <Link
+                          to={`/events/${e.id}`}
                           className="group inline-flex items-center gap-2 px-7 py-3 rounded-full bg-gradient-to-r from-gold to-blush text-blush-foreground text-xs tracking-[0.16em] uppercase font-medium shadow-lg shadow-gold/10 hover:brightness-110 transition"
                         >
-                          {e.ctaLabel ?? "Reserve your spot"}
-                          <ArrowUpRight className="w-4 h-4" />
-                        </a>
+                          Reserve your spot
+                          <ArrowRight className="w-4 h-4" />
+                        </Link>
                       )}
                     </div>
                   </div>

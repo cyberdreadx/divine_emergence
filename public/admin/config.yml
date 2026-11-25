@@ -621,3 +621,30 @@ collections:
           - { label: "Host photo (beside the FAQ)", name: faqImage, widget: image, required: false, hint: "Optional portrait shown next to the FAQ. Leave empty for none." }
           - { label: "Image description (for accessibility)", name: imageAlt, widget: string, required: false }
           - { label: "Button label", name: ctaLabel, widget: string, required: false }
+
+  - name: events
+    label: "Events"
+    label_singular: "Event"
+    description: "Workshops and events on divineemergence.org/events. To add one, open an existing event and choose Duplicate (in the menu next to Save), then change the details. Past events drop off the site automatically."
+    folder: "src/content/events"
+    create: true
+    extension: json
+    format: json
+    slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
+    summary: "{{date}} · {{title}}"
+    sortable_fields: [date, title]
+    editor:
+      preview: false
+    fields:
+      - { label: "Event title", name: title, widget: string }
+      - { label: "What the event is", name: eventType, widget: string, required: false, hint: "Shown above the title, e.g. Breathwork Circle, Sound Bath, Workshop." }
+      - { label: "Date", name: date, widget: datetime, format: "YYYY-MM-DD", date_format: "YYYY-MM-DD", time_format: false, picker_utc: true }
+      - { label: "Last day (multi-day events only)", name: endDate, widget: datetime, format: "YYYY-MM-DD", date_format: "YYYY-MM-DD", time_format: false, picker_utc: true, required: false, hint: "Leave empty for a one-day event." }
+      - { label: "Time", name: time, widget: string, required: false, hint: "For example: 6:00 PM to 8:00 PM" }
+      - { label: "Location", name: location, widget: string, hint: "For example: Delray Beach, FL (or the venue and address)." }
+      - { label: "Cost", name: cost, widget: string, required: false, hint: "Shown as written, e.g. $45 or Free." }
+      - { label: "Short description", name: description, widget: text, hint: "A few sentences about the event. Press Enter for a new line." }
+      - { label: "Photo (optional)", name: image, widget: image, required: false }
+      - { label: "Payment link", name: paymentLink, widget: string, required: false, hint: "Paste the checkout link from GoHighLevel (Payments > Payment Links), Stripe or Square. After entering their name, email and phone, people are sent here to pay. Leave empty for a free event." }
+      - { label: "Sold out", name: soldOut, widget: boolean, default: false, required: false }
+      - { label: "Show on website", name: published, widget: boolean, default: true, required: false, hint: "Switch off to hide this event without deleting it." }

@@ -11,7 +11,7 @@
 // - After changing a photo or a card's words, regenerate the cards with
 //   `node scripts/make-share-images.mjs` and commit public/share/*.jpg.
 
-import { readFileSync } from "node:fs";
+import { readFileSync, readdirSync } from "node:fs";
 
 export const SITE_URL = "https://divineemergence.org";
 
@@ -32,8 +32,30 @@ const offeringPage = (slug, { photo, paths, eyebrow, tagline }) => {
   };
 };
 
+/** One preview per published event page (/events/<id>), using the events card. */
+const eventPages = () => {
+  const dir = new URL("../src/content/events/", import.meta.url);
+  let names = [];
+  try {
+    names = readdirSync(dir).filter((n) => n.endsWith(".json"));
+  } catch {
+    return [];
+  }
+  return names
+    .map((n) => ({ id: n.replace(/\.json$/, ""), e: JSON.parse(readFileSync(new URL(n, dir), "utf8")) }))
+    .filter(({ e }) => e.published !== false && e.title && e.date)
+    .map(({ id, e }) => ({
+      key: `event-${id}`,
+      paths: [`/events/${id}`],
+      title: e.title,
+      description: [e.cost, e.location, e.description].filter(Boolean).join(" · ").slice(0, 200),
+      image: e.image && e.image.startsWith("/") ? e.image : "/share/events.jpg",
+    }));
+};
+
 export function sharePages() {
   return [
+    ...eventPages(),
     {
       key: "home",
       paths: ["/"],
