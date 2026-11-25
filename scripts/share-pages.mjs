@@ -161,6 +161,16 @@ export function sharePages() {
       noindex: true,
     },
     {
+      key: "bwintegration",
+      paths: ["/bwintegration"],
+      title: "Breathwork Integration Guide",
+      description: "Your breathwork integration guide from Divine Emergence: gentle support for the days after your session.",
+      eyebrow: "After Your Session",
+      tagline: "Bringing what came up into daily life",
+      photo: "public/offerings/breathwork-2.webp",
+      noindex: true,
+    },
+    {
       key: "intake",
       paths: ["/intake"],
       title: "Ceremony Intake Form",

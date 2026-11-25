@@ -6,6 +6,7 @@ import SignaturePad from "@/components/SignaturePad";
 import NotFound from "@/pages/NotFound";
 import { BRAND, GUIDE_ENDPOINT, INTAKE_PDF_ENDPOINT } from "@/lib/site";
 import { type Block, getGuide } from "@/lib/guides";
+import { renderRichText } from "@/lib/richText";
 import { buildGuidePdf, guideFileName, type GuideSignature } from "@/lib/guidePdf";
 
 const inputClass =
@@ -29,7 +30,7 @@ const renderBlock = (b: Block, i: number) => {
         {b.note}
       </p>
     );
-  if ("p" in b) return <p key={i}>{b.p}</p>;
+  if ("p" in b) return <p key={i}>{renderRichText(b.p)}</p>;
   return (
     <ul key={i} className="list-disc pl-6 space-y-1.5 marker:text-gold/70">
       {b.ul.map((item, j) =>
