@@ -15,7 +15,7 @@ const Connect = () => {
           {content.heading}
         </h2>
         <p className="text-muted-foreground leading-relaxed max-w-xl mx-auto mb-10">
-          {renderRichText(content.body)}
+          {renderRichText(content.body.trim())}
         </p>
 
         <a

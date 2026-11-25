@@ -16,7 +16,7 @@ const Offerings = () => {
             {content.heading} <span className="italic">{content.headingItalic}</span>.
           </h2>
           <p className="mt-6 text-muted-foreground leading-relaxed">
-            {renderRichText(content.intro)}
+            {renderRichText(content.intro.trim())}
           </p>
         </div>
 

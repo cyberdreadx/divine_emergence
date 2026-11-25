@@ -22,7 +22,7 @@ const Hero = () => {
         </h1>
 
         <p className="mt-6 text-muted-foreground text-base md:text-lg leading-relaxed max-w-xl">
-          {renderRichText(content.body)}
+          {renderRichText(content.body.trim())}
         </p>
 
         <div className="mt-10 flex flex-col sm:flex-row items-center gap-4">

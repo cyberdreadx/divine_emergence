@@ -13,7 +13,7 @@ const Mission = () => {
           {content.eyebrow}
         </span>
         <p className="font-serif text-2xl md:text-4xl text-foreground leading-[1.35] italic font-light max-w-3xl mx-auto">
-          {renderRichText(content.statement)}
+          {renderRichText(content.statement.trim())}
         </p>
 
         <div className="mt-16 grid sm:grid-cols-3 gap-6">
