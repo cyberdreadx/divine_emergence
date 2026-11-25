@@ -12,7 +12,7 @@ const Breathwork = () => {
             {content.eyebrow}
           </span>
           <p className="font-serif text-2xl md:text-4xl text-foreground leading-[1.3] italic font-light">
-            {renderRichText(content.quote)}
+            {renderRichText(content.quote.trim())}
           </p>
         </div>
 

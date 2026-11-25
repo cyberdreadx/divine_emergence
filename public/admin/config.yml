@@ -56,10 +56,10 @@ collections:
           - { label: "Small label above heading", name: eyebrow, widget: string }
           - { label: "Heading", name: heading, widget: string, hint: "The gold highlighted words are set separately below." }
           - { label: "Highlighted words in heading", name: headingHighlight, widget: string, hint: "Shown in gold italic at the end of the heading." }
-          - { label: "Story paragraphs", name: paragraphs, widget: list, hint: "Each item is one paragraph. Use + to add, drag to reorder. Wrap a word in **double asterisks** to make it gold." }
+          - { label: "Story paragraphs", name: paragraphs, widget: list, hint: "Each box is one paragraph. Use “Add” to start a new paragraph, and drag to reorder. Wrap a word in **double asterisks** to make it gold.", field: { label: "Paragraph", name: paragraph, widget: text } }
           - { label: "Closing pull-quote", name: pullQuote, widget: text }
           - { label: "Facts heading", name: factsHeading, widget: string }
-          - { label: "Facts about Laura", name: facts, widget: list, hint: "Short one-line facts." }
+          - { label: "Facts about Laura", name: facts, widget: list, hint: "Each box is one short fact. Use “Add” for another.", field: { label: "Fact", name: fact, widget: string } }
           - { label: "About Laura photo", name: image, widget: image, required: false, hint: "Upload a new photo to replace the current one." }
           - { label: "Photo description (for accessibility)", name: imageAlt, widget: string, required: false }
 
@@ -78,7 +78,7 @@ collections:
         fields:
           - { label: "Small label above quote", name: eyebrow, widget: string }
           - { label: "Feature quote", name: quote, widget: text }
-          - { label: "Body paragraphs", name: paragraphs, widget: list }
+          - { label: "Body paragraphs", name: paragraphs, widget: list, hint: "Each box is one paragraph. Use “Add” to start a new paragraph, and drag to reorder.", field: { label: "Paragraph", name: paragraph, widget: text } }
           - { label: "Link label", name: ctaLabel, widget: string }
           - { label: "Breathwork section photo", name: image, widget: image, required: false, hint: "Upload a new photo to replace the current one." }
           - { label: "Photo description (for accessibility)", name: imageAlt, widget: string, required: false }
@@ -155,14 +155,14 @@ collections:
           - { label: "Headline", name: headline, widget: text, required: false }
           - { label: "Intro paragraph", name: intro, widget: text, required: false }
           - { label: "Hero photo (top of the page)", name: image, widget: image, required: false, hint: "The large photo next to the title. Upload a new one to replace it." }
-          - { label: "Body paragraphs", name: body, widget: list, required: false }
+          - { label: "Body paragraphs", name: body, widget: list, required: false, hint: "Each box is one paragraph. Use “Add” to start a new paragraph, and drag to reorder.", field: { label: "Paragraph", name: body, widget: text } }
           - label: "Prose sections"
             name: sections
             widget: list
             required: false
             fields:
               - { label: "Heading", name: heading, widget: string, required: false }
-              - { label: "Paragraphs", name: paragraphs, widget: list, required: false }
+              - { label: "Paragraphs", name: paragraphs, widget: list, required: false, hint: "Each box is one paragraph. Use “Add” to start a new paragraph, and drag to reorder.", field: { label: "Paragraph", name: paragraph, widget: text } }
           - label: "Approach block (what sets this apart)"
             name: approach
             widget: object
@@ -182,7 +182,7 @@ collections:
             required: false
             fields:
               - { label: "Title", name: title, widget: string, required: false }
-              - { label: "Bullet points", name: items, widget: list, required: false }
+              - { label: "Bullet points", name: items, widget: list, required: false, hint: "Each box is one bullet point. Use “Add” for another, and drag to reorder.", field: { label: "Bullet point", name: item, widget: string } }
           - label: "Photo gallery"
             name: gallery
             widget: list
@@ -211,14 +211,14 @@ collections:
             required: false
             fields:
               - { label: "Heading", name: heading, widget: string, required: false }
-              - { label: "Paragraphs", name: paragraphs, widget: list, required: false }
+              - { label: "Paragraphs", name: paragraphs, widget: list, required: false, hint: "Each box is one paragraph. Use “Add” to start a new paragraph, and drag to reorder.", field: { label: "Paragraph", name: paragraph, widget: text } }
           - label: "Benefits block"
             name: benefits
             widget: object
             required: false
             fields:
               - { label: "Title", name: title, widget: string, required: false }
-              - { label: "Bullet points", name: items, widget: list, required: false }
+              - { label: "Bullet points", name: items, widget: list, required: false, hint: "Each box is one bullet point. Use “Add” for another, and drag to reorder.", field: { label: "Bullet point", name: item, widget: string } }
           - label: "FAQ"
             name: faq
             widget: list
@@ -255,22 +255,22 @@ collections:
           - { label: "Headline", name: headline, widget: text, required: false }
           - { label: "Intro paragraph", name: intro, widget: text, required: false }
           - { label: "Hero photo (top of the page)", name: image, widget: image, required: false, hint: "The large photo next to the title. Upload a new one to replace it." }
-          - { label: "Body paragraphs", name: body, widget: list, required: false }
+          - { label: "Body paragraphs", name: body, widget: list, required: false, hint: "Each box is one paragraph. Use “Add” to start a new paragraph, and drag to reorder.", field: { label: "Paragraph", name: body, widget: text } }
           - label: "Prose sections"
             name: sections
             widget: list
             required: false
             fields:
               - { label: "Heading", name: heading, widget: string, required: false }
-              - { label: "Paragraphs", name: paragraphs, widget: list, required: false }
-              - { label: "Bullet points", name: items, widget: list, required: false }
+              - { label: "Paragraphs", name: paragraphs, widget: list, required: false, hint: "Each box is one paragraph. Use “Add” to start a new paragraph, and drag to reorder.", field: { label: "Paragraph", name: paragraph, widget: text } }
+              - { label: "Bullet points", name: items, widget: list, required: false, hint: "Each box is one bullet point. Use “Add” for another, and drag to reorder.", field: { label: "Bullet point", name: item, widget: string } }
           - label: "Benefits block"
             name: benefits
             widget: object
             required: false
             fields:
               - { label: "Title", name: title, widget: string, required: false }
-              - { label: "Bullet points", name: items, widget: list, required: false }
+              - { label: "Bullet points", name: items, widget: list, required: false, hint: "Each box is one bullet point. Use “Add” for another, and drag to reorder.", field: { label: "Bullet point", name: item, widget: string } }
           - label: "FAQ"
             name: faq
             widget: list
@@ -308,7 +308,7 @@ collections:
           - { label: "Headline", name: headline, widget: text, required: false, hint: "The big title. Press Enter for a second line (e.g. a location/date subtitle)." }
           - { label: "Intro paragraph", name: intro, widget: text, required: false, hint: "The text under the title. Press Enter twice to start a new paragraph." }
           - { label: "Hero photo (top of the page)", name: image, widget: image, required: false, hint: "The large photo next to the title. Upload a new one to replace it." }
-          - { label: "Body paragraphs", name: body, widget: list, required: false, hint: "Each item is one full paragraph. Keep a whole sentence in a single item; use + to add another paragraph." }
+          - { label: "Body paragraphs", name: body, widget: list, required: false, hint: "Each box is one paragraph. Use “Add” to start a new paragraph, and drag to reorder.", field: { label: "Paragraph", name: body, widget: text } }
           - label: "At a glance block"
             name: approach
             widget: object
@@ -328,7 +328,7 @@ collections:
             required: false
             fields:
               - { label: "Title", name: title, widget: string, required: false }
-              - { label: "Bullet points", name: items, widget: list, required: false }
+              - { label: "Bullet points", name: items, widget: list, required: false, hint: "Each box is one bullet point. Use “Add” for another, and drag to reorder.", field: { label: "Bullet point", name: item, widget: string } }
           - label: "Pricing block"
             name: pricing
             widget: object
@@ -376,7 +376,7 @@ collections:
           - { label: "Headline", name: headline, widget: text, required: false }
           - { label: "Intro paragraph", name: intro, widget: text, required: false }
           - { label: "Hero photo (top of the page)", name: image, widget: image, required: false, hint: "The large photo next to the title. Upload a new one to replace it." }
-          - { label: "Body paragraphs", name: body, widget: list, required: false }
+          - { label: "Body paragraphs", name: body, widget: list, required: false, hint: "Each box is one paragraph. Use “Add” to start a new paragraph, and drag to reorder.", field: { label: "Paragraph", name: body, widget: text } }
           - label: "Photo gallery"
             name: gallery
             widget: list
@@ -399,22 +399,22 @@ collections:
           - { label: "Headline", name: headline, widget: text, required: false }
           - { label: "Intro paragraph", name: intro, widget: text, required: false }
           - { label: "Hero photo (top of the page)", name: image, widget: image, required: false, hint: "The large photo next to the title. Upload a new one to replace it." }
-          - { label: "Body paragraphs", name: body, widget: list, required: false }
+          - { label: "Body paragraphs", name: body, widget: list, required: false, hint: "Each box is one paragraph. Use “Add” to start a new paragraph, and drag to reorder.", field: { label: "Paragraph", name: body, widget: text } }
           - label: "Benefits block"
             name: benefits
             widget: object
             required: false
             fields:
               - { label: "Title", name: title, widget: string, required: false }
-              - { label: "Bullet points", name: items, widget: list, required: false }
+              - { label: "Bullet points", name: items, widget: list, required: false, hint: "Each box is one bullet point. Use “Add” for another, and drag to reorder.", field: { label: "Bullet point", name: item, widget: string } }
           - label: "Prose sections"
             name: sections
             widget: list
             required: false
             fields:
               - { label: "Heading", name: heading, widget: string, required: false }
-              - { label: "Paragraphs", name: paragraphs, widget: list, required: false }
-              - { label: "Bullet points", name: items, widget: list, required: false }
+              - { label: "Paragraphs", name: paragraphs, widget: list, required: false, hint: "Each box is one paragraph. Use “Add” to start a new paragraph, and drag to reorder.", field: { label: "Paragraph", name: paragraph, widget: text } }
+              - { label: "Bullet points", name: items, widget: list, required: false, hint: "Each box is one bullet point. Use “Add” for another, and drag to reorder.", field: { label: "Bullet point", name: item, widget: string } }
           - label: "Curriculum block"
             name: curriculum
             widget: object
@@ -428,14 +428,14 @@ collections:
                 fields:
                   - { label: "Label", name: label, widget: string, required: false }
                   - { label: "Title", name: title, widget: string, required: false }
-                  - { label: "Bullet points", name: items, widget: list, required: false }
+                  - { label: "Bullet points", name: items, widget: list, required: false, hint: "Each box is one bullet point. Use “Add” for another, and drag to reorder.", field: { label: "Bullet point", name: item, widget: string } }
           - label: "Includes block"
             name: includes
             widget: object
             required: false
             fields:
               - { label: "Title", name: title, widget: string, required: false }
-              - { label: "Bullet points", name: items, widget: list, required: false }
+              - { label: "Bullet points", name: items, widget: list, required: false, hint: "Each box is one bullet point. Use “Add” for another, and drag to reorder.", field: { label: "Bullet point", name: item, widget: string } }
           - label: "Pricing block"
             name: pricing
             widget: object
@@ -493,7 +493,7 @@ collections:
           - { label: "Headline", name: headline, widget: text, required: false }
           - { label: "Intro paragraph", name: intro, widget: text, required: false }
           - { label: "Hero photo (top of the page)", name: image, widget: image, required: false, hint: "The large photo next to the title. Upload a new one to replace it." }
-          - { label: "Body paragraphs", name: body, widget: list, required: false }
+          - { label: "Body paragraphs", name: body, widget: list, required: false, hint: "Each box is one paragraph. Use “Add” to start a new paragraph, and drag to reorder.", field: { label: "Paragraph", name: body, widget: text } }
           - label: "Curriculum block"
             name: curriculum
             widget: object
@@ -527,7 +527,7 @@ collections:
             required: false
             fields:
               - { label: "Title", name: title, widget: string, required: false }
-              - { label: "Bullet points", name: items, widget: list, required: false }
+              - { label: "Bullet points", name: items, widget: list, required: false, hint: "Each box is one bullet point. Use “Add” for another, and drag to reorder.", field: { label: "Bullet point", name: item, widget: string } }
           - label: "Testimonials"
             name: testimonials
             widget: list
@@ -562,7 +562,7 @@ collections:
             required: false
             fields:
               - { label: "Title", name: title, widget: string, required: false }
-              - { label: "Bullet points", name: items, widget: list, required: false }
+              - { label: "Bullet points", name: items, widget: list, required: false, hint: "Each box is one bullet point. Use “Add” for another, and drag to reorder.", field: { label: "Bullet point", name: item, widget: string } }
           - label: "Curriculum block"
             name: curriculum
             widget: object
@@ -576,14 +576,14 @@ collections:
                 fields:
                   - { label: "Label", name: label, widget: string, required: false }
                   - { label: "Title", name: title, widget: string, required: false }
-                  - { label: "Bullet points", name: items, widget: list, required: false }
+                  - { label: "Bullet points", name: items, widget: list, required: false, hint: "Each box is one bullet point. Use “Add” for another, and drag to reorder.", field: { label: "Bullet point", name: item, widget: string } }
           - label: "Includes block"
             name: includes
             widget: object
             required: false
             fields:
               - { label: "Title", name: title, widget: string, required: false }
-              - { label: "Bullet points", name: items, widget: list, required: false }
+              - { label: "Bullet points", name: items, widget: list, required: false, hint: "Each box is one bullet point. Use “Add” for another, and drag to reorder.", field: { label: "Bullet point", name: item, widget: string } }
           - label: "Pricing block"
             name: pricing
             widget: object

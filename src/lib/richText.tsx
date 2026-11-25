@@ -9,6 +9,16 @@ import React from "react";
 // Anything without markers renders as plain text. Laura only needs to remember
 // the gold one: wrap a word in double asterisks.
 export function renderRichText(text: string): React.ReactNode {
+  // A line break typed in the editor shows as a line break on the page.
+  if (text.includes("\n")) {
+    const lines = text.split(/\n/);
+    return lines.map((line, i) => (
+      <React.Fragment key={`l${i}`}>
+        {renderRichText(line)}
+        {i < lines.length - 1 && <br />}
+      </React.Fragment>
+    ));
+  }
   const pattern = /\*\*(.+?)\*\*|\*(.+?)\*/g;
   const nodes: React.ReactNode[] = [];
   let lastIndex = 0;

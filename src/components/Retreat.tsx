@@ -27,7 +27,7 @@ const Retreat = () => {
               {content.heading}
             </h2>
             <p className="text-muted-foreground leading-relaxed mb-8">
-              {renderRichText(content.body)}
+              {renderRichText(content.body.trim())}
             </p>
             <Link
               to="/reverence-retreat"

@@ -118,7 +118,7 @@ const OfferingDetail = ({ slug: slugOverride }: { slug?: string }) => {
                   {approach.features.map((f, i) => (
                     <div key={i} className="rounded-2xl border border-white/10 bg-card/40 backdrop-blur-sm p-7">
                       <h3 className="font-serif text-xl text-foreground mb-3">{f.title}</h3>
-                      <p className="text-muted-foreground text-sm leading-relaxed">{f.text}</p>
+                      <p className="text-muted-foreground text-sm leading-relaxed whitespace-pre-line">{f.text?.trim()}</p>
                     </div>
                   ))}
                 </div>
@@ -198,7 +198,7 @@ const OfferingDetail = ({ slug: slugOverride }: { slug?: string }) => {
                         <h3 className="font-serif text-xl text-foreground">{step.title}</h3>
                       </div>
                       {step.text && (
-                        <p className="text-muted-foreground text-sm leading-relaxed sm:pl-[5.25rem]">{step.text}</p>
+                        <p className="text-muted-foreground text-sm leading-relaxed sm:pl-[5.25rem] whitespace-pre-line">{step.text?.trim()}</p>
                       )}
                       {step.items && (
                         <ul className="space-y-2 sm:pl-[5.25rem]">
@@ -224,7 +224,7 @@ const OfferingDetail = ({ slug: slugOverride }: { slug?: string }) => {
                   {values.features.map((f, i) => (
                     <div key={i} className="rounded-2xl border border-white/10 bg-card/40 backdrop-blur-sm p-7">
                       <h3 className="font-serif text-xl text-foreground mb-3">{f.title}</h3>
-                      <p className="text-muted-foreground text-sm leading-relaxed">{f.text}</p>
+                      <p className="text-muted-foreground text-sm leading-relaxed whitespace-pre-line">{f.text?.trim()}</p>
                     </div>
                   ))}
                 </div>
@@ -288,11 +288,11 @@ const OfferingDetail = ({ slug: slugOverride }: { slug?: string }) => {
                     <div key={i} className="rounded-2xl border border-gold/20 bg-card/40 backdrop-blur-sm p-8 text-center">
                       <div className="text-muted-foreground text-xs uppercase tracking-[0.2em] mb-3">{tier.name}</div>
                       <div className="font-serif text-4xl text-foreground mb-2">{tier.price}</div>
-                      {tier.note && <div className="text-muted-foreground/70 text-sm">{tier.note}</div>}
+                      {tier.note && <div className="text-muted-foreground/70 text-sm whitespace-pre-line">{tier.note.trim()}</div>}
                     </div>
                   ))}
                 </div>
-                {pricing.note && <p className="text-muted-foreground/70 text-sm mt-5">{pricing.note}</p>}
+                {pricing.note && <p className="text-muted-foreground/70 text-sm mt-5 whitespace-pre-line">{pricing.note.trim()}</p>}
               </div>
             )}
 
@@ -352,7 +352,7 @@ const OfferingDetail = ({ slug: slugOverride }: { slug?: string }) => {
                         {item.q}
                         <span className="text-gold text-xl leading-none transition-transform group-open:rotate-45">+</span>
                       </summary>
-                      <p className="text-muted-foreground leading-relaxed mt-4">{item.a}</p>
+                      <p className="text-muted-foreground leading-relaxed mt-4 whitespace-pre-line">{item.a?.trim()}</p>
                     </details>
                   ))}
                 </div>
@@ -384,7 +384,7 @@ const OfferingDetail = ({ slug: slugOverride }: { slug?: string }) => {
             <div className="mt-16 md:mt-24 rounded-3xl border border-gold/20 bg-card/40 backdrop-blur-sm p-8 md:p-12 flex flex-col md:flex-row md:items-center gap-6 md:gap-10">
               <div className="flex-1">
                 <h3 className="font-serif text-2xl md:text-3xl text-foreground mb-3">{secondaryCta.heading}</h3>
-                <p className="text-muted-foreground leading-relaxed">{secondaryCta.text}</p>
+                <p className="text-muted-foreground leading-relaxed whitespace-pre-line">{secondaryCta.text?.trim()}</p>
               </div>
               {secondaryCta.href.startsWith("/") ? (
                 <Link

@@ -31,7 +31,7 @@ const Story = () => {
                 <p key={i}>{renderRichText(p)}</p>
               ))}
               <p className="text-foreground font-serif text-xl italic leading-relaxed">
-                {renderRichText(content.pullQuote)}
+                {renderRichText(content.pullQuote.trim())}
               </p>
             </div>
 
