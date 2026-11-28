@@ -1,16 +1,16 @@
 # Divine Emergence — content editor configuration.
 # This tells the editor which text on the site Laura can change, and gives each
-# piece a friendly label. It saves edits back to the GitHub repo as a pull
-# request (a "suggested change") for the developer to review before it goes live.
+# piece a friendly label. When Laura clicks Publish, the edit is saved straight
+# to the main branch of the GitHub repo and Netlify puts it live in a minute or two.
 
 backend:
   name: github
   repo: cyberdreadx/divine_emergence
   branch: main
 
-# Every save becomes a pull request (draft -> in review -> ready) instead of
-# publishing straight to the live site. Nothing goes live until the dev merges.
-publish_mode: editorial_workflow
+# No review step: Publish goes live directly (Laura edits on her own).
+# To bring back draft -> review -> ready pull requests, add:
+#   publish_mode: editorial_workflow
 
 # Lets the dev test the editor locally with `npx decap-server` (no login needed).
 local_backend: true
