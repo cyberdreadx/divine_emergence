@@ -36,6 +36,7 @@ collections:
           - { label: "Menu: Retreat", name: linkRetreat, widget: string }
           - { label: "Menu: Events", name: linkEvents, widget: string }
           - { label: "Menu: Free Ebook", name: linkEbook, widget: string }
+          - { label: "Menu: Blog", name: linkBlog, widget: string }
           - { label: "Button label (desktop)", name: ctaLabel, widget: string }
           - { label: "Button label (mobile)", name: ctaLabelMobile, widget: string }
 
@@ -125,6 +126,17 @@ collections:
           - { label: "Paragraph", name: body, widget: text }
           - { label: "Button label", name: ctaLabel, widget: string }
 
+      - name: partners
+        label: "Partner (Katukina affiliate)"
+        file: "src/content/partners.json"
+        fields:
+          - { label: "Small label", name: eyebrow, widget: string }
+          - { label: "Heading", name: heading, widget: string }
+          - { label: "Text", name: body, widget: text, hint: "Wrap a word in **double asterisks** to make it gold." }
+          - { label: "Button text", name: buttonLabel, widget: string }
+          - { label: "Affiliate link", name: url, widget: string, hint: "Your Katukina affiliate link. Leave empty to hide this section." }
+          - { label: "Affiliate disclosure", name: disclosure, widget: text, hint: "Required by law for affiliate links. Keep a short version." }
+
       - name: footer
         label: "Footer"
         file: "src/content/footer.json"
@@ -137,6 +149,9 @@ collections:
           - { label: "Link: Retreat", name: linkRetreat, widget: string }
           - { label: "Link: Free Clarity Call", name: linkClarityCall, widget: string }
           - { label: "Link: Contact", name: linkContact, widget: string }
+          - { label: "Link: Blog", name: linkBlog, widget: string }
+          - { label: "Link: Podcasts", name: linkPodcasts, widget: string }
+          - { label: "Link: Partner (affiliate)", name: linkPartner, widget: string }
 
   - name: offerings
     label: "Offering pages"
@@ -648,3 +663,46 @@ collections:
       - { label: "Payment link", name: paymentLink, widget: string, required: false, hint: "Paste the checkout link from GoHighLevel (Payments > Payment Links), Stripe or Square. After entering their name, email and phone, people are sent here to pay. Leave empty for a free event." }
       - { label: "Sold out", name: soldOut, widget: boolean, default: false, required: false }
       - { label: "Show on website", name: published, widget: boolean, default: true, required: false, hint: "Switch off to hide this event without deleting it." }
+
+  - name: blog
+    label: "Blog"
+    label_singular: "Blog post"
+    description: "Posts on divineemergence.org/blog, newest first. To write one, open the example post and choose Duplicate (next to Save), or use New Blog post."
+    folder: "src/content/blog"
+    create: true
+    extension: json
+    format: json
+    slug: "{{slug}}"
+    summary: "{{date}} · {{title}}"
+    sortable_fields: [date, title]
+    editor:
+      preview: false
+    fields:
+      - { label: "Title", name: title, widget: string }
+      - { label: "Date", name: date, widget: datetime, format: "YYYY-MM-DD", date_format: "YYYY-MM-DD", time_format: false, picker_utc: true }
+      - { label: "Short summary (optional)", name: summary, widget: text, required: false, hint: "Shown on the blog page and in link previews. Leave empty to use the start of the post." }
+      - { label: "Cover photo (optional)", name: image, widget: image, required: false }
+      - { label: "Post", name: body, widget: markdown, hint: "Write freely. Use the toolbar for headings, bold, lists, links, quotes and photos." }
+      - { label: "Show on website", name: published, widget: boolean, default: true, required: false }
+
+  - name: podcasts
+    label: "Podcasts"
+    label_singular: "Podcast episode"
+    description: "Shows Laura has been a guest on, at divineemergence.org/podcasts. Spotify, Apple Podcasts and YouTube links play right on the page."
+    folder: "src/content/podcasts"
+    create: true
+    extension: json
+    format: json
+    slug: "{{slug}}"
+    summary: "{{date}} · {{show}}: {{title}}"
+    sortable_fields: [date, show, title]
+    editor:
+      preview: false
+    fields:
+      - { label: "Episode title", name: title, widget: string }
+      - { label: "Podcast name", name: show, widget: string }
+      - { label: "Date it aired", name: date, widget: datetime, format: "YYYY-MM-DD", date_format: "YYYY-MM-DD", time_format: false, picker_utc: true, required: false }
+      - { label: "Short description", name: description, widget: text, required: false }
+      - { label: "Episode link", name: link, widget: string, hint: "Paste the Spotify, Apple Podcasts or YouTube link to the episode (any other link works too, as a Listen button)." }
+      - { label: "Cover art (optional)", name: image, widget: image, required: false }
+      - { label: "Show on website", name: published, widget: boolean, default: true, required: false }

@@ -6,6 +6,8 @@ import { TooltipProvider } from "@/components/ui/tooltip";
 import Index from "./pages/Index.tsx";
 import OfferingDetail from "./pages/OfferingDetail.tsx";
 import EventsPage from "./pages/EventsPage.tsx";
+import { BlogList, BlogPostPage } from "./pages/Blog.tsx";
+import Podcasts from "./pages/Podcasts.tsx";
 import EventSignup from "./pages/EventSignup.tsx";
 import Ebook from "./pages/Ebook.tsx";
 import ClarityCall from "./pages/ClarityCall.tsx";
@@ -33,6 +35,9 @@ const App = () => (
           <Route path="/womensretreat" element={<OfferingDetail slug="womens-retreat" />} />
           <Route path="/womansretreat" element={<Navigate to="/womensretreat" replace />} />
           <Route path="/events" element={<EventsPage />} />
+          <Route path="/blog" element={<BlogList />} />
+          <Route path="/blog/:id" element={<BlogPostPage />} />
+          <Route path="/podcasts" element={<Podcasts />} />
           <Route path="/events/:id" element={<EventSignup />} />
           <Route path="/ebook" element={<Ebook />} />
           <Route path="/coaching-call" element={<ClarityCall />} />
