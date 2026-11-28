@@ -61,7 +61,8 @@ export const GUIDE_ENDPOINT = "";
 // eventLocation, eventCost, paid, submittedAt). Paid events then go straight
 // to the event's payment link either way; while this is blank the sign-up
 // details are not saved to GoHighLevel.
-export const EVENT_REGISTRATION_ENDPOINT = "";
+export const EVENT_REGISTRATION_ENDPOINT =
+  "https://services.leadconnectorhq.com/hooks/Xf8ncPOdulMSwnurGzU0/webhook-trigger/efac1233-9e71-49c5-a2d1-6fcff0d42976";
 
 // Existing detail pages on the live site. These currently resolve on GoHighLevel;
 // update them here if the pages move.
