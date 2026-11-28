@@ -1,0 +1,8 @@
+{
+  "title": "Your first post (example)",
+  "date": "2026-11-28",
+  "summary": "A short summary shown on the blog page. Leave empty to use the start of the post.",
+  "image": "",
+  "body": "This is an example post to copy. In the CMS, open it, choose **Duplicate**, write your post, then switch on \"Show on website\".\n\n## A heading\n\nWrite in plain paragraphs. Leave a blank line between paragraphs. Use the toolbar for **bold**, *italic*, lists, links and photos.\n\n> A quote stands out like this.",
+  "published": false
+}

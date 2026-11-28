@@ -53,9 +53,50 @@ const eventPages = () => {
     }));
 };
 
+/** One preview per published blog post (/blog/<id>). */
+const blogPages = () => {
+  const dir = new URL("../src/content/blog/", import.meta.url);
+  let names = [];
+  try {
+    names = readdirSync(dir).filter((n) => n.endsWith(".json"));
+  } catch {
+    return [];
+  }
+  const plain = (md = "") => md.replace(/!?\[([^\]]*)\]\([^)]*\)/g, "$1").replace(/[#>*_`~-]+/g, " ").replace(/\s+/g, " ").trim();
+  return names
+    .map((n) => ({ id: n.replace(/\.json$/, ""), p: JSON.parse(readFileSync(new URL(n, dir), "utf8")) }))
+    .filter(({ p }) => p.published !== false && p.title && p.body)
+    .map(({ id, p }) => ({
+      key: `blog-${id}`,
+      paths: [`/blog/${id}`],
+      title: p.title,
+      description: (p.summary?.trim() || plain(p.body)).slice(0, 200),
+      image: p.image && p.image.startsWith("/") ? p.image : "/share/blog.jpg",
+    }));
+};
+
 export function sharePages() {
   return [
     ...eventPages(),
+    ...blogPages(),
+    {
+      key: "blog",
+      paths: ["/blog"],
+      title: "The Journal",
+      description: "Stories, experiences, and lessons from Laura's path: breath, medicine, integration, and coming home to yourself.",
+      eyebrow: "Reflections from Laura",
+      tagline: "Breath, medicine, and coming home to yourself",
+      photo: "public/site/about-laura.webp",
+    },
+    {
+      key: "podcasts",
+      paths: ["/podcasts"],
+      title: "Podcasts & Conversations",
+      description: "Podcast conversations with Laura about breathwork, ancestral medicine, healing, and integration.",
+      eyebrow: "As Heard On",
+      tagline: "Conversations on breath, medicine, and healing",
+      photo: "public/offerings/coaching-1.webp",
+    },
     {
       key: "home",
       paths: ["/"],

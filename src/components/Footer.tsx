@@ -1,6 +1,7 @@
 import { Link } from "react-router-dom";
 import { BRAND, BOOKING_URL } from "@/lib/site";
 import content from "@/content/footer.json";
+import partner from "@/content/partners.json";
 import logo from "@/assets/de-logo.svg";
 
 const Footer = () => {
@@ -26,6 +27,13 @@ const Footer = () => {
                 <li><a href="#about" className="hover:text-foreground transition-colors">{content.linkAbout}</a></li>
                 <li><a href="#offerings" className="hover:text-foreground transition-colors">{content.linkOfferings}</a></li>
                 <li><Link to="/reverence-retreat" className="hover:text-foreground transition-colors">{content.linkRetreat}</Link></li>
+                <li><Link to="/blog" className="hover:text-foreground transition-colors">{content.linkBlog}</Link></li>
+                <li><Link to="/podcasts" className="hover:text-foreground transition-colors">{content.linkPodcasts}</Link></li>
+                <li>
+                  <a href={partner.url} target="_blank" rel="sponsored noopener noreferrer" className="hover:text-foreground transition-colors">
+                    {content.linkPartner}
+                  </a>
+                </li>
               </ul>
             </div>
             <div>

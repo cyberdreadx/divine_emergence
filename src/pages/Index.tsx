@@ -8,6 +8,7 @@ import Retreat from "@/components/Retreat";
 import Mission from "@/components/Mission";
 import Reviews from "@/components/Reviews";
 import Connect from "@/components/Connect";
+import Partner from "@/components/Partner";
 import Footer from "@/components/Footer";
 import NewsletterPopup from "@/components/NewsletterPopup";
 
@@ -54,6 +55,7 @@ const Index = () => {
       <Retreat />
       <Mission />
       <Reviews />
+      <Partner />
       <Connect />
       <Footer />
       <NewsletterPopup />
